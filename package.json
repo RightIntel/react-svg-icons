@@ -4,7 +4,8 @@
   "description": "React components for svg icons",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node src/scripts/compile.js"
   },
   "repository": {
     "type": "git",
