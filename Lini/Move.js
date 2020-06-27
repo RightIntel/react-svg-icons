@@ -1,20 +1,28 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 import React from 'react';
 import PropTypes from 'prop-types';
+export default function LiniMove({
+  size,
+  ...props
+}) {
+  let className = 'Component Lini LiniMove';
 
-export default function LiniMove({ size, ...props }) {
-    let className = 'Component Lini LiniMove';
-    if (props.className) {
-        className += ' ' + props.className;
-    }
-    return (
-        <span {...props} className={className}>
-            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 20 20">
-                <path d="M18.354 10.146l-3-3a.5.5 0 00-.707.707l2.146 2.146H10V3.206l2.146 2.146a.498.498 0 00.708 0 .5.5 0 000-.707l-3-3a.5.5 0 00-.707 0l-3 3a.5.5 0 00.707.707L9 3.206v6.793H2.207l2.146-2.146a.5.5 0 00-.707-.707l-3 3a.5.5 0 000 .707l3 3a.498.498 0 00.708 0 .5.5 0 000-.707L2.208 11h6.793v6.793l-2.146-2.146a.5.5 0 00-.707.707l3 3a.498.498 0 00.708 0l3-3a.5.5 0 00-.707-.707l-2.146 2.146V11h6.793l-2.146 2.146a.5.5 0 00.708.707l3-3a.5.5 0 000-.707z" />
-            </svg>
-        </span>
-    );
+  if (props.className) {
+    className += ' ' + props.className;
+  }
+
+  return /*#__PURE__*/React.createElement("span", _extends({}, props, {
+    className: className
+  }), /*#__PURE__*/React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: size,
+    height: size,
+    viewBox: "0 0 20 20"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M18.354 10.146l-3-3a.5.5 0 00-.707.707l2.146 2.146H10V3.206l2.146 2.146a.498.498 0 00.708 0 .5.5 0 000-.707l-3-3a.5.5 0 00-.707 0l-3 3a.5.5 0 00.707.707L9 3.206v6.793H2.207l2.146-2.146a.5.5 0 00-.707-.707l-3 3a.5.5 0 000 .707l3 3a.498.498 0 00.708 0 .5.5 0 000-.707L2.208 11h6.793v6.793l-2.146-2.146a.5.5 0 00-.707.707l3 3a.498.498 0 00.708 0l3-3a.5.5 0 00-.707-.707l-2.146 2.146V11h6.793l-2.146 2.146a.5.5 0 00.708.707l3-3a.5.5 0 000-.707z"
+  })));
 }
-
 LiniMove.propTypes = {
-    size: PropTypes.number.isRequired,
+  size: PropTypes.number.isRequired
 };

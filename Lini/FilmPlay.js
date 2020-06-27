@@ -1,21 +1,30 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 import React from 'react';
 import PropTypes from 'prop-types';
+export default function LiniFilmPlay({
+  size,
+  ...props
+}) {
+  let className = 'Component Lini LiniFilmPlay';
 
-export default function LiniFilmPlay({ size, ...props }) {
-    let className = 'Component Lini LiniFilmPlay';
-    if (props.className) {
-        className += ' ' + props.className;
-    }
-    return (
-        <span {...props} className={className}>
-            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 20 20">
-                <path d="M7.5 15a.5.5 0 01-.5-.5v-9a.5.5 0 01.8-.4l6 4.5a.5.5 0 010 .8l-6 4.5a.5.5 0 01-.3.1zM8 6.5v7l4.667-3.5L8 6.5z" />
-                <path d="M19.5 2H.5a.5.5 0 00-.5.5v15a.5.5 0 00.5.5h19a.5.5 0 00.5-.5v-15a.5.5 0 00-.5-.5zM3 11H1V9h2v2zm0-3H1V6h2v2zm-2 4h2v2H1v-2zm3-9h12v14H4V3zm13 6h2v2h-2V9zm0-1V6h2v2h-2zm0 4h2v2h-2v-2zm2-7h-2V3h2v2zM3 3v2H1V3h2zM1 15h2v2H1v-2zm16 2v-2h2v2h-2z" />
-            </svg>
-        </span>
-    );
+  if (props.className) {
+    className += ' ' + props.className;
+  }
+
+  return /*#__PURE__*/React.createElement("span", _extends({}, props, {
+    className: className
+  }), /*#__PURE__*/React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: size,
+    height: size,
+    viewBox: "0 0 20 20"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M7.5 15a.5.5 0 01-.5-.5v-9a.5.5 0 01.8-.4l6 4.5a.5.5 0 010 .8l-6 4.5a.5.5 0 01-.3.1zM8 6.5v7l4.667-3.5L8 6.5z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19.5 2H.5a.5.5 0 00-.5.5v15a.5.5 0 00.5.5h19a.5.5 0 00.5-.5v-15a.5.5 0 00-.5-.5zM3 11H1V9h2v2zm0-3H1V6h2v2zm-2 4h2v2H1v-2zm3-9h12v14H4V3zm13 6h2v2h-2V9zm0-1V6h2v2h-2zm0 4h2v2h-2v-2zm2-7h-2V3h2v2zM3 3v2H1V3h2zM1 15h2v2H1v-2zm16 2v-2h2v2h-2z"
+  })));
 }
-
 LiniFilmPlay.propTypes = {
-    size: PropTypes.number.isRequired,
+  size: PropTypes.number.isRequired
 };

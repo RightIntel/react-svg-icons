@@ -1,21 +1,30 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 import React from 'react';
 import PropTypes from 'prop-types';
+export default function LiniCrossSquare({
+  size,
+  ...props
+}) {
+  let className = 'Component Lini LiniCrossSquare';
 
-export default function LiniCrossSquare({ size, ...props }) {
-    let className = 'Component Lini LiniCrossSquare';
-    if (props.className) {
-        className += ' ' + props.className;
-    }
-    return (
-        <span {...props} className={className}>
-            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 20 20">
-                <path d="M17.5 20h-16C.673 20 0 19.327 0 18.5v-16C0 1.673.673 1 1.5 1h16c.827 0 1.5.673 1.5 1.5v16c0 .827-.673 1.5-1.5 1.5zM1.5 2a.5.5 0 00-.5.5v16a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-16a.5.5 0 00-.5-.5h-16z" />
-                <path d="M14.332 14.126l-4.08-3.626 4.08-3.626a.5.5 0 00-.664-.748L9.5 9.831 5.332 6.126a.5.5 0 10-.664.748l4.08 3.626-4.08 3.626a.5.5 0 00.664.748L9.5 11.169l4.168 3.705a.5.5 0 10.664-.748z" />
-            </svg>
-        </span>
-    );
+  if (props.className) {
+    className += ' ' + props.className;
+  }
+
+  return /*#__PURE__*/React.createElement("span", _extends({}, props, {
+    className: className
+  }), /*#__PURE__*/React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: size,
+    height: size,
+    viewBox: "0 0 20 20"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 20h-16C.673 20 0 19.327 0 18.5v-16C0 1.673.673 1 1.5 1h16c.827 0 1.5.673 1.5 1.5v16c0 .827-.673 1.5-1.5 1.5zM1.5 2a.5.5 0 00-.5.5v16a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-16a.5.5 0 00-.5-.5h-16z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14.332 14.126l-4.08-3.626 4.08-3.626a.5.5 0 00-.664-.748L9.5 9.831 5.332 6.126a.5.5 0 10-.664.748l4.08 3.626-4.08 3.626a.5.5 0 00.664.748L9.5 11.169l4.168 3.705a.5.5 0 10.664-.748z"
+  })));
 }
-
 LiniCrossSquare.propTypes = {
-    size: PropTypes.number.isRequired,
+  size: PropTypes.number.isRequired
 };
