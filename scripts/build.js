@@ -22,7 +22,7 @@ for (const name of files) {
 	js = js.replace(/ fill="#000000"/g, ' fill={color}');
 	let { code: output } = transformSync(js, options);
 	output = output.replace(/^.+(var React)/s, '$1');
-	output = output.replace('_extends(', 'Object.extends(');
+	output = output.replace('_extends(', 'Object.assign(');
 	output = output.trim();
 	const dest = path.resolve(__dirname, `../Lini/${PascalName}.js`)
 	fs.writeFileSync(dest, output, 'utf8');

@@ -13,7 +13,7 @@ function LiniHat({
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
