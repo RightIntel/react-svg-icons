@@ -4,12 +4,19 @@ var PropTypes = require('prop-types');
 
 function LiniAlignTop({
   size,
+  color,
   ...props
 }) {
   var className = 'Component Lini LiniAlignTop';
 
   if (props.className) {
     className += ' ' + props.className;
+  }
+
+  const pathProps = {};
+
+  if (color) {
+    pathProps.fill = color;
   }
 
   return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
@@ -19,13 +26,13 @@ function LiniAlignTop({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", _extends({
     d: "M0 0.5c0-0.276 0.224-0.5 0.5-0.5h19c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-19c-0.276 0-0.5-0.224-0.5-0.5z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M11 11.5v-8c0-0.827 0.673-1.5 1.5-1.5h4c0.827 0 1.5 0.673 1.5 1.5v8c0 0.827-0.673 1.5-1.5 1.5h-4c-0.827 0-1.5-0.673-1.5-1.5zM17 3.5c0-0.276-0.224-0.5-0.5-0.5h-4c-0.276 0-0.5 0.224-0.5 0.5v8c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-8z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M2 17.5v-14c0-0.827 0.673-1.5 1.5-1.5h4c0.827 0 1.5 0.673 1.5 1.5v14c0 0.827-0.673 1.5-1.5 1.5h-4c-0.827 0-1.5-0.673-1.5-1.5zM8 3.5c0-0.276-0.224-0.5-0.5-0.5h-4c-0.276 0-0.5 0.224-0.5 0.5v14c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-14z"
-  })));
+  }, pathProps))));
 }
 
 LiniAlignTop.propTypes = {

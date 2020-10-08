@@ -4,12 +4,19 @@ var PropTypes = require('prop-types');
 
 function LiniTextAlignJustify({
   size,
+  color,
   ...props
 }) {
   var className = 'Component Lini LiniTextAlignJustify';
 
   if (props.className) {
     className += ' ' + props.className;
+  }
+
+  const pathProps = {};
+
+  if (color) {
+    pathProps.fill = color;
   }
 
   return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
@@ -19,17 +26,17 @@ function LiniTextAlignJustify({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", _extends({
     d: "M17.5 5h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17.5 8h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17.5 11h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17.5 14h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17.5 17h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-  })));
+  }, pathProps))));
 }
 
 LiniTextAlignJustify.propTypes = {

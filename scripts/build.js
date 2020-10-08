@@ -19,10 +19,10 @@ for (const name of files) {
 	let js = tpl;
 	js = js.replace(/__Name__/g, PascalName);
 	js = js.replace('__paths__', paths);
-	js = js.replace(/ fill="#000000"/g, '');
+	js = js.replace(/ fill="#000000"/g, ' {...pathProps}');
 	let { code: output } = transformSync(js, options);
 	output = output.replace(/^.+(var React)/s, '$1');
-	output = output.replace('_extends(', 'Object.assign(');
+	output = output.replace(/_extends\(/g, 'Object.assign(');
 	output = output.trim();
 	const dest = path.resolve(__dirname, `../Lini/${PascalName}.js`)
 	fs.writeFileSync(dest, output, 'utf8');

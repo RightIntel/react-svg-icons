@@ -4,12 +4,19 @@ var PropTypes = require('prop-types');
 
 function LiniWall({
   size,
+  color,
   ...props
 }) {
   var className = 'Component Lini LiniWall';
 
   if (props.className) {
     className += ' ' + props.className;
+  }
+
+  const pathProps = {};
+
+  if (color) {
+    pathProps.fill = color;
   }
 
   return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
@@ -19,9 +26,9 @@ function LiniWall({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", _extends({
     d: "M18.5 7c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-2.5v-3h2.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-18c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h5.5v3h-5.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h2.5v3h-2.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h5.5v3h-5.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h2.5v3h-2.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h18c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-5.5v-3h5.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-2.5v-3h2.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-5.5v-3h5.5zM7 3h8v3h-8v-3zM12 18h-8v-3h8v3zM15 14h-8v-3h8v3zM12 10h-8v-3h8v3z"
-  })));
+  }, pathProps))));
 }
 
 LiniWall.propTypes = {

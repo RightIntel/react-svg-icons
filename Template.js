@@ -1,9 +1,13 @@
 var React = require('react');
 var PropTypes = require('prop-types');
-function Lini__Name__({ size, ...props }) {
+function Lini__Name__({ size, color, ...props }) {
     var className = 'Component Lini Lini__Name__';
     if (props.className) {
         className += ' ' + props.className;
+    }
+    const pathProps = {};
+    if (color) {
+        pathProps.fill = color;
     }
     return (
         <span {...props} className={className}>

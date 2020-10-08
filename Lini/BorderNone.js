@@ -4,12 +4,19 @@ var PropTypes = require('prop-types');
 
 function LiniBorderNone({
   size,
+  color,
   ...props
 }) {
   var className = 'Component Lini LiniBorderNone';
 
   if (props.className) {
     className += ' ' + props.className;
+  }
+
+  const pathProps = {};
+
+  if (color) {
+    pathProps.fill = color;
   }
 
   return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
@@ -19,97 +26,97 @@ function LiniBorderNone({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M3 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M5 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M7 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M11 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M13 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M15 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 10h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 16h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 14h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 12h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 8h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 6h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 4h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 16h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 14h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 12h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 8h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 6h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M1 4h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 16h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 14h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 12h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 8h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 6h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M17 4h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M9 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M3 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M5 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M7 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M11 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M13 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M15 2h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M3 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M5 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M7 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M11 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M13 18h1v1h-1v-1z"
-  }), /*#__PURE__*/React.createElement("path", {
+  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
     d: "M15 18h1v1h-1v-1z"
-  })));
+  }, pathProps))));
 }
 
 LiniBorderNone.propTypes = {
