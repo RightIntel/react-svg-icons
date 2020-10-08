@@ -4,7 +4,6 @@ var PropTypes = require('prop-types');
 
 function LiniPercent({
   size,
-  color = '#000000',
   ...props
 }) {
   var className = 'Component Lini LiniPercent';
@@ -22,13 +21,13 @@ function LiniPercent({
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M1 20c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l18-18c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-18 18c-0.098 0.098-0.226 0.146-0.354 0.146z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M5 9c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zM5 2c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M15 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zM15 13c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z",
-    fill: color
+    fill: "#000000"
   })));
 }
 

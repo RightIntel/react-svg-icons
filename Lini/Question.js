@@ -4,7 +4,6 @@ var PropTypes = require('prop-types');
 
 function LiniQuestion({
   size,
-  color = '#000000',
   ...props
 }) {
   var className = 'Component Lini LiniQuestion';
@@ -22,10 +21,10 @@ function LiniQuestion({
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M9.5 17c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5 3.033 0 5.5-2.467 5.5-5.5s-2.467-5.5-5.5-5.5-5.5 2.467-5.5 5.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5c0 3.416-2.649 6.225-6 6.481v2.519c0 0.276-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M9.5 20c-0.276 0-0.5-0.224-0.5-0.5v-1c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   })));
 }
 

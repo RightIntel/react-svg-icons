@@ -4,7 +4,6 @@ var PropTypes = require('prop-types');
 
 function LiniSignal0({
   size,
-  color = '#000000',
   ...props
 }) {
   var className = 'Component Lini LiniSignal0';
@@ -22,19 +21,19 @@ function LiniSignal0({
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M18.5 19h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M14.5 19h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M10.5 19h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M6.5 19h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M2.5 19h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   })));
 }
 

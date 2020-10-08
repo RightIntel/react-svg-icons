@@ -4,7 +4,6 @@ var PropTypes = require('prop-types');
 
 function LiniExclamation({
   size,
-  color = '#000000',
   ...props
 }) {
   var className = 'Component Lini LiniExclamation';
@@ -22,10 +21,10 @@ function LiniExclamation({
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M9.5 17c-0.276 0-0.5-0.224-0.5-0.5v-15c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v15c0 0.276-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M9.5 20c-0.276 0-0.5-0.224-0.5-0.5v-1c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   })));
 }
 

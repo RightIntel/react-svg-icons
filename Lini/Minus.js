@@ -4,7 +4,6 @@ var PropTypes = require('prop-types');
 
 function LiniMinus({
   size,
-  color = '#000000',
   ...props
 }) {
   var className = 'Component Lini LiniMinus';
@@ -22,7 +21,7 @@ function LiniMinus({
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M18.5 11h-18c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h18c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   })));
 }
 

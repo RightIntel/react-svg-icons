@@ -19,7 +19,6 @@ for (const name of files) {
 	let js = tpl;
 	js = js.replace(/__Name__/g, PascalName);
 	js = js.replace('__paths__', paths);
-	js = js.replace(/ fill="#000000"/g, ' fill={color}');
 	let { code: output } = transformSync(js, options);
 	output = output.replace(/^.+(var React)/s, '$1');
 	output = output.replace('_extends(', 'Object.assign(');

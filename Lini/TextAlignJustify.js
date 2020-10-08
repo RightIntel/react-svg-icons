@@ -4,7 +4,6 @@ var PropTypes = require('prop-types');
 
 function LiniTextAlignJustify({
   size,
-  color = '#000000',
   ...props
 }) {
   var className = 'Component Lini LiniTextAlignJustify';
@@ -22,19 +21,19 @@ function LiniTextAlignJustify({
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M17.5 5h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M17.5 8h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M17.5 11h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M17.5 14h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   }), /*#__PURE__*/React.createElement("path", {
     d: "M17.5 17h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
-    fill: color
+    fill: "#000000"
   })));
 }
 

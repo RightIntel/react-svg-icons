@@ -4,7 +4,6 @@ var PropTypes = require('prop-types');
 
 function LiniPlus({
   size,
-  color = '#000000',
   ...props
 }) {
   var className = 'Component Lini LiniPlus';
@@ -22,7 +21,7 @@ function LiniPlus({
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M18.5 10h-8.5v-8.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v8.5h-8.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h8.5v8.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-8.5h8.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z",
-    fill: color
+    fill: "#000000"
   })));
 }
 

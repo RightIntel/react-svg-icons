@@ -1,6 +1,6 @@
 var React = require('react');
 var PropTypes = require('prop-types');
-function Lini__Name__({ size, color = '#000000', ...props }) {
+function Lini__Name__({ size, ...props }) {
     var className = 'Component Lini Lini__Name__';
     if (props.className) {
         className += ' ' + props.className;
