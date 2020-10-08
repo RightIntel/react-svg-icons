@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniRoad({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniRoad({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniRoad';
+  var className = 'Component Lini LiniRoad';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,25 @@ export default function LiniRoad({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M.501 20a.5.5 0 01-.489-.603l4-19a.5.5 0 01.978.206l-4 19A.5.5 0 01.501 20zM18.499 20a.502.502 0 01-.489-.397l-4-19a.5.5 0 01.978-.206l4 19a.5.5 0 01-.489.603zM9.5 3a.5.5 0 01-.5-.5v-2a.5.5 0 011 0v2a.5.5 0 01-.5.5zM9.5 10a.5.5 0 01-.5-.5v-4a.5.5 0 011 0v4a.5.5 0 01-.5.5zM9.5 20a.5.5 0 01-.5-.5v-6a.5.5 0 011 0v6a.5.5 0 01-.5.5z"
+    d: "M0.501 20c-0.034 0-0.069-0.003-0.103-0.011-0.27-0.057-0.443-0.322-0.386-0.592l4-19c0.057-0.27 0.322-0.443 0.592-0.386s0.443 0.322 0.386 0.592l-4 19c-0.050 0.236-0.257 0.397-0.489 0.397z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.499 20c-0.231 0-0.439-0.162-0.489-0.397l-4-19c-0.057-0.27 0.116-0.535 0.386-0.592s0.535 0.116 0.592 0.386l4 19c0.057 0.27-0.116 0.535-0.386 0.592-0.035 0.007-0.069 0.011-0.103 0.011z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 3c-0.276 0-0.5-0.224-0.5-0.5v-2c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v2c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 10c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 20c-0.276 0-0.5-0.224-0.5-0.5v-6c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v6c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniRoad.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniRoad;

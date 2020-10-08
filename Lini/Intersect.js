@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniIntersect({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniIntersect({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniIntersect';
+  var className = 'Component Lini LiniIntersect';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,115 @@ export default function LiniIntersect({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16 7h1v1h-1V7zM16 19h1v1h-1v-1zM14 19h1v1h-1v-1zM12 19h1v1h-1v-1zM10 19h1v1h-1v-1zM8 19h1v1H8v-1zM18 15h1v1h-1v-1zM18 13h1v1h-1v-1zM18 17h1v1h-1v-1zM18 9h1v1h-1V9zM18 11h1v1h-1v-1zM6 17h1v1H6v-1zM14 7h1v1h-1V7zM0 9h1v1H0V9zM0 5h1v1H0V5zM0 3h1v1H0V3zM0 11h1v1H0v-1zM0 7h1v1H0V7zM12 3h1v1h-1V3zM12 5h1v1h-1V5zM4 1h1v1H4V1zM2 1h1v1H2V1zM6 1h1v1H6V1zM10 1h1v1h-1V1zM8 1h1v1H8V1zM4 13h1v1H4v-1zM2 13h1v1H2v-1zM7.5 7C6.673 7 6 7.673 6 8.5V14h5.5c.827 0 1.5-.673 1.5-1.5V7H7.5zm4.5 5.5a.5.5 0 01-.5.5H7V8.5a.5.5 0 01.5-.5H12v4.5zM6 15h1v1H6v-1zM18 7h1v1h-1V7zM18 19h1v1h-1v-1zM0 13h1v1H0v-1zM0 1h1v1H0V1zM12 1h1v1h-1V1zM6 19h1v1H6v-1z"
+    d: "M16 7h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16 19h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14 19h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 19h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 19h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M8 19h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18 15h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18 17h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18 9h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18 11h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6 17h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14 7h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0 9h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0 5h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0 3h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0 11h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0 7h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 3h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 5h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M4 1h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2 1h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6 1h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 1h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M8 1h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M4 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.5 7c-0.827 0-1.5 0.673-1.5 1.5v5.5h5.5c0.827 0 1.5-0.673 1.5-1.5v-5.5h-5.5zM12 12.5c0 0.276-0.224 0.5-0.5 0.5h-4.5v-4.5c0-0.276 0.224-0.5 0.5-0.5h4.5v4.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6 15h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18 7h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18 19h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0 1h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 1h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6 19h1v1h-1v-1z",
+    fill: color
   })));
 }
+
 LiniIntersect.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniIntersect;

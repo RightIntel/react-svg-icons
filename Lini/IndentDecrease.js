@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniIndentDecrease({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniIndentDecrease({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniIndentDecrease';
+  var className = 'Component Lini LiniIndentDecrease';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,28 @@ export default function LiniIndentDecrease({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 5h-15a.5.5 0 010-1h15a.5.5 0 010 1zM17.5 8h-8a.5.5 0 010-1h8a.5.5 0 010 1zM17.5 11h-8a.5.5 0 010-1h8a.5.5 0 010 1zM17.5 14h-8a.5.5 0 010-1h8a.5.5 0 010 1zM17.5 17h-15a.5.5 0 010-1h15a.5.5 0 010 1zM6.5 14a.5.5 0 01-.3-.1l-4-3a.5.5 0 010-.8l4-3a.5.5 0 01.8.4v6a.5.5 0 01-.5.5zm-3.167-3.5L6 12.5v-4l-2.667 2z"
+    d: "M17.5 5h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 8h-8c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h8c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 11h-8c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h8c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 14h-8c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h8c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 17h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6.5 14c-0.106 0-0.212-0.034-0.3-0.1l-4-3c-0.126-0.094-0.2-0.243-0.2-0.4s0.074-0.306 0.2-0.4l4-3c0.152-0.114 0.354-0.132 0.524-0.047s0.276 0.258 0.276 0.447v6c0 0.189-0.107 0.363-0.276 0.447-0.071 0.035-0.147 0.053-0.224 0.053zM3.333 10.5l2.667 2v-4l-2.667 2z",
+    fill: color
   })));
 }
+
 LiniIndentDecrease.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniIndentDecrease;

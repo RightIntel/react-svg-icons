@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniChevronRightCircle({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniChevronRightCircle({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniChevronRightCircle';
+  var className = 'Component Lini LiniChevronRightCircle';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniChevronRightCircle({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.218 3.782C14.424 1.988 12.038 1 9.5 1s-4.923.988-6.718 2.782S0 7.962 0 10.499s.988 4.923 2.782 6.718 4.18 2.782 6.718 2.782 4.923-.988 6.718-2.782S19 13.037 19 10.499s-.988-4.923-2.782-6.717zM9.5 19C4.813 19 1 15.187 1 10.5S4.813 2 9.5 2c4.687 0 8.5 3.813 8.5 8.5S14.187 19 9.5 19z"
+    d: "M16.218 3.782c-1.794-1.794-4.18-2.782-6.718-2.782s-4.923 0.988-6.718 2.782-2.782 4.18-2.782 6.717 0.988 4.923 2.782 6.718 4.18 2.782 6.718 2.782 4.923-0.988 6.718-2.782 2.782-4.18 2.782-6.718-0.988-4.923-2.782-6.717zM9.5 19c-4.687 0-8.5-3.813-8.5-8.5s3.813-8.5 8.5-8.5c4.687 0 8.5 3.813 8.5 8.5s-3.813 8.5-8.5 8.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M8 16a.5.5 0 01-.354-.853l4.646-4.646-4.646-4.646a.5.5 0 01.707-.707l5 5a.5.5 0 010 .707l-5 5a.498.498 0 01-.354.146z"
+    d: "M8 16c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l4.646-4.646-4.646-4.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l5 5c0.195 0.195 0.195 0.512 0 0.707l-5 5c-0.098 0.098-0.226 0.146-0.354 0.146z",
+    fill: color
   })));
 }
+
 LiniChevronRightCircle.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniChevronRightCircle;

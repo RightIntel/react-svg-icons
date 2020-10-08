@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniGrin({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniGrin({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniGrin';
+  var className = 'Component Lini LiniGrin';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,22 @@ export default function LiniGrin({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 20c-2.538 0-4.923-.988-6.718-2.782S0 13.038 0 10.501c0-2.538.988-4.923 2.782-6.718S6.962 1 9.5 1c2.538 0 4.923.988 6.718 2.783S19 7.963 19 10.501s-.988 4.923-2.782 6.717A9.438 9.438 0 019.5 20zm0-18C4.813 2 1 5.813 1 10.5S4.813 19 9.5 19s8.5-3.813 8.5-8.5S14.187 2 9.5 2z"
+    d: "M9.5 20c-2.538 0-4.923-0.988-6.718-2.782s-2.782-4.18-2.782-6.717c0-2.538 0.988-4.923 2.782-6.718s4.18-2.783 6.718-2.783c2.538 0 4.923 0.988 6.718 2.783s2.782 4.18 2.782 6.718-0.988 4.923-2.782 6.717c-1.794 1.794-4.18 2.782-6.718 2.782zM9.5 2c-4.687 0-8.5 3.813-8.5 8.5s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5-3.813-8.5-8.5-8.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M6.5 8C5.673 8 5 7.327 5 6.5S5.673 5 6.5 5 8 5.673 8 6.5 7.327 8 6.5 8zm0-2a.5.5 0 100 1 .5.5 0 000-1zM12.5 8c-.827 0-1.5-.673-1.5-1.5S11.673 5 12.5 5s1.5.673 1.5 1.5S13.327 8 12.5 8zm0-2a.5.5 0 100 1 .5.5 0 000-1zM15.5 10h-12a.5.5 0 00-.5.5C3 14.084 5.916 17 9.5 17s6.5-2.916 6.5-6.5a.5.5 0 00-.5-.5zM9 15.977a5.459 5.459 0 01-2-.579V11h2v4.977zM10 11h2v4.398a5.453 5.453 0 01-2 .579V11zm-5.977 0H6v3.739A5.496 5.496 0 014.022 11zM13 14.739V11h1.977A5.493 5.493 0 0113 14.739z"
+    d: "M6.5 8c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM6.5 6c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.5 8c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM12.5 6c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 10h-12c-0.276 0-0.5 0.224-0.5 0.5 0 3.584 2.916 6.5 6.5 6.5s6.5-2.916 6.5-6.5c0-0.276-0.224-0.5-0.5-0.5zM9 15.977c-0.714-0.065-1.39-0.266-2-0.579l-0-4.398h2v4.977zM10 11h2v4.398c-0.61 0.313-1.285 0.514-2 0.579v-4.977zM4.023 11h1.977l0 3.739c-1.1-0.91-1.842-2.238-1.978-3.739zM13 14.739v-3.739h1.977c-0.136 1.501-0.877 2.83-1.977 3.739z",
+    fill: color
   })));
 }
+
 LiniGrin.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniGrin;

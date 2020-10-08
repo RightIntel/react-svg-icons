@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniChevronsContractVertical({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniChevronsContractVertical({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniChevronsContractVertical';
+  var className = 'Component Lini LiniChevronsContractVertical';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniChevronsContractVertical({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 7.5a.502.502 0 01-.354-.146l-6-6a.5.5 0 01.707-.707l5.646 5.646L15.145.647a.5.5 0 01.707.707l-6 6a.498.498 0 01-.354.146zM15.5 19.5a.502.502 0 01-.354-.146L9.5 13.708l-5.646 5.646a.5.5 0 01-.707-.707l6-6a.5.5 0 01.707 0l6 6a.5.5 0 01-.354.853z"
+    d: "M9.5 7.5c-0.128 0-0.256-0.049-0.354-0.146l-6-6c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l5.646 5.646 5.646-5.646c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-6 6c-0.098 0.098-0.226 0.146-0.354 0.146z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 19.5c-0.128 0-0.256-0.049-0.354-0.146l-5.646-5.646-5.646 5.646c-0.195 0.195-0.512 0.195-0.707 0s-0.195-0.512 0-0.707l6-6c0.195-0.195 0.512-0.195 0.707 0l6 6c0.195 0.195 0.195 0.512 0 0.707-0.098 0.098-0.226 0.146-0.354 0.146z",
+    fill: color
   })));
 }
+
 LiniChevronsContractVertical.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniChevronsContractVertical;

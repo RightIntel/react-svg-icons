@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniAspectRatio({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniAspectRatio({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniAspectRatio';
+  var className = 'Component Lini LiniAspectRatio';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,25 @@ export default function LiniAspectRatio({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 2h-16C.673 2 0 2.673 0 3.5v10c0 .827.673 1.5 1.5 1.5H9v2H5.5a.5.5 0 000 1h8a.5.5 0 000-1H10v-2h7.5c.827 0 1.5-.673 1.5-1.5v-10c0-.827-.673-1.5-1.5-1.5zm.5 11.5a.5.5 0 01-.5.5h-16a.5.5 0 01-.5-.5v-10a.5.5 0 01.5-.5h16a.5.5 0 01.5.5v10z"
+    d: "M17.5 2h-16c-0.827 0-1.5 0.673-1.5 1.5v10c0 0.827 0.673 1.5 1.5 1.5h7.5v2h-3.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h8c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-3.5v-2h7.5c0.827 0 1.5-0.673 1.5-1.5v-10c0-0.827-0.673-1.5-1.5-1.5zM18 13.5c0 0.276-0.224 0.5-0.5 0.5h-16c-0.276 0-0.5-0.224-0.5-0.5v-10c0-0.276 0.224-0.5 0.5-0.5h16c0.276 0 0.5 0.224 0.5 0.5v10z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M16 6.5c0-.827-.673-1.5-1.5-1.5h-3a.5.5 0 000 1h3a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-3a.5.5 0 000 1h3a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-3a.5.5 0 000 1h3c.827 0 1.5-.673 1.5-1.5v-1c0-.384-.145-.734-.383-1 .238-.266.383-.616.383-1v-1zM7.5 5a.5.5 0 00-.5.5v2a.5.5 0 01-.5.5h-2a.5.5 0 01-.5-.5v-2a.5.5 0 00-1 0v2C3 8.327 3.673 9 4.5 9h2c.175 0 .343-.031.5-.086V11.5a.5.5 0 001 0v-6a.5.5 0 00-.5-.5zM9.5 8a.5.5 0 01-.5-.5v-1a.5.5 0 011 0v1a.5.5 0 01-.5.5zM9.5 11a.5.5 0 01-.5-.5v-1a.5.5 0 011 0v1a.5.5 0 01-.5.5z"
+    d: "M16 6.5c0-0.827-0.673-1.5-1.5-1.5h-3c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h3c0.276 0 0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5h-3c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h3c0.276 0 0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5h-3c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h3c0.827 0 1.5-0.673 1.5-1.5v-1c0-0.384-0.145-0.734-0.383-1 0.238-0.266 0.383-0.616 0.383-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.5 5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276-0.224 0.5-0.5 0.5h-2c-0.276 0-0.5-0.224-0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v2c0 0.827 0.673 1.5 1.5 1.5h2c0.175 0 0.343-0.031 0.5-0.086v2.586c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-6c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 8c-0.276 0-0.5-0.224-0.5-0.5v-1c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 11c-0.276 0-0.5-0.224-0.5-0.5v-1c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniAspectRatio.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniAspectRatio;

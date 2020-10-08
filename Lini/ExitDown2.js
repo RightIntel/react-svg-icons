@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniExitDown2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniExitDown2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniExitDown2';
+  var className = 'Component Lini LiniExitDown2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniExitDown2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 1h-16C.673 1 0 1.673 0 2.5v1C0 4.327.673 5 1.5 5h6a.5.5 0 000-1h-6a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h16a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-6a.5.5 0 000 1h6c.827 0 1.5-.673 1.5-1.5v-1c0-.827-.673-1.5-1.5-1.5z"
+    d: "M17.5 1h-16c-0.827 0-1.5 0.673-1.5 1.5v1c0 0.827 0.673 1.5 1.5 1.5h6c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-6c-0.276 0-0.5-0.224-0.5-0.5v-1c0-0.276 0.224-0.5 0.5-0.5h16c0.276 0 0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5h-6c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h6c0.827 0 1.5-0.673 1.5-1.5v-1c0-0.827-0.673-1.5-1.5-1.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M14.854 13.646a.5.5 0 00-.707 0l-4.146 4.146V3.499a.5.5 0 00-1 0v14.293l-4.146-4.146a.5.5 0 00-.707.707l5 5a.498.498 0 00.708 0l5-5a.5.5 0 000-.707z"
+    d: "M14.854 13.646c-0.195-0.195-0.512-0.195-0.707 0l-4.146 4.146v-14.293c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v14.293l-4.146-4.146c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l5 5c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l5-5c0.195-0.195 0.195-0.512-0-0.707z",
+    fill: color
   })));
 }
+
 LiniExitDown2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniExitDown2;

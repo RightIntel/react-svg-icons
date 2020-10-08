@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniChevronsContractHorizontal({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniChevronsContractHorizontal({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniChevronsContractHorizontal';
+  var className = 'Component Lini LiniChevronsContractHorizontal';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniChevronsContractHorizontal({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M12.5 9.5c0-.128.049-.256.146-.354l6-6a.5.5 0 01.707.707l-5.646 5.646 5.646 5.646a.5.5 0 01-.707.707l-6-6a.498.498 0 01-.146-.354zM.5 15.5c0-.128.049-.256.146-.354L6.292 9.5.646 3.854a.5.5 0 01.707-.707l6 6a.5.5 0 010 .707l-6 6A.5.5 0 01.5 15.5z"
+    d: "M12.5 9.5c0-0.128 0.049-0.256 0.146-0.354l6-6c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-5.646 5.646 5.646 5.646c0.195 0.195 0.195 0.512 0 0.707s-0.512 0.195-0.707 0l-6-6c-0.098-0.098-0.146-0.226-0.146-0.354z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M0.5 15.5c0-0.128 0.049-0.256 0.146-0.354l5.646-5.646-5.646-5.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l6 6c0.195 0.195 0.195 0.512 0 0.707l-6 6c-0.195 0.195-0.512 0.195-0.707 0-0.098-0.098-0.146-0.226-0.146-0.354z",
+    fill: color
   })));
 }
+
 LiniChevronsContractHorizontal.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniChevronsContractHorizontal;

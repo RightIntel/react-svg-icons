@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniBarcode({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniBarcode({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniBarcode';
+  var className = 'Component Lini LiniBarcode';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,43 @@ export default function LiniBarcode({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M0 3h1v14H0V3zM16 3h.5v14H16V3zM3.5 3H4v14h-.5V3zM12 3h1v14h-1V3zM2 3h1v14H2V3zM7.5 3H8v14h-.5V3zM6 3h1v14H6V3zM19.5 3h.5v14h-.5V3zM17 3h1v14h-1V3zM8.5 3H9v14h-.5V3zM10 3h1v14h-1V3z"
+    d: "M0 3h1v14h-1v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16 3h0.5v14h-0.5v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3.5 3h0.5v14h-0.5v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 3h1v14h-1v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2 3h1v14h-1v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.5 3h0.5v14h-0.5v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6 3h1v14h-1v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19.5 3h0.5v14h-0.5v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 3h1v14h-1v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M8.5 3h0.5v14h-0.5v-14z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 3h1v14h-1v-14z",
+    fill: color
   })));
 }
+
 LiniBarcode.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniBarcode;

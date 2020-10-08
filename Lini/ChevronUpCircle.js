@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniChevronUpCircle({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniChevronUpCircle({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniChevronUpCircle';
+  var className = 'Component Lini LiniChevronUpCircle';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniChevronUpCircle({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M2.782 3.782C.988 5.576 0 7.962 0 10.5s.988 4.923 2.782 6.718S6.962 20 9.5 20s4.923-.988 6.718-2.782S19 13.038 19 10.501s-.988-4.923-2.782-6.718-4.18-2.782-6.718-2.782-4.923.988-6.718 2.782zM18 10.5c0 4.687-3.813 8.5-8.5 8.5S1 15.187 1 10.5C1 5.813 4.813 2 9.5 2S18 5.813 18 10.5z"
+    d: "M2.782 3.782c-1.794 1.794-2.782 4.18-2.782 6.718s0.988 4.923 2.782 6.718 4.18 2.782 6.718 2.782 4.923-0.988 6.718-2.782 2.782-4.18 2.782-6.717-0.988-4.923-2.782-6.718-4.18-2.782-6.718-2.782-4.923 0.988-6.718 2.782zM18 10.5c0 4.687-3.813 8.5-8.5 8.5s-8.5-3.813-8.5-8.5c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M15 12a.5.5 0 01-.853.354L9.501 7.708l-4.646 4.646a.5.5 0 01-.707-.707l5-5a.5.5 0 01.707 0l5 5a.498.498 0 01.146.354z"
+    d: "M15 12c0 0.128-0.049 0.256-0.146 0.354-0.195 0.195-0.512 0.195-0.707 0l-4.646-4.646-4.646 4.646c-0.195 0.195-0.512 0.195-0.707 0s-0.195-0.512 0-0.707l5-5c0.195-0.195 0.512-0.195 0.707 0l5 5c0.098 0.098 0.146 0.226 0.146 0.354z",
+    fill: color
   })));
 }
+
 LiniChevronUpCircle.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniChevronUpCircle;

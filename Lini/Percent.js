@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPercent({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPercent({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPercent';
+  var className = 'Component Lini LiniPercent';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,19 @@ export default function LiniPercent({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M1 20a.5.5 0 01-.354-.853l18-18a.5.5 0 01.707.707l-18 18A.498.498 0 01.999 20zM5 9C2.794 9 1 7.206 1 5s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-7C3.346 2 2 3.346 2 5s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3zM15 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-7c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z"
+    d: "M1 20c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l18-18c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-18 18c-0.098 0.098-0.226 0.146-0.354 0.146z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 9c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zM5 2c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zM15 13c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z",
+    fill: color
   })));
 }
+
 LiniPercent.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPercent;

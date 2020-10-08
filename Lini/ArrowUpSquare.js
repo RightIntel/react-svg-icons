@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniArrowUpSquare({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniArrowUpSquare({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniArrowUpSquare';
+  var className = 'Component Lini LiniArrowUpSquare';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniArrowUpSquare({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 20h-16C.673 20 0 19.327 0 18.5v-16C0 1.673.673 1 1.5 1h16c.827 0 1.5.673 1.5 1.5v16c0 .827-.673 1.5-1.5 1.5zM1.5 2a.5.5 0 00-.5.5v16a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-16a.5.5 0 00-.5-.5h-16z"
+    d: "M17.5 20h-16c-0.827 0-1.5-0.673-1.5-1.5v-16c0-0.827 0.673-1.5 1.5-1.5h16c0.827 0 1.5 0.673 1.5 1.5v16c0 0.827-0.673 1.5-1.5 1.5zM1.5 2c-0.276 0-0.5 0.224-0.5 0.5v16c0 0.276 0.224 0.5 0.5 0.5h16c0.276 0 0.5-0.224 0.5-0.5v-16c0-0.276-0.224-0.5-0.5-0.5h-16z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M12.854 8.646l-3-3a.5.5 0 00-.707 0l-3 3a.5.5 0 00.707.707L9 7.207V15.5a.5.5 0 001 0V7.207l2.146 2.146a.498.498 0 00.708 0 .5.5 0 000-.707z"
+    d: "M12.854 8.646l-3-3c-0.195-0.195-0.512-0.195-0.707 0l-3 3c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l2.146-2.146v8.293c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-8.293l2.146 2.146c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
   })));
 }
+
 LiniArrowUpSquare.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniArrowUpSquare;

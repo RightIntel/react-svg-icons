@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniSurveillance2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniSurveillance2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniSurveillance2';
+  var className = 'Component Lini LiniSurveillance2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniSurveillance2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 16c-.827 0-1.5-.673-1.5-1.5S8.673 13 9.5 13s1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm0-2a.5.5 0 100 1 .5.5 0 000-1z"
+    d: "M9.5 16c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5c0.827 0 1.5 0.673 1.5 1.5s-0.673 1.5-1.5 1.5zM9.5 14c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 3h-16C.673 3 0 3.673 0 4.5v3c0 .652.418 1.208 1 1.414V9.5c0 2.27.884 4.405 2.49 6.01S7.23 18 9.5 18c2.27 0 4.405-.884 6.01-2.49S18 11.77 18 9.5v-.586c.582-.206 1-.762 1-1.414v-3c0-.827-.673-1.5-1.5-1.5zM7 16.571V14.5C7 13.122 8.122 12 9.5 12s2.5 1.122 2.5 2.5v2.071c-.782.277-1.624.429-2.5.429s-1.718-.152-2.5-.429zm6-.439V14.5c0-1.93-1.57-3.5-3.5-3.5S6 12.57 6 14.5v1.632A7.507 7.507 0 012 9.5V9h15v.5a7.508 7.508 0 01-4 6.632zM18 7.5a.5.5 0 01-.5.5h-16a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h16a.5.5 0 01.5.5v3z"
+    d: "M17.5 3h-16c-0.827 0-1.5 0.673-1.5 1.5v3c0 0.652 0.418 1.208 1 1.414v0.586c0 2.27 0.884 4.405 2.49 6.010s3.74 2.49 6.010 2.49c2.27 0 4.405-0.884 6.010-2.49s2.49-3.74 2.49-6.010v-0.586c0.582-0.206 1-0.762 1-1.414v-3c0-0.827-0.673-1.5-1.5-1.5zM7 16.571v-2.071c0-1.378 1.122-2.5 2.5-2.5s2.5 1.122 2.5 2.5l-0 2.071c-0.782 0.277-1.624 0.429-2.5 0.429s-1.718-0.152-2.5-0.429zM13 16.132l0-1.632c0-1.93-1.57-3.5-3.5-3.5s-3.5 1.57-3.5 3.5v1.632c-2.377-1.26-4-3.759-4-6.632v-0.5h15v0.5c0 2.872-1.623 5.372-4 6.632zM18 7.5c0 0.276-0.224 0.5-0.5 0.5h-16c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h16c0.276 0 0.5 0.224 0.5 0.5v3z",
+    fill: color
   })));
 }
+
 LiniSurveillance2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniSurveillance2;

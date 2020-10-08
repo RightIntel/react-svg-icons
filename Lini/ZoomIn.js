@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniZoomIn({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniZoomIn({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniZoomIn';
+  var className = 'Component Lini LiniZoomIn';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniZoomIn({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.869 19.162l-5.943-6.484A7.448 7.448 0 0015.001 7.5c0-2.003-.78-3.887-2.197-5.303S9.504 0 7.501 0 3.614.78 2.198 2.197.001 5.497.001 7.5s.78 3.887 2.197 5.303S5.498 15 7.501 15a7.441 7.441 0 004.688-1.645l5.943 6.483a.497.497 0 00.707.031.5.5 0 00.031-.706zM1 7.5C1 3.916 3.916 1 7.5 1S14 3.916 14 7.5 11.084 14 7.5 14 1 11.084 1 7.5z"
+    d: "M18.869 19.162l-5.943-6.484c1.339-1.401 2.075-3.233 2.075-5.178 0-2.003-0.78-3.887-2.197-5.303s-3.3-2.197-5.303-2.197-3.887 0.78-5.303 2.197-2.197 3.3-2.197 5.303 0.78 3.887 2.197 5.303 3.3 2.197 5.303 2.197c1.726 0 3.362-0.579 4.688-1.645l5.943 6.483c0.099 0.108 0.233 0.162 0.369 0.162 0.121 0 0.242-0.043 0.338-0.131 0.204-0.187 0.217-0.503 0.031-0.706zM1 7.5c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M11.5 7H8V3.5a.5.5 0 00-1 0V7H3.5a.5.5 0 000 1H7v3.5a.5.5 0 001 0V8h3.5a.5.5 0 000-1z"
+    d: "M11.5 7h-3.5v-3.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v3.5h-3.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h3.5v3.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-3.5h3.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniZoomIn.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniZoomIn;

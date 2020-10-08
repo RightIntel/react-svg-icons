@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPieChart2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPieChart2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPieChart2';
+  var className = 'Component Lini LiniPieChart2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniPieChart2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M8.5 20c-2.27 0-4.405-.884-6.01-2.49S0 13.77 0 11.5c0-2.27.884-4.405 2.49-6.01S6.23 3 8.5 3a.5.5 0 010 1C4.364 4 1 7.364 1 11.5S4.364 19 8.5 19s7.5-3.364 7.5-7.5a.5.5 0 011 0c0 2.27-.884 4.405-2.49 6.01S10.77 20 8.5 20z"
+    d: "M8.5 20c-2.27 0-4.405-0.884-6.010-2.49s-2.49-3.74-2.49-6.010c0-2.27 0.884-4.405 2.49-6.010s3.74-2.49 6.010-2.49c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5c-4.136 0-7.5 3.364-7.5 7.5s3.364 7.5 7.5 7.5c4.136 0 7.5-3.364 7.5-7.5 0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5c0 2.27-0.884 4.405-2.49 6.010s-3.74 2.49-6.010 2.49z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 10h-8a.5.5 0 01-.5-.5v-8a.5.5 0 01.5-.5c2.27 0 4.405.884 6.01 2.49S19 7.23 19 9.5a.5.5 0 01-.5.5zM11 9h6.984A7.513 7.513 0 0011 2.016V9z"
+    d: "M18.5 10h-8c-0.276 0-0.5-0.224-0.5-0.5v-8c0-0.276 0.224-0.5 0.5-0.5 2.27 0 4.405 0.884 6.010 2.49s2.49 3.74 2.49 6.010c0 0.276-0.224 0.5-0.5 0.5zM11 9h6.984c-0.247-3.738-3.246-6.736-6.984-6.984v6.984z",
+    fill: color
   })));
 }
+
 LiniPieChart2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPieChart2;

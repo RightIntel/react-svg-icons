@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniDrawers2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniDrawers2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniDrawers2';
+  var className = 'Component Lini LiniDrawers2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,31 @@ export default function LiniDrawers2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 3h-17C.673 3 0 3.673 0 4.5v12a.5.5 0 001 0V16h18v.5a.5.5 0 001 0v-12c0-.827-.673-1.5-1.5-1.5zm-17 1h17a.5.5 0 01.5.5V7H1V4.5a.5.5 0 01.5-.5zM19 8v3H1V8h18zM1 15v-3h18v3H1z"
+    d: "M18.5 3h-17c-0.827 0-1.5 0.673-1.5 1.5v12c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-0.5h18v0.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-12c0-0.827-0.673-1.5-1.5-1.5zM1.5 4h17c0.276 0 0.5 0.224 0.5 0.5v2.5h-18v-2.5c0-0.276 0.224-0.5 0.5-0.5zM19 8v3h-18v-3h18zM1 15v-3h18v3h-18z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M5.5 6h-1a.5.5 0 010-1h1a.5.5 0 010 1zM5.5 10h-1a.5.5 0 010-1h1a.5.5 0 010 1zM5.5 14h-1a.5.5 0 010-1h1a.5.5 0 010 1zM15.5 6h-1a.5.5 0 010-1h1a.5.5 0 010 1zM15.5 10h-1a.5.5 0 010-1h1a.5.5 0 010 1zM15.5 14h-1a.5.5 0 010-1h1a.5.5 0 010 1z"
+    d: "M5.5 6h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 10h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 14h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 6h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 10h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 14h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniDrawers2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniDrawers2;

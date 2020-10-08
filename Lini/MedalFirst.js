@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniMedalFirst({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniMedalFirst({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniMedalFirst';
+  var className = 'Component Lini LiniMedalFirst';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniMedalFirst({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M14.795 4.779l-1.464-1.063-.559-1.721h-1.809L9.499.932 8.035 1.995H6.226l-.559 1.721-1.464 1.063.559 1.721-.559 1.721 1.464 1.063.332 1.021V19.5a.502.502 0 00.777.416l2.723-1.815 2.723 1.815a.498.498 0 00.513.025.499.499 0 00.264-.441v-9.195l.332-1.021 1.464-1.063-.559-1.721.559-1.721zM9.777 17.084a.5.5 0 00-.555 0l-2.223 1.482v-7.561h1.036l1.464 1.063 1.464-1.063h1.036v7.561l-2.223-1.482zm3.843-9.245l-1.139.827L12.048 10H12v.004h-1.361l-1.139.827-1.139-.827H6.954l-.435-1.339-1.139-.827.435-1.339L5.38 5.16l1.139-.827.435-1.339h1.407L9.5 2.167l1.139.827h1.407l.435 1.339 1.139.827-.435 1.339.435 1.339z"
+    d: "M14.795 4.779l-1.464-1.063-0.559-1.721h-1.809l-1.464-1.063-1.464 1.063h-1.809l-0.559 1.721-1.464 1.063 0.559 1.721-0.559 1.721 1.464 1.063 0.332 1.021v9.195c0 0.184 0.102 0.354 0.264 0.441s0.36 0.077 0.513-0.025l2.723-1.815 2.723 1.815c0.084 0.056 0.18 0.084 0.277 0.084 0.081 0 0.162-0.020 0.236-0.059 0.163-0.087 0.264-0.256 0.264-0.441v-9.195l0.332-1.021 1.464-1.063-0.559-1.721 0.559-1.721zM9.777 17.084c-0.168-0.112-0.387-0.112-0.555 0l-2.223 1.482v-7.561h1.036l1.464 1.063 1.464-1.063h1.036v7.561l-2.223-1.482zM13.62 7.839l-1.139 0.827-0.433 1.334h-0.048v0.004h-1.361l-1.139 0.827-1.139-0.827h-1.407l-0.435-1.339-1.139-0.827 0.435-1.339-0.435-1.339 1.139-0.827 0.435-1.339h1.407l1.139-0.827 1.139 0.827h1.407l0.435 1.339 1.139 0.827-0.435 1.339 0.435 1.339z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 9a.5.5 0 01-.5-.5V5h-.5a.5.5 0 010-1h1a.5.5 0 01.5.5v4a.5.5 0 01-.5.5z"
+    d: "M9.5 9c-0.276 0-0.5-0.224-0.5-0.5v-3.5h-0.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniMedalFirst.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniMedalFirst;

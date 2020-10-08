@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniMan2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniMan2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniMan2';
+  var className = 'Component Lini LiniMan2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniMan2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 5C8.122 5 7 3.878 7 2.5S8.122 0 9.5 0 12 1.122 12 2.5 10.878 5 9.5 5zm0-4C8.673 1 8 1.673 8 2.5S8.673 4 9.5 4 11 3.327 11 2.5 10.327 1 9.5 1zM12.5 6h-6C5.673 6 5 6.673 5 7.5v4a1.502 1.502 0 002 1.414V18.5a1.502 1.502 0 002.5 1.117A1.502 1.502 0 0012 18.5v-5.586a1.502 1.502 0 002-1.414v-4c0-.827-.673-1.5-1.5-1.5zm.5 5.5a.5.5 0 01-1 0v-3a.5.5 0 00-1 0v10a.5.5 0 01-1 0v-6a.5.5 0 00-1 0v6a.5.5 0 01-1 0v-10a.5.5 0 00-1 0v3a.5.5 0 01-1 0v-4a.5.5 0 01.5-.5h6a.5.5 0 01.5.5v4z"
+    d: "M9.5 5c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zM9.5 1c-0.827 0-1.5 0.673-1.5 1.5s0.673 1.5 1.5 1.5c0.827 0 1.5-0.673 1.5-1.5s-0.673-1.5-1.5-1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.5 6h-6c-0.827 0-1.5 0.673-1.5 1.5v4c0 0.827 0.673 1.5 1.5 1.5 0.175 0 0.343-0.031 0.5-0.086v5.586c0 0.827 0.673 1.5 1.5 1.5 0.384 0 0.734-0.145 1-0.383 0.266 0.238 0.616 0.383 1 0.383 0.827 0 1.5-0.673 1.5-1.5v-5.586c0.157 0.056 0.325 0.086 0.5 0.086 0.827 0 1.5-0.673 1.5-1.5v-4c0-0.827-0.673-1.5-1.5-1.5zM13 11.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5v-3c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v10c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5v-6c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v6c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5v-10c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5h6c0.276 0 0.5 0.224 0.5 0.5v4z",
+    fill: color
   })));
 }
+
 LiniMan2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniMan2;

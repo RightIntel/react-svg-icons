@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniChevronRightSquare({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniChevronRightSquare({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniChevronRightSquare';
+  var className = 'Component Lini LiniChevronRightSquare';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniChevronRightSquare({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M0 18.5v-16C0 1.673.673 1 1.5 1h16c.827 0 1.5.673 1.5 1.5v16c0 .827-.673 1.5-1.5 1.5h-16C.673 20 0 19.327 0 18.5zm18-16a.5.5 0 00-.5-.5h-16a.5.5 0 00-.5.5v16a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-16z"
+    d: "M0 18.5v-16c0-0.827 0.673-1.5 1.5-1.5h16c0.827 0 1.5 0.673 1.5 1.5v16c0 0.827-0.673 1.5-1.5 1.5h-16c-0.827 0-1.5-0.673-1.5-1.5zM18 2.5c0-0.276-0.224-0.5-0.5-0.5h-16c-0.276 0-0.5 0.224-0.5 0.5v16c0 0.276 0.224 0.5 0.5 0.5h16c0.276 0 0.5-0.224 0.5-0.5v-16z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M6.5 15.5c0-.128.049-.256.146-.354l4.646-4.646-4.646-4.646a.5.5 0 01.707-.707l5 5a.5.5 0 010 .707l-5 5A.5.5 0 016.5 15.5z"
+    d: "M6.5 15.5c0-0.128 0.049-0.256 0.146-0.354l4.646-4.646-4.646-4.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l5 5c0.195 0.195 0.195 0.512 0 0.707l-5 5c-0.195 0.195-0.512 0.195-0.707 0-0.098-0.098-0.146-0.226-0.146-0.354z",
+    fill: color
   })));
 }
+
 LiniChevronRightSquare.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniChevronRightSquare;

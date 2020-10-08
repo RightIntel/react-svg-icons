@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniMusicNote3({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniMusicNote3({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniMusicNote3';
+  var className = 'Component Lini LiniMusicNote3';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniMusicNote3({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.82 1.116a.499.499 0 00-.41-.108l-11 2a.5.5 0 00-.411.492v11.399a3.965 3.965 0 00-.448-.26C6.727 14.227 5.644 14 4.499 14s-2.228.227-3.052.639c-.934.467-1.448 1.128-1.448 1.861s.514 1.395 1.448 1.861c.824.412 1.907.639 3.052.639s2.228-.227 3.052-.639c.934-.467 1.448-1.128 1.448-1.861V6.416l10-1.847v8.33a3.965 3.965 0 00-.448-.26c-.824-.412-1.907-.639-3.052-.639s-2.228.227-3.052.639c-.934.467-1.448 1.128-1.448 1.861s.514 1.395 1.448 1.861c.824.412 1.907.639 3.052.639s2.228-.227 3.052-.639c.934-.467 1.448-1.128 1.448-1.861v-13a.5.5 0 00-.18-.384zM4.5 18C2.497 18 1 17.208 1 16.5S2.497 15 4.5 15s3.5.792 3.5 1.5S6.503 18 4.5 18zM9 5.399V3.917l10-1.818v1.453L9 5.399zM15.5 16c-2.003 0-3.5-.792-3.5-1.5s1.497-1.5 3.5-1.5 3.5.792 3.5 1.5-1.497 1.5-3.5 1.5z"
+    d: "M19.82 1.116c-0.114-0.095-0.264-0.135-0.41-0.108l-11 2c-0.238 0.043-0.411 0.25-0.411 0.492v11.399c-0.136-0.092-0.286-0.179-0.448-0.26-0.824-0.412-1.907-0.639-3.052-0.639s-2.228 0.227-3.052 0.639c-0.934 0.467-1.448 1.128-1.448 1.861s0.514 1.395 1.448 1.861c0.824 0.412 1.907 0.639 3.052 0.639s2.228-0.227 3.052-0.639c0.934-0.467 1.448-1.128 1.448-1.861v-10.084l10-1.847v8.33c-0.136-0.092-0.286-0.179-0.448-0.26-0.824-0.412-1.907-0.639-3.052-0.639s-2.228 0.227-3.052 0.639c-0.934 0.467-1.448 1.128-1.448 1.861s0.514 1.395 1.448 1.861c0.824 0.412 1.907 0.639 3.052 0.639s2.228-0.227 3.052-0.639c0.934-0.467 1.448-1.128 1.448-1.861v-13c0-0.148-0.066-0.289-0.18-0.384zM4.5 18c-2.003 0-3.5-0.792-3.5-1.5s1.497-1.5 3.5-1.5 3.5 0.792 3.5 1.5-1.497 1.5-3.5 1.5zM9 5.399v-1.482l10-1.818v1.453l-10 1.847zM15.5 16c-2.003 0-3.5-0.792-3.5-1.5s1.497-1.5 3.5-1.5c2.003 0 3.5 0.792 3.5 1.5s-1.497 1.5-3.5 1.5z",
+    fill: color
   })));
 }
+
 LiniMusicNote3.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniMusicNote3;

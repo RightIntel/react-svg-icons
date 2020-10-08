@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniWall2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniWall2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniWall2';
+  var className = 'Component Lini LiniWall2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,46 @@ export default function LiniWall2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M2.5 20h-2a.5.5 0 010-1H2v-2H.5a.5.5 0 010-1h2a.5.5 0 01.5.5v3a.5.5 0 01-.5.5zM11.5 20h-7a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v3a.5.5 0 01-.5.5zM5 19h6v-2H5v2zM18.5 20h-5a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h5a.5.5 0 010 1H14v2h4.5a.5.5 0 010 1zM14.5 15h-7a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v3a.5.5 0 01-.5.5zM8 14h6v-2H8v2zM18.5 15h-2a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h2a.5.5 0 010 1H17v2h1.5a.5.5 0 010 1zM5.5 15h-5a.5.5 0 010-1H5v-2H.5a.5.5 0 010-1h5a.5.5 0 01.5.5v3a.5.5 0 01-.5.5zM2.5 10h-2a.5.5 0 010-1H2V7H.5a.5.5 0 010-1h2a.5.5 0 01.5.5v3a.5.5 0 01-.5.5zM11.5 10h-7a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v3a.5.5 0 01-.5.5zM5 9h6V7H5v2zM18.5 10h-5a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h5a.5.5 0 010 1H14v2h4.5a.5.5 0 010 1zM14.5 5h-7a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v3a.5.5 0 01-.5.5zM8 4h6V2H8v2zM18.5 5h-2a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h2a.5.5 0 010 1H17v2h1.5a.5.5 0 010 1zM5.5 5h-5a.5.5 0 010-1H5V2H.5a.5.5 0 010-1h5a.5.5 0 01.5.5v3a.5.5 0 01-.5.5z"
+    d: "M2.5 20h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1.5v-2h-1.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11.5 20h-7c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5zM5 19h6v-2h-6v2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 20h-5c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-4.5v2h4.5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14.5 15h-7c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5zM8 14h6v-2h-6v2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 15h-2c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1.5v2h1.5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 15h-5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h4.5v-2h-4.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2.5 10h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1.5v-2h-1.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11.5 10h-7c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5zM5 9h6v-2h-6v2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 10h-5c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-4.5v2h4.5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14.5 5h-7c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5zM8 4h6v-2h-6v2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 5h-2c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1.5v2h1.5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 5h-5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h4.5v-2h-4.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniWall2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniWall2;

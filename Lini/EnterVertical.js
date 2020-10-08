@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniEnterVertical({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniEnterVertical({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniEnterVertical';
+  var className = 'Component Lini LiniEnterVertical';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,22 @@ export default function LiniEnterVertical({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 12h-5a.5.5 0 010-1h5a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-5a.5.5 0 010-1h5c.827 0 1.5.673 1.5 1.5v1c0 .827-.673 1.5-1.5 1.5zM6.5 12h-5C.673 12 0 11.327 0 10.5v-1C0 8.673.673 8 1.5 8h5a.5.5 0 010 1h-5a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h5a.5.5 0 010 1zM12.854 5.646a.5.5 0 00-.707 0l-2.146 2.146V.499a.5.5 0 00-1 0v7.293L6.855 5.646a.5.5 0 00-.707.707l3 3a.498.498 0 00.708 0l3-3a.5.5 0 000-.707zM12.854 13.646l-3-3a.5.5 0 00-.707 0l-3 3a.5.5 0 00.707.707L9 12.207V19.5a.5.5 0 001 0v-7.293l2.146 2.146a.498.498 0 00.708 0 .5.5 0 000-.707z"
+    d: "M17.5 12h-5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h5c0.276 0 0.5-0.224 0.5-0.5v-1c0-0.276-0.224-0.5-0.5-0.5h-5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h5c0.827 0 1.5 0.673 1.5 1.5v1c0 0.827-0.673 1.5-1.5 1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6.5 12h-5c-0.827 0-1.5-0.673-1.5-1.5v-1c0-0.827 0.673-1.5 1.5-1.5h5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-5c-0.276 0-0.5 0.224-0.5 0.5v1c0 0.276 0.224 0.5 0.5 0.5h5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.854 5.646c-0.195-0.195-0.512-0.195-0.707 0l-2.146 2.146v-7.293c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v7.293l-2.146-2.146c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l3 3c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l3-3c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.854 13.646l-3-3c-0.195-0.195-0.512-0.195-0.707 0l-3 3c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l2.146-2.146v7.293c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-7.293l2.146 2.146c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
   })));
 }
+
 LiniEnterVertical.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniEnterVertical;

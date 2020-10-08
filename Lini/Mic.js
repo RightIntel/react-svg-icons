@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniMic({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniMic({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniMic';
+  var className = 'Component Lini LiniMic';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniMic({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 14C7.57 14 6 12.43 6 10.5v-6C6 2.57 7.57 1 9.5 1S13 2.57 13 4.5v6c0 1.93-1.57 3.5-3.5 3.5zm0-12A2.503 2.503 0 007 4.5v6C7 11.878 8.122 13 9.5 13s2.5-1.122 2.5-2.5v-6C12 3.122 10.878 2 9.5 2z"
+    d: "M9.5 14c-1.93 0-3.5-1.57-3.5-3.5v-6c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5v6c0 1.93-1.57 3.5-3.5 3.5zM9.5 2c-1.378 0-2.5 1.122-2.5 2.5v6c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5v-6c0-1.378-1.122-2.5-2.5-2.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M16 10.5a.5.5 0 00-1 0c0 3.033-2.467 5.5-5.5 5.5S4 13.533 4 10.5a.5.5 0 00-1 0 6.509 6.509 0 006 6.481V19H7.5a.5.5 0 000 1h4a.5.5 0 000-1H10v-2.019a6.509 6.509 0 006-6.481z"
+    d: "M16 10.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5c0 3.033-2.467 5.5-5.5 5.5s-5.5-2.467-5.5-5.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5c0 3.416 2.649 6.225 6 6.481v2.019h-1.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-1.5v-2.019c3.351-0.256 6-3.065 6-6.481z",
+    fill: color
   })));
 }
+
 LiniMic.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniMic;

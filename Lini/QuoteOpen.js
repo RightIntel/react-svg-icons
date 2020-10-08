@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniQuoteOpen({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniQuoteOpen({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniQuoteOpen';
+  var className = 'Component Lini LiniQuoteOpen';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniQuoteOpen({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M4.5 8c-.924 0-1.783.28-2.499.759A7.505 7.505 0 018.5 5a.5.5 0 000-1c-2.27 0-4.405.884-6.01 2.49S0 10.23 0 12.5C0 14.981 2.019 17 4.5 17S9 14.981 9 12.5 6.981 8 4.5 8zm0 8C2.57 16 1 14.43 1 12.5l.001-.09A3.505 3.505 0 014.5 9C6.43 9 8 10.57 8 12.5S6.43 16 4.5 16zM15.5 8c-.924 0-1.783.28-2.499.759A7.505 7.505 0 0119.5 5a.5.5 0 000-1c-2.27 0-4.405.884-6.01 2.49S11 10.23 11 12.5c0 2.481 2.019 4.5 4.5 4.5s4.5-2.019 4.5-4.5S17.981 8 15.5 8zm0 8c-1.93 0-3.5-1.57-3.5-3.5l.001-.09A3.505 3.505 0 0115.5 9c1.93 0 3.5 1.57 3.5 3.5S17.43 16 15.5 16z"
+    d: "M4.5 8c-0.924 0-1.783 0.28-2.499 0.759 1.297-2.245 3.725-3.759 6.499-3.759 0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5c-2.27 0-4.405 0.884-6.010 2.49s-2.49 3.74-2.49 6.010c0 2.481 2.019 4.5 4.5 4.5s4.5-2.019 4.5-4.5-2.019-4.5-4.5-4.5zM4.5 16c-1.93 0-3.5-1.57-3.5-3.5 0-0.030 0.001-0.060 0.001-0.090 0.048-1.888 1.599-3.41 3.499-3.41 1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 8c-0.924 0-1.783 0.28-2.499 0.759 1.297-2.245 3.725-3.759 6.499-3.759 0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5c-2.27 0-4.405 0.884-6.010 2.49s-2.49 3.74-2.49 6.010c0 2.481 2.019 4.5 4.5 4.5s4.5-2.019 4.5-4.5-2.019-4.5-4.5-4.5zM15.5 16c-1.93 0-3.5-1.57-3.5-3.5 0-0.030 0.001-0.060 0.001-0.090 0.048-1.888 1.599-3.41 3.499-3.41 1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z",
+    fill: color
   })));
 }
+
 LiniQuoteOpen.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniQuoteOpen;

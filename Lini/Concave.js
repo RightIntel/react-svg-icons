@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniConcave({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniConcave({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniConcave';
+  var className = 'Component Lini LiniConcave';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniConcave({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M.5 18a.5.5 0 01-.474-.658C.036 17.313 1 14.364 1 10.5S.035 3.687.026 3.658a.502.502 0 01.596-.643C.661 3.025 4.626 4 9.501 4c4.882 0 8.839-.975 8.879-.985a.5.5 0 01.595.643c-.01.029-.974 2.978-.974 6.842s.965 6.813.974 6.842a.502.502 0 01-.596.643C18.333 17.973 14.371 17 9.5 17c-4.882 0-8.839.975-8.879.985S.54 18 .5 18zm9-2c3.717 0 6.853.537 8.289.83-.303-1.175-.789-3.497-.789-6.33s.485-5.155.789-6.33C16.354 4.463 13.217 5 9.5 5s-6.853-.537-8.289-.83C1.514 5.345 2 7.667 2 10.5s-.485 5.155-.789 6.33A42.869 42.869 0 019.5 16z"
+    d: "M0.5 18c-0.137 0-0.271-0.057-0.367-0.16-0.124-0.134-0.165-0.325-0.107-0.498 0.010-0.029 0.974-2.978 0.974-6.842s-0.965-6.813-0.974-6.842c-0.057-0.173-0.016-0.364 0.108-0.498s0.311-0.189 0.488-0.145c0.039 0.010 4.004 0.985 8.879 0.985 4.882 0 8.839-0.975 8.879-0.985 0.177-0.044 0.364 0.011 0.488 0.145s0.165 0.325 0.107 0.498c-0.010 0.029-0.974 2.978-0.974 6.842s0.965 6.813 0.974 6.842c0.057 0.173 0.016 0.364-0.108 0.498s-0.311 0.19-0.488 0.145c-0.046-0.012-4.008-0.985-8.879-0.985-4.882 0-8.839 0.975-8.879 0.985s-0.081 0.015-0.121 0.015zM9.5 16c3.717 0 6.853 0.537 8.289 0.83-0.303-1.175-0.789-3.497-0.789-6.33s0.485-5.155 0.789-6.33c-1.435 0.293-4.572 0.83-8.289 0.83s-6.853-0.537-8.289-0.83c0.303 1.175 0.789 3.497 0.789 6.33s-0.485 5.155-0.789 6.33c1.435-0.293 4.572-0.83 8.289-0.83z",
+    fill: color
   })));
 }
+
 LiniConcave.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniConcave;

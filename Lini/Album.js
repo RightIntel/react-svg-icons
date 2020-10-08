@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniAlbum({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniAlbum({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniAlbum';
+  var className = 'Component Lini LiniAlbum';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,22 @@ export default function LiniAlbum({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 20h-14c-.827 0-1.5-.673-1.5-1.5v-13C1 4.673 1.673 4 2.5 4h14c.827 0 1.5.673 1.5 1.5v13c0 .827-.673 1.5-1.5 1.5zM2.5 5a.5.5 0 00-.5.5v13a.5.5 0 00.5.5h14a.5.5 0 00.5-.5v-13a.5.5 0 00-.5-.5h-14zM16.5 3h-14a.5.5 0 010-1h14a.5.5 0 010 1zM15.5 1h-12a.5.5 0 010-1h12a.5.5 0 010 1z"
+    d: "M16.5 20h-14c-0.827 0-1.5-0.673-1.5-1.5v-13c0-0.827 0.673-1.5 1.5-1.5h14c0.827 0 1.5 0.673 1.5 1.5v13c0 0.827-0.673 1.5-1.5 1.5zM2.5 5c-0.276 0-0.5 0.224-0.5 0.5v13c0 0.276 0.224 0.5 0.5 0.5h14c0.276 0 0.5-0.224 0.5-0.5v-13c0-0.276-0.224-0.5-0.5-0.5h-14z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M13.817 9.113a.501.501 0 00-.415-.104l-5 1a.5.5 0 00-.402.49v2.695a2.569 2.569 0 00-1-.195c-1.122 0-2 .659-2 1.5s.878 1.5 2 1.5 2-.659 2-1.5v-3.59l4-.8v2.085a2.569 2.569 0 00-1-.195c-1.122 0-2 .659-2 1.5s.878 1.5 2 1.5 2-.659 2-1.5v-4a.5.5 0 00-.183-.387zM7 15c-.61 0-1-.296-1-.5s.39-.5 1-.5 1 .296 1 .5-.39.5-1 .5zm5-1c-.61 0-1-.296-1-.5s.39-.5 1-.5 1 .296 1 .5-.39.5-1 .5z"
+    d: "M16.5 3h-14c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h14c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 1h-12c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h12c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.817 9.113c-0.116-0.095-0.268-0.133-0.415-0.104l-5 1c-0.234 0.047-0.402 0.252-0.402 0.49v2.695c-0.293-0.124-0.633-0.195-1-0.195-1.122 0-2 0.659-2 1.5s0.878 1.5 2 1.5 2-0.659 2-1.5v-3.59l4-0.8v2.085c-0.293-0.124-0.633-0.195-1-0.195-1.122 0-2 0.659-2 1.5s0.878 1.5 2 1.5 2-0.659 2-1.5v-4c0-0.15-0.067-0.292-0.183-0.387zM7 15c-0.61 0-1-0.296-1-0.5s0.39-0.5 1-0.5 1 0.296 1 0.5-0.39 0.5-1 0.5zM12 14c-0.61 0-1-0.296-1-0.5s0.39-0.5 1-0.5 1 0.296 1 0.5-0.39 0.5-1 0.5z",
+    fill: color
   })));
 }
+
 LiniAlbum.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniAlbum;

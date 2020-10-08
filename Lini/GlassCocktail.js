@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniGlassCocktail({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniGlassCocktail({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniGlassCocktail';
+  var className = 'Component Lini LiniGlassCocktail';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniGlassCocktail({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.957 3.517C16.881 3.324 16.655 3 16 3H3c-.655 0-.881.324-.957.517s-.132.584.347 1.031L9 10.717V17.5c0 .813-.458 1.5-1 1.5H6.5a.5.5 0 000 1h6a.5.5 0 000-1H11c-.542 0-1-.687-1-1.5v-6.783l6.61-6.169c.479-.447.423-.838.347-1.031zM9.5 9.816L3.268 4h12.463L9.5 9.816z"
+    d: "M16.957 3.517c-0.076-0.193-0.302-0.517-0.957-0.517h-13c-0.655 0-0.881 0.324-0.957 0.517s-0.132 0.584 0.347 1.031l6.61 6.169v6.783c0 0.813-0.458 1.5-1 1.5h-1.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h6c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-1.5c-0.542 0-1-0.687-1-1.5v-6.783l6.61-6.169c0.479-0.447 0.423-0.838 0.347-1.031zM9.5 9.816l-6.232-5.816h12.463l-6.231 5.816z",
+    fill: color
   })));
 }
+
 LiniGlassCocktail.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniGlassCocktail;

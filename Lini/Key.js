@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniKey({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniKey({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniKey';
+  var className = 'Component Lini LiniKey';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniKey({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M15 0a5 5 0 00-4.087 7.88L.147 18.646a.5.5 0 00.708.707l1.146-1.146 1.646 1.646a.498.498 0 00.708 0 .5.5 0 000-.707L2.709 17.5l.793-.793 1.646 1.646a.498.498 0 00.708 0 .5.5 0 000-.707L4.21 16l7.363-7.363A5 5 0 1015.003 0zm2.828 7.828C17.072 8.584 16.068 9 15 9s-2.073-.416-2.828-1.172C11.416 7.072 11 6.068 11 5s.416-2.073 1.172-2.828C12.928 1.416 13.932 1 15 1s2.073.416 2.828 1.172C18.584 2.928 19 3.932 19 5s-.416 2.073-1.172 2.828z"
+    d: "M15 0c-2.761 0-5 2.239-5 5 0 1.072 0.338 2.066 0.913 2.88l-10.766 10.766c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l1.146-1.146 1.646 1.646c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707l-1.646-1.646 0.793-0.793 1.646 1.646c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707l-1.646-1.646 7.363-7.363c0.895 0.845 2.102 1.363 3.43 1.363 2.761 0 5-2.239 5-5s-2.239-5-5-5zM17.828 7.828c-0.756 0.756-1.76 1.172-2.828 1.172s-2.073-0.416-2.828-1.172c-0.756-0.756-1.172-1.76-1.172-2.828s0.416-2.073 1.172-2.828c0.756-0.756 1.76-1.172 2.828-1.172s2.073 0.416 2.828 1.172c0.756 0.756 1.172 1.76 1.172 2.828s-0.416 2.073-1.172 2.828z",
+    fill: color
   })));
 }
+
 LiniKey.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniKey;

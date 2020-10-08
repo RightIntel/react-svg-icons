@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPercentSquare({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPercentSquare({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPercentSquare';
+  var className = 'Component Lini LiniPercentSquare';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,22 @@ export default function LiniPercentSquare({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 20h-16C.673 20 0 19.327 0 18.5v-16C0 1.673.673 1 1.5 1h16c.827 0 1.5.673 1.5 1.5v16c0 .827-.673 1.5-1.5 1.5zM1.5 2a.5.5 0 00-.5.5v16a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-16a.5.5 0 00-.5-.5h-16z"
+    d: "M17.5 20h-16c-0.827 0-1.5-0.673-1.5-1.5v-16c0-0.827 0.673-1.5 1.5-1.5h16c0.827 0 1.5 0.673 1.5 1.5v16c0 0.827-0.673 1.5-1.5 1.5zM1.5 2c-0.276 0-0.5 0.224-0.5 0.5v16c0 0.276 0.224 0.5 0.5 0.5h16c0.276 0 0.5-0.224 0.5-0.5v-16c0-0.276-0.224-0.5-0.5-0.5h-16z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M5 16a.5.5 0 01-.371-.834l9-10a.5.5 0 11.743.669l-9 10a.499.499 0 01-.372.166zM6.5 10C5.122 10 4 8.878 4 7.5S5.122 5 6.5 5 9 6.122 9 7.5 7.878 10 6.5 10zm0-4C5.673 6 5 6.673 5 7.5S5.673 9 6.5 9 8 8.327 8 7.5 7.327 6 6.5 6zM12.5 16c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z"
+    d: "M5 16c-0.119 0-0.239-0.042-0.334-0.128-0.205-0.185-0.222-0.501-0.037-0.706l9-10c0.185-0.205 0.501-0.222 0.706-0.037s0.222 0.501 0.037 0.706l-9 10c-0.099 0.11-0.235 0.166-0.372 0.166z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6.5 10c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zM6.5 6c-0.827 0-1.5 0.673-1.5 1.5s0.673 1.5 1.5 1.5 1.5-0.673 1.5-1.5-0.673-1.5-1.5-1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.5 16c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zM12.5 12c-0.827 0-1.5 0.673-1.5 1.5s0.673 1.5 1.5 1.5 1.5-0.673 1.5-1.5-0.673-1.5-1.5-1.5z",
+    fill: color
   })));
 }
+
 LiniPercentSquare.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPercentSquare;

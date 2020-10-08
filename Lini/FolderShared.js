@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniFolderShared({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniFolderShared({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniFolderShared';
+  var className = 'Component Lini LiniFolderShared';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,22 @@ export default function LiniFolderShared({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 18h-17C.673 18 0 17.327 0 16.5V6c0-.352.119-.856.276-1.171l.553-1.106c.206-.413.71-.724 1.171-.724h7c.461 0 .964.311 1.171.724l.553 1.106A.406.406 0 0011 5h7.5c.827 0 1.5.673 1.5 1.5v10c0 .827-.673 1.5-1.5 1.5zM2 4a.404.404 0 00-.276.171l-.553 1.106A2.056 2.056 0 001 6.001v10.5a.5.5 0 00.5.5h17a.5.5 0 00.5-.5v-10a.5.5 0 00-.5-.5H11c-.461 0-.965-.311-1.171-.724l-.553-1.106A.406.406 0 009 4H2z"
+    d: "M18.5 18h-17c-0.827 0-1.5-0.673-1.5-1.5v-10.5c0-0.352 0.119-0.856 0.276-1.171l0.553-1.106c0.206-0.413 0.71-0.724 1.171-0.724h7c0.461 0 0.964 0.311 1.171 0.724l0.553 1.106c0.038 0.077 0.191 0.171 0.276 0.171h7.5c0.827 0 1.5 0.673 1.5 1.5v10c0 0.827-0.673 1.5-1.5 1.5zM2 4c-0.086 0-0.238 0.094-0.276 0.171l-0.553 1.106c-0.088 0.176-0.171 0.527-0.171 0.724v10.5c0 0.276 0.224 0.5 0.5 0.5h17c0.276 0 0.5-0.224 0.5-0.5v-10c0-0.276-0.224-0.5-0.5-0.5h-7.5c-0.461 0-0.965-0.311-1.171-0.724l-0.553-1.106c-0.038-0.077-0.191-0.171-0.276-0.171h-7z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 15a3.5 3.5 0 01-2.334-.891.5.5 0 11.667-.745c.459.411 1.05.637 1.667.637 1.378 0 2.5-1.122 2.5-2.5a.5.5 0 01.5-.5h2a.5.5 0 010 1h-1.536a3.505 3.505 0 01-3.464 3zM6.5 12h-2a.5.5 0 010-1h1.536A3.505 3.505 0 019.5 8c.863 0 1.691.317 2.333.891a.5.5 0 11-.667.745A2.497 2.497 0 009.499 9a2.503 2.503 0 00-2.5 2.5.5.5 0 01-.5.5z"
+    d: "M9.5 15c-0.863 0-1.691-0.317-2.334-0.891-0.206-0.184-0.223-0.5-0.039-0.706s0.5-0.223 0.706-0.039c0.459 0.411 1.050 0.637 1.667 0.637 1.378 0 2.5-1.122 2.5-2.5 0-0.276 0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1.536c-0.243 1.694-1.704 3-3.464 3z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 13c-.827 0-1.5-.673-1.5-1.5S8.673 10 9.5 10s1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm0-2a.5.5 0 100 1 .5.5 0 000-1z"
+    d: "M6.5 12h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1.536c0.243-1.694 1.704-3 3.464-3 0.863 0 1.691 0.317 2.333 0.891 0.206 0.184 0.223 0.5 0.039 0.706s-0.5 0.223-0.706 0.039c-0.459-0.41-1.050-0.636-1.667-0.636-1.378 0-2.5 1.122-2.5 2.5 0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 13c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5c0.827 0 1.5 0.673 1.5 1.5s-0.673 1.5-1.5 1.5zM9.5 11c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniFolderShared.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniFolderShared;

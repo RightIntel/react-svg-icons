@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCloudHailstones({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCloudHailstones({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCloudHailstones';
+  var className = 'Component Lini LiniCloudHailstones';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,28 @@ export default function LiniCloudHailstones({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.006 15H6c-3.308 0-6-2.692-6-6s2.692-6 6-6c1.602 0 3.137.643 4.26 1.775A3.014 3.014 0 0113 3a3.004 3.004 0 012.822 4.017A3.999 3.999 0 0120 11.007a3.999 3.999 0 01-3.994 3.994zM6 4C3.243 4 1 6.243 1 9s2.243 5 5 5h10.006C17.657 14 19 12.657 19 11.006a2.997 2.997 0 00-4.02-2.814.5.5 0 01-.534-.814c.357-.376.554-.865.554-1.379 0-1.103-.897-2-2-2-.642 0-1.229.297-1.61.814-.23.312-.365.678-.388 1.057a.5.5 0 01-.908.257A5.008 5.008 0 006 3.999zM3 17a1 1 0 11-2 0 1 1 0 012 0zM11 17a1 1 0 11-2 0 1 1 0 012 0zM19 17a1 1 0 11-2 0 1 1 0 012 0zM7 19a1 1 0 11-2 0 1 1 0 012 0zM15 19a1 1 0 11-2 0 1 1 0 012 0z"
+    d: "M16.006 15h-10.006c-3.308 0-6-2.692-6-6s2.692-6 6-6c1.602 0 3.137 0.643 4.26 1.775 0.088-0.194 0.196-0.38 0.325-0.555 0.564-0.764 1.467-1.22 2.415-1.22 1.654 0 3 1.346 3 3 0 0.351-0.061 0.694-0.178 1.017 0.061-0.003 0.122-0.004 0.184-0.004 2.202 0 3.994 1.792 3.994 3.994s-1.792 3.994-3.994 3.994zM6 4c-2.757 0-5 2.243-5 5s2.243 5 5 5h10.006c1.651 0 2.994-1.343 2.994-2.994s-1.343-2.994-2.994-2.994c-0.354 0-0.699 0.061-1.026 0.18-0.218 0.080-0.462-0.001-0.59-0.195s-0.104-0.45 0.056-0.619c0.357-0.376 0.554-0.865 0.554-1.379 0-1.103-0.897-2-2-2-0.642 0-1.229 0.297-1.61 0.814-0.23 0.312-0.365 0.678-0.388 1.057-0.013 0.212-0.159 0.393-0.363 0.45s-0.423-0.020-0.545-0.193c-0.11-0.156-0.229-0.307-0.354-0.447-0.949-1.068-2.312-1.681-3.74-1.681z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 17c0 0.552-0.448 1-1 1s-1-0.448-1-1c0-0.552 0.448-1 1-1s1 0.448 1 1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 17c0 0.552-0.448 1-1 1s-1-0.448-1-1c0-0.552 0.448-1 1-1s1 0.448 1 1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19 17c0 0.552-0.448 1-1 1s-1-0.448-1-1c0-0.552 0.448-1 1-1s1 0.448 1 1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7 19c0 0.552-0.448 1-1 1s-1-0.448-1-1c0-0.552 0.448-1 1-1s1 0.448 1 1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 19c0 0.552-0.448 1-1 1s-1-0.448-1-1c0-0.552 0.448-1 1-1s1 0.448 1 1z",
+    fill: color
   })));
 }
+
 LiniCloudHailstones.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCloudHailstones;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCross2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCross2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCross2';
+  var className = 'Component Lini LiniCross2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniCross2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M10.707 10.5l8.646-8.646a.5.5 0 00-.707-.707L10 9.793 1.354 1.147a.5.5 0 00-.707.707L9.293 10.5.647 19.146a.5.5 0 00.708.707l8.646-8.646 8.646 8.646a.498.498 0 00.708 0 .5.5 0 000-.707L10.709 10.5z"
+    d: "M10.707 10.5l8.646-8.646c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-8.646 8.646-8.646-8.646c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l8.646 8.646-8.646 8.646c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l8.646-8.646 8.646 8.646c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707l-8.646-8.646z",
+    fill: color
   })));
 }
+
 LiniCross2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCross2;

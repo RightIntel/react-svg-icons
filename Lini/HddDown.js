@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniHddDown({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniHddDown({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniHddDown';
+  var className = 'Component Lini LiniHddDown';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,22 @@ export default function LiniHddDown({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 20h-16C.673 20 0 19.327 0 18.5v-3c0-.627.22-1.557.5-2.118l2.106-4.211C2.934 8.514 3.766 8 4.5 8a.5.5 0 010 1c-.362 0-.838.295-1 .618l-2.106 4.211C1.184 14.249 1 15.03 1 15.5v3a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-3c0-.47-.184-1.251-.394-1.671L15.5 9.618c-.162-.323-.638-.618-1-.618a.5.5 0 010-1c.734 0 1.566.514 1.894 1.171l2.106 4.211c.28.561.5 1.491.5 2.118v3c0 .827-.673 1.5-1.5 1.5z"
+    d: "M17.5 20h-16c-0.827 0-1.5-0.673-1.5-1.5v-3c0-0.627 0.22-1.557 0.5-2.118l2.106-4.211c0.328-0.657 1.16-1.171 1.894-1.171 0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5c-0.362 0-0.838 0.295-1 0.618l-2.106 4.211c-0.21 0.42-0.394 1.201-0.394 1.671v3c0 0.276 0.224 0.5 0.5 0.5h16c0.276 0 0.5-0.224 0.5-0.5v-3c0-0.47-0.184-1.251-0.394-1.671l-2.106-4.211c-0.162-0.323-0.638-0.618-1-0.618-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5c0.734 0 1.566 0.514 1.894 1.171l2.106 4.211c0.28 0.561 0.5 1.491 0.5 2.118v3c0 0.827-0.673 1.5-1.5 1.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 18h-1a.5.5 0 010-1h1a.5.5 0 010 1zM16.5 16h-14a.5.5 0 010-1h14a.5.5 0 010 1zM12.854 7.646a.5.5 0 00-.707 0l-2.146 2.146V1.499a.5.5 0 00-1 0v8.293L6.855 7.646a.5.5 0 00-.707.707l3 3a.498.498 0 00.708 0l3-3a.5.5 0 000-.707z"
+    d: "M16.5 18h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 16h-14c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h14c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.854 7.646c-0.195-0.195-0.512-0.195-0.707 0l-2.146 2.146v-8.293c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v8.293l-2.146-2.146c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l3 3c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l3-3c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
   })));
 }
+
 LiniHddDown.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniHddDown;

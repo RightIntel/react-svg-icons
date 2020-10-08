@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniBorderTop({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniBorderTop({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniBorderTop';
+  var className = 'Component Lini LiniBorderTop';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,121 @@ export default function LiniBorderTop({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M1 10h1v1H1v-1zM3 10h1v1H3v-1zM5 10h1v1H5v-1zM7 10h1v1H7v-1zM9 10h1v1H9v-1zM11 10h1v1h-1v-1zM13 10h1v1h-1v-1zM15 10h1v1h-1v-1zM17 10h1v1h-1v-1zM9 16h1v1H9v-1zM9 14h1v1H9v-1zM9 12h1v1H9v-1zM9 8h1v1H9V8zM9 6h1v1H9V6zM9 4h1v1H9V4zM1 16h1v1H1v-1zM1 18h1v1H1v-1zM1 14h1v1H1v-1zM1 12h1v1H1v-1zM1 8h1v1H1V8zM1 6h1v1H1V6zM1 4h1v1H1V4zM17 16h1v1h-1v-1zM17 18h1v1h-1v-1zM17 14h1v1h-1v-1zM17 12h1v1h-1v-1zM17 8h1v1h-1V8zM17 6h1v1h-1V6zM17 4h1v1h-1V4zM9 18h1v1H9v-1zM3 18h1v1H3v-1zM5 18h1v1H5v-1zM7 18h1v1H7v-1zM11 18h1v1h-1v-1zM13 18h1v1h-1v-1zM15 18h1v1h-1v-1zM17.5 3h-16a.5.5 0 010-1h16a.5.5 0 010 1z"
+    d: "M1 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 16h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 14h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 12h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 8h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 6h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 4h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 16h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 14h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 12h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 8h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 6h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 4h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 16h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 14h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 12h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 8h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 6h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 4h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 18h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 3h-16c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h16c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniBorderTop.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniBorderTop;

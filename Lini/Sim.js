@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniSim({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniSim({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniSim';
+  var className = 'Component Lini LiniSim';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniSim({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M15.5 20h-11c-.827 0-1.5-.673-1.5-1.5V7c0-.688.367-1.574.854-2.061L6.94 1.853c.487-.487 1.373-.854 2.061-.854h6.5c.827 0 1.5.673 1.5 1.5v16c0 .827-.673 1.5-1.5 1.5zM9 2c-.415 0-1.06.267-1.354.561L4.56 5.647c-.293.293-.561.939-.561 1.354v11.5a.5.5 0 00.5.5h11a.5.5 0 00.5-.5v-16a.5.5 0 00-.5-.5h-6.5z"
+    d: "M15.5 20h-11c-0.827 0-1.5-0.673-1.5-1.5v-11.5c0-0.688 0.367-1.574 0.854-2.061l3.086-3.086c0.487-0.487 1.373-0.854 2.061-0.854h6.5c0.827 0 1.5 0.673 1.5 1.5v16c0 0.827-0.673 1.5-1.5 1.5zM9 2c-0.415 0-1.060 0.267-1.354 0.561l-3.086 3.086c-0.293 0.293-0.561 0.939-0.561 1.354v11.5c0 0.276 0.224 0.5 0.5 0.5h11c0.276 0 0.5-0.224 0.5-0.5v-16c0-0.276-0.224-0.5-0.5-0.5h-6.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M13 9H7c-1.103 0-2 .897-2 2v5c0 1.103.897 2 2 2h6c1.103 0 2-.897 2-2v-5c0-1.103-.897-2-2-2zm1 2v2h-2v-3h1c.551 0 1 .449 1 1zm-5 2v-3h2v3H9zm2 1v3H9v-3h2zm-4-4h1v3H6v-2c0-.551.449-1 1-1zm-1 6v-2h2v3H7c-.551 0-1-.449-1-1zm7 1h-1v-3h2v2c0 .551-.449 1-1 1z"
+    d: "M13 9h-6c-1.103 0-2 0.897-2 2v5c0 1.103 0.897 2 2 2h6c1.103 0 2-0.897 2-2v-5c0-1.103-0.897-2-2-2zM14 11v2h-2v-3h1c0.551 0 1 0.449 1 1zM9 13v-3h2v3h-2zM11 14v3h-2v-3h2zM7 10h1v3h-2v-2c0-0.551 0.449-1 1-1zM6 16v-2h2v3h-1c-0.551 0-1-0.449-1-1zM13 17h-1v-3h2v2c0 0.551-0.449 1-1 1z",
+    fill: color
   })));
 }
+
 LiniSim.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniSim;

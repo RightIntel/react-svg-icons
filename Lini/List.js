@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniList({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniList({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniList';
+  var className = 'Component Lini LiniList';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,28 @@ export default function LiniList({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.5 16h-15a.5.5 0 010-1h15a.5.5 0 010 1zM19.5 11h-15a.5.5 0 010-1h15a.5.5 0 010 1zM19.5 6h-15a.5.5 0 010-1h15a.5.5 0 010 1zM1.5 7C.673 7 0 6.327 0 5.5S.673 4 1.5 4 3 4.673 3 5.5 2.327 7 1.5 7zm0-2a.5.5 0 100 1 .5.5 0 000-1zM1.5 12C.673 12 0 11.327 0 10.5S.673 9 1.5 9 3 9.673 3 10.5 2.327 12 1.5 12zm0-2a.5.5 0 100 1 .5.5 0 000-1zM1.5 17C.673 17 0 16.327 0 15.5S.673 14 1.5 14s1.5.673 1.5 1.5S2.327 17 1.5 17zm0-2a.5.5 0 100 1 .5.5 0 000-1z"
+    d: "M19.5 16h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19.5 11h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19.5 6h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM1.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1.5 12c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5c0 0.827-0.673 1.5-1.5 1.5zM1.5 10c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1.5 17c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM1.5 15c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniList.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniList;

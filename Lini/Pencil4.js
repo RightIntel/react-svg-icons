@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPencil4({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPencil4({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPencil4';
+  var className = 'Component Lini LiniPencil4';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniPencil4({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M3.5 17a.5.5 0 01-.47-.671l2-5.5a.51.51 0 01.116-.183l10.5-10.5a.5.5 0 01.707 0l3.5 3.5a.5.5 0 010 .707l-10.5 10.5a.496.496 0 01-.183.116l-5.5 2a.505.505 0 01-.171.03zm2.432-5.725l-1.596 4.389 4.389-1.596L18.793 4 16 1.207 5.932 11.275z"
+    d: "M3.5 17c-0.13 0-0.258-0.051-0.354-0.147-0.137-0.137-0.183-0.342-0.116-0.524l2-5.5c0.025-0.069 0.065-0.131 0.116-0.183l10.5-10.5c0.195-0.195 0.512-0.195 0.707 0l3.5 3.5c0.195 0.195 0.195 0.512 0 0.707l-10.5 10.5c-0.052 0.052-0.114 0.091-0.183 0.116l-5.5 2c-0.056 0.020-0.113 0.030-0.171 0.030zM5.932 11.275l-1.596 4.389 4.389-1.596 10.068-10.068-2.793-2.793-10.068 10.068z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 20h-16C.673 20 0 19.327 0 18.5v-16C0 1.673.673 1 1.5 1h10a.5.5 0 010 1h-10a.5.5 0 00-.5.5v16a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-10a.5.5 0 011 0v10c0 .827-.673 1.5-1.5 1.5z"
+    d: "M17.5 20h-16c-0.827 0-1.5-0.673-1.5-1.5v-16c0-0.827 0.673-1.5 1.5-1.5h10c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-10c-0.276 0-0.5 0.224-0.5 0.5v16c0 0.276 0.224 0.5 0.5 0.5h16c0.276 0 0.5-0.224 0.5-0.5v-10c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v10c0 0.827-0.673 1.5-1.5 1.5z",
+    fill: color
   })));
 }
+
 LiniPencil4.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPencil4;

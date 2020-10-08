@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPapers({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPapers({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPapers';
+  var className = 'Component Lini LiniPapers';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,31 @@ export default function LiniPapers({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M10.5 9h-3a.5.5 0 01-.5-.5v-4a.5.5 0 01.5-.5h3a.5.5 0 01.5.5v4a.5.5 0 01-.5.5zM8 8h2V5H8v3zM5.5 5h-2a.5.5 0 010-1h2a.5.5 0 010 1zM5.5 7h-2a.5.5 0 010-1h2a.5.5 0 010 1zM5.5 9h-2a.5.5 0 010-1h2a.5.5 0 010 1zM10.5 11h-7a.5.5 0 010-1h7a.5.5 0 010 1zM10.5 13h-7a.5.5 0 010-1h7a.5.5 0 010 1z"
+    d: "M10.5 9h-3c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5zM8 8h2v-3h-2v3z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 5H16v-.5c0-.827-.673-1.5-1.5-1.5H14v-.5c0-.827-.673-1.5-1.5-1.5h-11C.673 1 0 1.673 0 2.5v12c0 .827.673 1.5 1.5 1.5H2v.5c0 .827.673 1.5 1.5 1.5H4v.5c0 .827.673 1.5 1.5 1.5h11c.827 0 1.5-.673 1.5-1.5v-12c0-.827-.673-1.5-1.5-1.5zM1 14.5v-12a.5.5 0 01.5-.5h11a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5zm2 2V16h9.5c.827 0 1.5-.673 1.5-1.5V4h.5a.5.5 0 01.5.5v12a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5zm14 2a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5V18h9.5c.827 0 1.5-.673 1.5-1.5V6h.5a.5.5 0 01.5.5v12z"
+    d: "M5.5 5h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 7h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 9h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10.5 11h-7c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10.5 13h-7c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 5h-0.5v-0.5c0-0.827-0.673-1.5-1.5-1.5h-0.5v-0.5c0-0.827-0.673-1.5-1.5-1.5h-11c-0.827 0-1.5 0.673-1.5 1.5v12c0 0.827 0.673 1.5 1.5 1.5h0.5v0.5c0 0.827 0.673 1.5 1.5 1.5h0.5v0.5c0 0.827 0.673 1.5 1.5 1.5h11c0.827 0 1.5-0.673 1.5-1.5v-12c0-0.827-0.673-1.5-1.5-1.5zM1 14.5v-12c0-0.276 0.224-0.5 0.5-0.5h11c0.276 0 0.5 0.224 0.5 0.5v12c0 0.276-0.224 0.5-0.5 0.5h-11c-0.276 0-0.5-0.224-0.5-0.5zM3 16.5v-0.5h9.5c0.827 0 1.5-0.673 1.5-1.5v-10.5h0.5c0.276 0 0.5 0.224 0.5 0.5v12c0 0.276-0.224 0.5-0.5 0.5h-11c-0.276 0-0.5-0.224-0.5-0.5zM17 18.5c0 0.276-0.224 0.5-0.5 0.5h-11c-0.276 0-0.5-0.224-0.5-0.5v-0.5h9.5c0.827 0 1.5-0.673 1.5-1.5v-10.5h0.5c0.276 0 0.5 0.224 0.5 0.5v12z",
+    fill: color
   })));
 }
+
 LiniPapers.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPapers;

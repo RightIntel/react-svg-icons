@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniKeyHole({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniKeyHole({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniKeyHole';
+  var className = 'Component Lini LiniKeyHole';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniKeyHole({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M14.5 20h-9a.5.5 0 01-.48-.64l2.873-9.824A5.011 5.011 0 015 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.01 5.01 0 01-2.894 4.536l2.873 9.824a.499.499 0 01-.48.64zm-8.333-1h7.666L11.02 9.384a.5.5 0 01.313-.612A4.008 4.008 0 0014 5c0-2.206-1.794-4-4-4S6 2.794 6 5a4.008 4.008 0 002.667 3.772.5.5 0 01.313.612L6.167 19z"
+    d: "M14.5 20h-9c-0.157 0-0.306-0.074-0.4-0.2s-0.124-0.289-0.080-0.44l2.873-9.824c-1.748-0.813-2.893-2.58-2.893-4.536 0-2.757 2.243-5 5-5s5 2.243 5 5c0 1.956-1.145 3.723-2.894 4.536l2.873 9.824c0.044 0.151 0.015 0.314-0.080 0.44s-0.243 0.2-0.4 0.2zM6.167 19h7.666l-2.813-9.616c-0.075-0.255 0.063-0.523 0.313-0.612 1.595-0.564 2.667-2.080 2.667-3.772 0-2.206-1.794-4-4-4s-4 1.794-4 4c0 1.692 1.072 3.208 2.667 3.772 0.25 0.088 0.388 0.357 0.313 0.612l-2.813 9.616z",
+    fill: color
   })));
 }
+
 LiniKeyHole.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniKeyHole;

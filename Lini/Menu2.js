@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniMenu2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniMenu2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniMenu2';
+  var className = 'Component Lini LiniMenu2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,19 @@ export default function LiniMenu2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 7h-17C.673 7 0 6.327 0 5.5S.673 4 1.5 4h17c.827 0 1.5.673 1.5 1.5S19.327 7 18.5 7zm-17-2a.5.5 0 000 1h17a.5.5 0 000-1h-17zM18.5 12h-17C.673 12 0 11.327 0 10.5S.673 9 1.5 9h17c.827 0 1.5.673 1.5 1.5s-.673 1.5-1.5 1.5zm-17-2a.5.5 0 000 1h17a.5.5 0 000-1h-17zM18.5 17h-17C.673 17 0 16.327 0 15.5S.673 14 1.5 14h17c.827 0 1.5.673 1.5 1.5s-.673 1.5-1.5 1.5zm-17-2a.5.5 0 000 1h17a.5.5 0 000-1h-17z"
+    d: "M18.5 7h-17c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5h17c0.827 0 1.5 0.673 1.5 1.5s-0.673 1.5-1.5 1.5zM1.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h17c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-17z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 12h-17c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5h17c0.827 0 1.5 0.673 1.5 1.5s-0.673 1.5-1.5 1.5zM1.5 10c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h17c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-17z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 17h-17c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5h17c0.827 0 1.5 0.673 1.5 1.5s-0.673 1.5-1.5 1.5zM1.5 15c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h17c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-17z",
+    fill: color
   })));
 }
+
 LiniMenu2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniMenu2;

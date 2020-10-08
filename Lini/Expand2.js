@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniExpand2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniExpand2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniExpand2';
+  var className = 'Component Lini LiniExpand2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniExpand2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.5 0h-5a.5.5 0 000 1h3.793l-6.146 6.146a.5.5 0 00.706.707L19 1.707V5.5a.5.5 0 001 0v-5a.5.5 0 00-.5-.5zM7.854 12.147a.5.5 0 00-.707 0l-6.146 6.146V14.5a.5.5 0 00-1 0v5a.5.5 0 00.5.5h5a.5.5 0 000-1H1.708l6.146-6.147a.5.5 0 000-.707z"
+    d: "M19.5 0h-5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h3.793l-6.146 6.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.353 0.146s0.256-0.049 0.353-0.146l6.147-6.146v3.793c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-5c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.854 12.147c-0.195-0.195-0.512-0.195-0.707 0l-6.146 6.146v-3.793c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v5c0 0.276 0.224 0.5 0.5 0.5h5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-3.793l6.146-6.147c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
   })));
 }
+
 LiniExpand2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniExpand2;

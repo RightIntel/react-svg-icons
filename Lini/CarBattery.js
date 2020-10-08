@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCarBattery({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCarBattery({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCarBattery';
+  var className = 'Component Lini LiniCarBattery';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function LiniCarBattery({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.5 5H18V3.5a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5V5H6V3.5a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5V5H.5a.5.5 0 00-.5.5v11a.5.5 0 00.5.5h19a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5zM15 4h2v1h-2V4zM3 4h2v1H3V4zm16 12H1V6h18v10z"
+    d: "M19.5 5h-1.5v-1.5c0-0.276-0.224-0.5-0.5-0.5h-3c-0.276 0-0.5 0.224-0.5 0.5v1.5h-8v-1.5c0-0.276-0.224-0.5-0.5-0.5h-3c-0.276 0-0.5 0.224-0.5 0.5v1.5h-1.5c-0.276 0-0.5 0.224-0.5 0.5v11c0 0.276 0.224 0.5 0.5 0.5h19c0.276 0 0.5-0.224 0.5-0.5v-11c0-0.276-0.224-0.5-0.5-0.5zM15 4h2v1h-2v-1zM3 4h2v1h-2v-1zM19 16h-18v-10h18v10z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 10H15V8.5a.5.5 0 00-1 0V10h-1.5a.5.5 0 000 1H14v1.5a.5.5 0 001 0V11h1.5a.5.5 0 000-1zM7.5 11h-4a.5.5 0 010-1h4a.5.5 0 010 1z"
+    d: "M16.5 10h-1.5v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-1.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h1.5v1.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-1.5h1.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.5 11h-4c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h4c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniCarBattery.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCarBattery;

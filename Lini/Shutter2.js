@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniShutter2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniShutter2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniShutter2';
+  var className = 'Component Lini LiniShutter2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniShutter2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M20 15.49V5.504.501a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v19a.5.5 0 00.5.5h19a.5.5 0 00.5-.5v-4.009-.002zM16.576 19l-8.537-2.668-4.602-4.602L1 4.419V1h2.424l8.537 2.668 4.602 4.602L19 15.581V19h-2.424zm-5.869 0l-1.144-1.144L13.224 19h-2.517zM5.86 19l-.856-2.569 2.502.782L9.293 19H5.86zM1 7.581l.856 2.568L1 9.293V7.581zm0 3.126l1.563 1.563.875 2.624L1 14.132v-3.425zm3.144 3.144l1.838 1.838-1.368-.427-.47-1.411zM9.293 1l1.144 1.144L6.776 1h2.517zm4.847 0l.856 2.569-2.502-.782L10.707 1h3.433zM19 9.293L17.437 7.73l-.875-2.624L19 5.868v3.425zm-3.144-3.144l-1.838-1.838 1.368.427.47 1.411zm2.288 3.702l.856.856v1.712l-.856-2.568zM19 4.82l-2.828-.884L15.193 1h3.806v3.82zM1 15.18l2.828.884L4.807 19H1.001v-3.82z"
+    d: "M20 15.49v-4.989c0-0 0-0 0-0v-4.997c0-0.002 0-0.003 0-0.005v-4.998c0-0.276-0.224-0.5-0.5-0.5h-5.008c-0.001 0-0.002 0-0.003 0h-10.986c-0.002 0-0.004 0-0.005 0h-2.998c-0.276 0-0.5 0.224-0.5 0.5v4.009c0 0 0 0.001 0 0.001v9.987c0 0.002 0 0.003 0 0.005v4.998c0 0.276 0.224 0.5 0.5 0.5h4.997c0.001 0 0.002 0 0.003 0s0.002-0 0.003-0h10.994c0.001 0 0.002 0 0.003 0s0.002-0 0.003-0h2.997c0.276 0 0.5-0.224 0.5-0.5v-4.009c0-0.001 0-0.001 0-0.002zM16.576 19l-8.537-2.668-4.602-4.602-2.437-7.311v-3.419h2.424l8.537 2.668 4.602 4.602 2.437 7.311v3.419h-2.424zM10.707 19l-1.144-1.144 3.661 1.144h-2.517zM5.86 19l-0.856-2.569 2.502 0.782 1.787 1.787h-3.433zM1 7.581l0.856 2.568-0.856-0.856v-1.712zM1 10.707l1.563 1.563 0.875 2.624-2.438-0.762v-3.425zM4.144 13.851l1.838 1.838-1.368-0.427-0.47-1.411zM9.293 1l1.144 1.144-3.661-1.144h2.517zM14.14 1l0.856 2.569-2.502-0.782-1.787-1.787h3.433zM19 9.293l-1.563-1.563-0.875-2.624 2.438 0.762v3.425zM15.856 6.149l-1.838-1.838 1.368 0.427 0.47 1.411zM18.144 9.851l0.856 0.856v1.712l-0.856-2.568zM19 4.82l-2.828-0.884-0.979-2.936h3.806v3.82zM1 15.18l2.828 0.884 0.979 2.936h-3.806v-3.82z",
+    fill: color
   })));
 }
+
 LiniShutter2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniShutter2;

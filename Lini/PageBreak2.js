@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPageBreak2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPageBreak2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPageBreak2';
+  var className = 'Component Lini LiniPageBreak2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,52 @@ export default function LiniPageBreak2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.5 11a.5.5 0 01-.5-.5v-8a.5.5 0 00-.5-.5h-13a.5.5 0 00-.5.5v8a.5.5 0 01-1 0v-8C4 1.673 4.673 1 5.5 1h13c.827 0 1.5.673 1.5 1.5v8a.5.5 0 01-.5.5zM18.5 20h-13c-.827 0-1.5-.673-1.5-1.5v-4a.5.5 0 011 0v4a.5.5 0 00.5.5h13a.5.5 0 00.5-.5v-4a.5.5 0 011 0v4c0 .827-.673 1.5-1.5 1.5z"
+    d: "M19.5 11c-0.276 0-0.5-0.224-0.5-0.5v-8c0-0.276-0.224-0.5-0.5-0.5h-13c-0.276 0-0.5 0.224-0.5 0.5v8c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5v-8c0-0.827 0.673-1.5 1.5-1.5h13c0.827 0 1.5 0.673 1.5 1.5v8c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M14.5 5h-7a.5.5 0 010-1h7a.5.5 0 010 1zM16.5 7h-9a.5.5 0 010-1h9a.5.5 0 010 1zM16.5 9h-9a.5.5 0 010-1h9a.5.5 0 010 1zM16.5 15h-9a.5.5 0 010-1h9a.5.5 0 010 1zM14.5 17h-7a.5.5 0 010-1h7a.5.5 0 010 1zM12.5 11h-5a.5.5 0 010-1h5a.5.5 0 010 1zM18.5 13h-1a.5.5 0 010-1h1a.5.5 0 010 1zM15.5 13h-1a.5.5 0 010-1h1a.5.5 0 010 1zM12.5 13h-1a.5.5 0 010-1h1a.5.5 0 010 1zM9.5 13h-1a.5.5 0 010-1h1a.5.5 0 010 1zM6.5 13h-1a.5.5 0 010-1h1a.5.5 0 010 1zM1 15a.5.5 0 01-.354-.853l1.646-1.646-1.646-1.646a.5.5 0 01.707-.707l2 2a.5.5 0 010 .707l-2 2a.498.498 0 01-.354.146z"
+    d: "M18.5 20h-13c-0.827 0-1.5-0.673-1.5-1.5v-4c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h13c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v4c0 0.827-0.673 1.5-1.5 1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14.5 5h-7c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 7h-9c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h9c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 9h-9c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h9c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 15h-9c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h9c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14.5 17h-7c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.5 11h-5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 13h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 13h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12.5 13h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 13h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6.5 13h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 15c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l1.646-1.646-1.646-1.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l2 2c0.195 0.195 0.195 0.512 0 0.707l-2 2c-0.098 0.098-0.226 0.146-0.354 0.146z",
+    fill: color
   })));
 }
+
 LiniPageBreak2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPageBreak2;

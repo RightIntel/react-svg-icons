@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniWallet({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniWallet({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniWallet';
+  var className = 'Component Lini LiniWallet';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function LiniWallet({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 9H17V6.5c0-.827-.673-1.5-1.5-1.5H13V.5a.5.5 0 00-.5-.5h-10a.5.5 0 00-.5.5v4.55C.86 5.282 0 6.292 0 7.5v11c0 .827.673 1.5 1.5 1.5h16c.827 0 1.5-.673 1.5-1.5v-8c0-.827-.673-1.5-1.5-1.5zM3 1h9v6H3V1zM2 6.086V7.5a.5.5 0 00.5.5h12a.5.5 0 000-1H13V6h2.5a.5.5 0 01.5.5V9H2.5C1.673 9 1 8.327 1 7.5c0-.652.418-1.208 1-1.414zM18 18.5a.5.5 0 01-.5.5h-16a.5.5 0 01-.5-.5V9.499c.418.315.938.501 1.5.501h15a.5.5 0 01.5.5v8z"
+    d: "M17.5 9h-0.5v-2.5c0-0.827-0.673-1.5-1.5-1.5h-2.5v-4.5c0-0.276-0.224-0.5-0.5-0.5h-10c-0.276 0-0.5 0.224-0.5 0.5v4.55c-1.14 0.232-2 1.242-2 2.45v11c0 0.827 0.673 1.5 1.5 1.5h16c0.827 0 1.5-0.673 1.5-1.5v-8c0-0.827-0.673-1.5-1.5-1.5zM3 1h9v6h-9v-6zM2 6.086v1.414c0 0.276 0.224 0.5 0.5 0.5h12c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-1.5v-1h2.5c0.276 0 0.5 0.224 0.5 0.5v2.5h-13.5c-0.827 0-1.5-0.673-1.5-1.5 0-0.652 0.418-1.208 1-1.414zM18 18.5c0 0.276-0.224 0.5-0.5 0.5h-16c-0.276 0-0.5-0.224-0.5-0.5v-9.001c0.418 0.315 0.938 0.501 1.5 0.501h15c0.276 0 0.5 0.224 0.5 0.5v8z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M10.5 3H10v-.5a.5.5 0 00-.5-.5h-2a.5.5 0 00-.5.5V4H6V2.5a.5.5 0 00-1 0V3h-.5a.5.5 0 000 1H5v.5a.5.5 0 00.5.5h2a.5.5 0 00.5-.5V3h1v1.5a.5.5 0 001 0V4h.5a.5.5 0 000-1zM16.5 18h-4a.5.5 0 010-1h4a.5.5 0 010 1z"
+    d: "M10.5 3h-0.5v-0.5c0-0.276-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5 0.224-0.5 0.5v1.5h-1v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v0.5h-0.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h0.5v0.5c0 0.276 0.224 0.5 0.5 0.5h2c0.276 0 0.5-0.224 0.5-0.5v-1.5h1v1.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-0.5h0.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 18h-4c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h4c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniWallet.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniWallet;

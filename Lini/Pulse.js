@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPulse({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPulse({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPulse';
+  var className = 'Component Lini LiniPulse';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniPulse({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M12.496 16.925c-.111 0-.379-.037-.552-.369a1.692 1.692 0 01-.142-.429L9.442 5.114l-2.196 8.053c-.177.648-.545.765-.749.776s-.583-.062-.832-.686l-1.164-2.911-.164.411C4.058 11.454 3.252 12 2.501 12h-2a.5.5 0 010-1h2c.346 0 .779-.293.907-.614l.257-.643c.243-.607.628-.697.836-.697s.593.091.836.697l1.075 2.686 2.344-8.596c.175-.642.5-.769.744-.762s.561.151.7.802l2.285 10.662 1.33-6.652c.133-.664.491-.801.693-.823s.581.032.856.651l1.188 2.672c.144.323.596.617.949.617h2a.5.5 0 010 1h-2c-.743 0-1.561-.532-1.863-1.211l-.955-2.149-1.495 7.477c-.036.178-.08.319-.137.431-.17.338-.442.376-.55.377h-.003z"
+    d: "M12.496 16.925c-0.111 0-0.379-0.037-0.552-0.369-0.058-0.111-0.104-0.251-0.142-0.429l-2.36-11.013-2.196 8.053c-0.177 0.648-0.545 0.765-0.749 0.776s-0.583-0.062-0.832-0.686l-1.164-2.911-0.164 0.411c-0.279 0.697-1.085 1.243-1.836 1.243h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.346 0 0.779-0.293 0.907-0.614l0.257-0.643c0.243-0.607 0.628-0.697 0.836-0.697s0.593 0.091 0.836 0.697l1.075 2.686 2.344-8.596c0.175-0.642 0.5-0.769 0.744-0.762s0.561 0.151 0.7 0.802l2.285 10.662 1.33-6.652c0.133-0.664 0.491-0.801 0.693-0.823s0.581 0.032 0.856 0.651l1.188 2.672c0.144 0.323 0.596 0.617 0.949 0.617h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-2c-0.743 0-1.561-0.532-1.863-1.211l-0.955-2.149-1.495 7.477c-0.036 0.178-0.080 0.319-0.137 0.431-0.17 0.338-0.442 0.376-0.55 0.377-0.001 0-0.002 0-0.003 0z",
+    fill: color
   })));
 }
+
 LiniPulse.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPulse;

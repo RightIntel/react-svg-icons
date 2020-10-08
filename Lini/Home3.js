@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniHome3({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniHome3({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniHome3';
+  var className = 'Component Lini LiniHome3';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniHome3({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M.5 12a.498.498 0 01-.37-.835l8.829-9.758c.274-.303.644-.47 1.042-.47.397 0 .767.167 1.042.47l8.829 9.758a.5.5 0 01-.741.671l-8.829-9.758c-.082-.091-.189-.141-.3-.141s-.218.05-.3.141L.873 11.836a.5.5 0 01-.371.165z"
+    d: "M0.5 12c-0.12 0-0.24-0.043-0.335-0.129-0.205-0.185-0.221-0.501-0.035-0.706l8.829-9.758c0.274-0.303 0.644-0.47 1.042-0.47 0 0 0 0 0 0 0.397 0 0.767 0.167 1.042 0.47l8.829 9.758c0.185 0.205 0.169 0.521-0.035 0.706s-0.521 0.169-0.706-0.035l-8.829-9.758c-0.082-0.091-0.189-0.141-0.3-0.141s-0.218 0.050-0.3 0.141l-8.829 9.758c-0.099 0.109-0.235 0.165-0.371 0.165z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M15.5 20h-4a.5.5 0 01-.5-.5V16H9v3.5a.5.5 0 01-.5.5h-4c-.827 0-1.5-.673-1.5-1.5v-8a.5.5 0 011 0v8a.5.5 0 00.5.5H8v-3.5a.5.5 0 01.5-.5h3a.5.5 0 01.5.5V19h3.5a.5.5 0 00.5-.5v-8a.5.5 0 011 0v8c0 .827-.673 1.5-1.5 1.5z"
+    d: "M15.5 20h-4c-0.276 0-0.5-0.224-0.5-0.5v-3.5h-2v3.5c0 0.276-0.224 0.5-0.5 0.5h-4c-0.827 0-1.5-0.673-1.5-1.5v-8c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v8c0 0.276 0.224 0.5 0.5 0.5h3.5v-3.5c0-0.276 0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5v3.5h3.5c0.276 0 0.5-0.224 0.5-0.5v-8c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v8c0 0.827-0.673 1.5-1.5 1.5z",
+    fill: color
   })));
 }
+
 LiniHome3.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniHome3;

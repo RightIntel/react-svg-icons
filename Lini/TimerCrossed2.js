@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniTimerCrossed2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniTimerCrossed2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniTimerCrossed2';
+  var className = 'Component Lini LiniTimerCrossed2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniTimerCrossed2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M15.51 5.49l-.047-.046 1.413-1.615a.5.5 0 10-.753-.659l-1.412 1.613a8.417 8.417 0 00-4.713-1.769l.001-.015v-1h.5a.5.5 0 000-1h-2a.5.5 0 000 1h.5v1L9 3.014a8.438 8.438 0 00-5.511 2.475c-1.605 1.605-2.49 3.74-2.49 6.01s.884 4.405 2.49 6.01l.047.046-1.413 1.615a.5.5 0 00.752.659l1.412-1.613A8.434 8.434 0 009.499 20c2.27 0 4.405-.884 6.01-2.49s2.49-3.74 2.49-6.01c0-2.27-.884-4.405-2.49-6.01zM2 11.5C2 7.364 5.364 4 9.5 4c1.709 0 3.287.575 4.549 1.542L10 10.17V5.501a.5.5 0 00-1 0v5.812l-4.802 5.488A7.48 7.48 0 012 11.501zM9.5 19a7.456 7.456 0 01-4.549-1.542L14.802 6.2A7.475 7.475 0 0117 11.5c0 4.136-3.364 7.5-7.5 7.5z"
+    d: "M15.51 5.49c-0.015-0.015-0.031-0.030-0.047-0.046l1.413-1.615c0.182-0.208 0.161-0.524-0.047-0.706s-0.524-0.161-0.706 0.047l-1.412 1.613c-1.355-1.056-2.985-1.67-4.713-1.769 0-0.005 0.001-0.010 0.001-0.015v-1h0.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h0.5v1c0 0.005 0.001 0.010 0.001 0.015-2.083 0.12-4.024 0.988-5.511 2.475-1.605 1.605-2.49 3.74-2.49 6.010s0.884 4.405 2.49 6.010c0.015 0.015 0.031 0.030 0.047 0.046l-1.413 1.615c-0.182 0.208-0.161 0.524 0.047 0.706 0.095 0.083 0.212 0.124 0.329 0.124 0.139 0 0.278-0.058 0.376-0.171l1.412-1.613c1.484 1.157 3.3 1.784 5.212 1.784 2.27 0 4.405-0.884 6.010-2.49s2.49-3.74 2.49-6.010c0-2.27-0.884-4.405-2.49-6.010zM2 11.5c0-4.136 3.364-7.5 7.5-7.5 1.709 0 3.287 0.575 4.549 1.542l-4.049 4.628v-4.669c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v5.812l-4.802 5.488c-1.357-1.358-2.198-3.233-2.198-5.3zM9.5 19c-1.709 0-3.287-0.575-4.549-1.542l9.851-11.258c1.358 1.358 2.198 3.233 2.198 5.3 0 4.136-3.364 7.5-7.5 7.5z",
+    fill: color
   })));
 }
+
 LiniTimerCrossed2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniTimerCrossed2;

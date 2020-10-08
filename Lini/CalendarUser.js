@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCalendarUser({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCalendarUser({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCalendarUser';
+  var className = 'Component Lini LiniCalendarUser';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function LiniCalendarUser({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 2H16v-.5a.5.5 0 00-1 0V2H5v-.5a.5.5 0 00-1 0V2H1.5C.673 2 0 2.673 0 3.5v14c0 .827.673 1.5 1.5 1.5h17c.827 0 1.5-.673 1.5-1.5v-14c0-.827-.673-1.5-1.5-1.5zm.5 15.5a.5.5 0 01-.5.5h-17a.5.5 0 01-.5-.5v-14a.5.5 0 01.5-.5H4v1.5a.5.5 0 001 0V3h10v1.5a.5.5 0 001 0V3h2.5a.5.5 0 01.5.5v14z"
+    d: "M18.5 2h-2.5v-0.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v0.5h-10v-0.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v0.5h-2.5c-0.827 0-1.5 0.673-1.5 1.5v14c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-14c0-0.827-0.673-1.5-1.5-1.5zM19 17.5c0 0.276-0.224 0.5-0.5 0.5h-17c-0.276 0-0.5-0.224-0.5-0.5v-14c0-0.276 0.224-0.5 0.5-0.5h2.5v1.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-1.5h10v1.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-1.5h2.5c0.276 0 0.5 0.224 0.5 0.5v14z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M10 11c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zm0-5c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zM13.5 16h-7c-.425 0-.796-.177-1.019-.486s-.273-.717-.139-1.12c.033-.098.842-2.393 4.658-2.393s4.626 2.296 4.658 2.393c.134.403.084.811-.139 1.12S13.925 16 13.5 16zm-7.211-1.286c-.03.091-.029.172.003.215s.11.071.208.071h7c.098 0 .176-.027.208-.071s.033-.124.003-.215c-.011-.029-.175-.442-.679-.847-.704-.567-1.752-.866-3.032-.866s-2.327.3-3.032.866c-.504.406-.668.818-.679.847z"
+    d: "M10 11c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3c0 1.654-1.346 3-3 3zM10 6c-1.103 0-2 0.897-2 2s0.897 2 2 2 2-0.897 2-2-0.897-2-2-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.5 16h-7c-0.425 0-0.796-0.177-1.019-0.486s-0.273-0.717-0.139-1.12c0.033-0.098 0.842-2.393 4.658-2.393s4.626 2.296 4.658 2.393c0.134 0.403 0.084 0.811-0.139 1.12s-0.594 0.486-1.019 0.486zM6.289 14.714c-0.030 0.091-0.029 0.172 0.003 0.215s0.11 0.071 0.208 0.071h7c0.098 0 0.176-0.027 0.208-0.071s0.033-0.124 0.003-0.215c-0.011-0.029-0.175-0.442-0.679-0.847-0.704-0.567-1.752-0.866-3.032-0.866s-2.327 0.3-3.032 0.866c-0.504 0.406-0.668 0.818-0.679 0.847z",
+    fill: color
   })));
 }
+
 LiniCalendarUser.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCalendarUser;

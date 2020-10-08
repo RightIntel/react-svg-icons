@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniEngine({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniEngine({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniEngine';
+  var className = 'Component Lini LiniEngine';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniEngine({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 6h-1a.5.5 0 00-.5.5V8h-1V6.5a.5.5 0 00-.5-.5H14v-.5a.5.5 0 00-.5-.5H10V4h2.5a.5.5 0 000-1h-6a.5.5 0 000 1H9v1H5.5a.5.5 0 00-.5.5V6H2.5a.5.5 0 00-.5.5V10H1V7.5a.5.5 0 00-1 0v6a.5.5 0 001 0V11h1v3.5a.5.5 0 00.5.5h2.793l1.854 1.854a.5.5 0 00.354.146h8a.5.5 0 00.5-.5V14h1v1.5a.5.5 0 00.5.5h1c.827 0 1.5-.673 1.5-1.5v-7c0-.827-.673-1.5-1.5-1.5zm.5 8.5a.5.5 0 01-.5.5H18v-1.5a.5.5 0 00-.5-.5h-2a.5.5 0 00-.5.5V16H7.707l-1.854-1.854A.5.5 0 005.499 14h-2.5V7h2.5a.5.5 0 00.5-.5V6h7v.5a.5.5 0 00.5.5h1.5v1.5a.5.5 0 00.5.5h2a.5.5 0 00.5-.5V7h.5a.5.5 0 01.5.5v7z"
+    d: "M18.5 6h-1c-0.276 0-0.5 0.224-0.5 0.5v1.5h-1v-1.5c0-0.276-0.224-0.5-0.5-0.5h-1.5v-0.5c0-0.276-0.224-0.5-0.5-0.5h-3.5v-1h2.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-6c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h2.5v1h-3.5c-0.276 0-0.5 0.224-0.5 0.5v0.5h-2.5c-0.276 0-0.5 0.224-0.5 0.5v3.5h-1v-2.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v6c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2.5h1v3.5c0 0.276 0.224 0.5 0.5 0.5h2.793l1.854 1.854c0.094 0.094 0.221 0.146 0.354 0.146h8c0.276 0 0.5-0.224 0.5-0.5v-2.5h1v1.5c0 0.276 0.224 0.5 0.5 0.5h1c0.827 0 1.5-0.673 1.5-1.5v-7c0-0.827-0.673-1.5-1.5-1.5zM19 14.5c0 0.276-0.224 0.5-0.5 0.5h-0.5v-1.5c0-0.276-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5 0.224-0.5 0.5v2.5h-7.293l-1.854-1.854c-0.094-0.094-0.221-0.146-0.354-0.146h-2.5v-7h2.5c0.276 0 0.5-0.224 0.5-0.5v-0.5h7v0.5c0 0.276 0.224 0.5 0.5 0.5h1.5v1.5c0 0.276 0.224 0.5 0.5 0.5h2c0.276 0 0.5-0.224 0.5-0.5v-1.5h0.5c0.276 0 0.5 0.224 0.5 0.5v7z",
+    fill: color
   })));
 }
+
 LiniEngine.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniEngine;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniWall({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniWall({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniWall';
+  var className = 'Component Lini LiniWall';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniWall({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 7a.5.5 0 000-1H16V3h2.5a.5.5 0 000-1H.5a.5.5 0 000 1H6v3H.5a.5.5 0 000 1H3v3H.5a.5.5 0 000 1H6v3H.5a.5.5 0 000 1H3v3H.5a.5.5 0 000 1h18a.5.5 0 000-1H13v-3h5.5a.5.5 0 000-1H16v-3h2.5a.5.5 0 000-1H13V7h5.5zM7 3h8v3H7V3zm5 15H4v-3h8v3zm3-4H7v-3h8v3zm-3-4H4V7h8v3z"
+    d: "M18.5 7c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-2.5v-3h2.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-18c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h5.5v3h-5.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h2.5v3h-2.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h5.5v3h-5.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h2.5v3h-2.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h18c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-5.5v-3h5.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-2.5v-3h2.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-5.5v-3h5.5zM7 3h8v3h-8v-3zM12 18h-8v-3h8v3zM15 14h-8v-3h8v3zM12 10h-8v-3h8v3z",
+    fill: color
   })));
 }
+
 LiniWall.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniWall;

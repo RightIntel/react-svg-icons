@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniAccessibility({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniAccessibility({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniAccessibility';
+  var className = 'Component Lini LiniAccessibility';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,19 @@ export default function LiniAccessibility({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 8C8.122 8 7 6.878 7 5.5S8.122 3 9.5 3 12 4.122 12 5.5 10.878 8 9.5 8zm0-4C8.673 4 8 4.673 8 5.5S8.673 7 9.5 7 11 6.327 11 5.5 10.327 4 9.5 4z"
+    d: "M9.5 8c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zM9.5 4c-0.827 0-1.5 0.673-1.5 1.5s0.673 1.5 1.5 1.5c0.827 0 1.5-0.673 1.5-1.5s-0.673-1.5-1.5-1.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M13.985 8.379a.5.5 0 00-.606-.364l-3.879.97-3.879-.97a.5.5 0 10-.242.97L9 9.89v2.443L6.1 16.2a.5.5 0 10.8.6l2.6-3.467 2.6 3.467a.498.498 0 00.7.1.5.5 0 00.1-.7L10 12.333V9.89l3.621-.905a.5.5 0 00.364-.606z"
+    d: "M13.985 8.379c-0.067-0.268-0.338-0.431-0.606-0.364l-3.879 0.97-3.879-0.97c-0.268-0.067-0.539 0.096-0.606 0.364s0.096 0.539 0.364 0.606l3.621 0.905v2.443l-2.9 3.867c-0.166 0.221-0.121 0.534 0.1 0.7s0.534 0.121 0.7-0.1l2.6-3.467 2.6 3.467c0.098 0.131 0.248 0.2 0.4 0.2 0.104 0 0.21-0.033 0.3-0.1 0.221-0.166 0.266-0.479 0.1-0.7l-2.9-3.867v-2.443l3.621-0.905c0.268-0.067 0.431-0.338 0.364-0.606z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 20c-2.538 0-4.923-.988-6.718-2.782S0 13.038 0 10.501c0-2.538.988-4.923 2.782-6.718S6.962 1 9.5 1c2.538 0 4.923.988 6.718 2.783S19 7.963 19 10.501s-.988 4.923-2.782 6.717A9.438 9.438 0 019.5 20zm0-18C4.813 2 1 5.813 1 10.5S4.813 19 9.5 19s8.5-3.813 8.5-8.5S14.187 2 9.5 2z"
+    d: "M9.5 20c-2.538 0-4.923-0.988-6.718-2.782s-2.782-4.18-2.782-6.717c0-2.538 0.988-4.923 2.782-6.718s4.18-2.783 6.718-2.783c2.538 0 4.923 0.988 6.718 2.783s2.782 4.18 2.782 6.718-0.988 4.923-2.782 6.717c-1.794 1.794-4.18 2.782-6.718 2.782zM9.5 2c-4.687 0-8.5 3.813-8.5 8.5s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5-3.813-8.5-8.5-8.5z",
+    fill: color
   })));
 }
+
 LiniAccessibility.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniAccessibility;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCombine({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCombine({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCombine';
+  var className = 'Component Lini LiniCombine';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniCombine({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 7H13V2.5c0-.827-.673-1.5-1.5-1.5h-10C.673 1 0 1.673 0 2.5v10c0 .827.673 1.5 1.5 1.5H6v4.5c0 .827.673 1.5 1.5 1.5h10c.827 0 1.5-.673 1.5-1.5v-10c0-.827-.673-1.5-1.5-1.5zm.5 11.5a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5V13H1.5a.5.5 0 01-.5-.5v-10a.5.5 0 01.5-.5h10a.5.5 0 01.5.5V8h5.5a.5.5 0 01.5.5v10z"
+    d: "M17.5 7h-4.5v-4.5c0-0.827-0.673-1.5-1.5-1.5h-10c-0.827 0-1.5 0.673-1.5 1.5v10c0 0.827 0.673 1.5 1.5 1.5h4.5v4.5c0 0.827 0.673 1.5 1.5 1.5h10c0.827 0 1.5-0.673 1.5-1.5v-10c0-0.827-0.673-1.5-1.5-1.5zM18 18.5c0 0.276-0.224 0.5-0.5 0.5h-10c-0.276 0-0.5-0.224-0.5-0.5v-5.5h-5.5c-0.276 0-0.5-0.224-0.5-0.5v-10c0-0.276 0.224-0.5 0.5-0.5h10c0.276 0 0.5 0.224 0.5 0.5v5.5h5.5c0.276 0 0.5 0.224 0.5 0.5v10z",
+    fill: color
   })));
 }
+
 LiniCombine.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCombine;

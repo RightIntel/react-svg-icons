@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniGridCrossed({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniGridCrossed({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniGridCrossed';
+  var className = 'Component Lini LiniGridCrossed';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniGridCrossed({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.854.146a.5.5 0 00-.707 0l-2 2a1.49 1.49 0 00-.646-.147h-13c-.827 0-1.5.673-1.5 1.5v13c0 .231.053.45.147.646l-2 2a.5.5 0 00.708.707l2-2c.196.094.415.147.646.147h13c.827 0 1.5-.673 1.5-1.5v-13c0-.231-.053-.45-.147-.646l2-2a.5.5 0 000-.707zM11.293 8L8 11.293V8h3.293zM8 7V3h4v4H8zm-1 5H3V8h4v4zm1.707 0L12 8.707V12H8.707zM12 13v4H8v-4h4zm1-5h4v4h-4V8zm0-5h3.293L13 6.293V3zM3.5 3H7v4H3V3.5a.5.5 0 01.5-.5zM3 13h3.293L3 16.293V13zm4 .707V17H3.707L7 13.707zM16.5 17H13v-4h4v3.5a.5.5 0 01-.5.5zM17 7h-3.293L17 3.707V7z"
+    d: "M19.854 0.146c-0.195-0.195-0.512-0.195-0.707 0l-2 2c-0.196-0.094-0.415-0.147-0.646-0.147h-13c-0.827 0-1.5 0.673-1.5 1.5v13c0 0.231 0.053 0.45 0.147 0.646l-2 2c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l2-2c0.196 0.094 0.415 0.147 0.646 0.147h13c0.827 0 1.5-0.673 1.5-1.5v-13c0-0.231-0.053-0.45-0.147-0.646l2-2c0.195-0.195 0.195-0.512-0-0.707zM11.293 8l-3.293 3.293v-3.293h3.293zM8 7v-4h4v4h-4zM7 12h-4v-4h4v4zM8.707 12l3.293-3.293v3.293h-3.293zM12 13v4h-4v-4h4zM13 8h4v4h-4v-4zM13 3h3.293l-3.293 3.293v-3.293zM3.5 3h3.5v4h-4v-3.5c0-0.276 0.224-0.5 0.5-0.5zM3 13h3.293l-3.293 3.293v-3.293zM7 13.707v3.293h-3.293l3.293-3.293zM16.5 17h-3.5v-4h4v3.5c0 0.276-0.224 0.5-0.5 0.5zM17 7h-3.293l3.293-3.293v3.293z",
+    fill: color
   })));
 }
+
 LiniGridCrossed.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniGridCrossed;

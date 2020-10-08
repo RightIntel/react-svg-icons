@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCreditCard({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCreditCard({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCreditCard';
+  var className = 'Component Lini LiniCreditCard';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,22 @@ export default function LiniCreditCard({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 3h-17C.673 3 0 3.673 0 4.5v11c0 .827.673 1.5 1.5 1.5h17c.827 0 1.5-.673 1.5-1.5v-11c0-.827-.673-1.5-1.5-1.5zm-17 1h17a.5.5 0 01.5.5V5H1v-.5a.5.5 0 01.5-.5zM19 6v3H1V6h18zm-.5 10h-17a.5.5 0 01-.5-.5V10h18v5.5a.5.5 0 01-.5.5z"
+    d: "M18.5 3h-17c-0.827 0-1.5 0.673-1.5 1.5v11c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-11c0-0.827-0.673-1.5-1.5-1.5zM1.5 4h17c0.276 0 0.5 0.224 0.5 0.5v0.5h-18v-0.5c0-0.276 0.224-0.5 0.5-0.5zM19 6v3h-18v-3h18zM18.5 16h-17c-0.276 0-0.5-0.224-0.5-0.5v-5.5h18v5.5c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M17 14h1v1h-1v-1zM13 14h3v1h-3v-1zM10 14h2v1h-2v-1z"
+    d: "M17 14h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13 14h3v1h-3v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 14h2v1h-2v-1z",
+    fill: color
   })));
 }
+
 LiniCreditCard.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCreditCard;

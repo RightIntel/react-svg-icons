@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCalculator2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCalculator2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCalculator2';
+  var className = 'Component Lini LiniCalculator2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function LiniCalculator2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 20h-14c-.827 0-1.5-.673-1.5-1.5v-17C1 .673 1.673 0 2.5 0h14c.827 0 1.5.673 1.5 1.5v17c0 .827-.673 1.5-1.5 1.5zM2.5 1a.5.5 0 00-.5.5v17a.5.5 0 00.5.5h14a.5.5 0 00.5-.5v-17a.5.5 0 00-.5-.5h-14z"
+    d: "M16.5 20h-14c-0.827 0-1.5-0.673-1.5-1.5v-17c0-0.827 0.673-1.5 1.5-1.5h14c0.827 0 1.5 0.673 1.5 1.5v17c0 0.827-0.673 1.5-1.5 1.5zM2.5 1c-0.276 0-0.5 0.224-0.5 0.5v17c0 0.276 0.224 0.5 0.5 0.5h14c0.276 0 0.5-0.224 0.5-0.5v-17c0-0.276-0.224-0.5-0.5-0.5h-14z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M15.5 7h-12a.5.5 0 01-.5-.5v-4a.5.5 0 01.5-.5h12a.5.5 0 01.5.5v4a.5.5 0 01-.5.5zM4 6h11V3H4v3zM15.5 8h-12a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h12a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5zm-.5 3h-2V9h2v2zm-8 1h2v2H7v-2zm-1 2H4v-2h2v2zm1-3V9h2v2H7zm2 4v2H7v-2h2zm1 0h2v2h-2v-2zm2-1h-2v-2h2v2zm-2-3V9h2v2h-2zM6 9v2H4V9h2zm-2 6h2v2H4v-2zm9 2v-5h2v5h-2z"
+    d: "M15.5 7h-12c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5h12c0.276 0 0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5zM4 6h11v-3h-11v3z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 8h-12c-0.276 0-0.5 0.224-0.5 0.5v9c0 0.276 0.224 0.5 0.5 0.5h12c0.276 0 0.5-0.224 0.5-0.5v-9c0-0.276-0.224-0.5-0.5-0.5zM15 11h-2v-2h2v2zM7 12h2v2h-2v-2zM6 14h-2v-2h2v2zM7 11v-2h2v2h-2zM9 15v2h-2v-2h2zM10 15h2v2h-2v-2zM12 14h-2v-2h2v2zM10 11v-2h2v2h-2zM6 9v2h-2v-2h2zM4 15h2v2h-2v-2zM13 17v-5h2v5h-2z",
+    fill: color
   })));
 }
+
 LiniCalculator2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCalculator2;

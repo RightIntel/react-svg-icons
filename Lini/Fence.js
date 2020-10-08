@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniFence({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniFence({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniFence';
+  var className = 'Component Lini LiniFence';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,31 @@ export default function LiniFence({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M3 6.5a.5.5 0 11-1 0 .5.5 0 011 0zM10 6.5a.5.5 0 11-1 0 .5.5 0 011 0zM17 6.5a.5.5 0 11-1 0 .5.5 0 011 0z"
+    d: "M3 6.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M18.854 2.646l-2-2a.5.5 0 00-.707 0l-2 2a.5.5 0 00-.146.354v1h-2V3a.504.504 0 00-.146-.354l-2-2a.5.5 0 00-.707 0l-2 2A.5.5 0 007.002 3v1h-2V3a.504.504 0 00-.146-.354l-2-2a.5.5 0 00-.707 0l-2 2A.5.5 0 00.003 3v16.5a.5.5 0 00.5.5h4a.5.5 0 00.5-.5V18h2v1.5a.5.5 0 00.5.5h4a.5.5 0 00.5-.5V18h2v1.5a.5.5 0 00.5.5h4a.5.5 0 00.5-.5V3a.504.504 0 00-.146-.354zM12 9h2v4h-2V9zm2-4v3h-2V5h2zM5 9h2v4H5V9zm2-4v3H5V5h2zM4 19H1V3.207l1.5-1.5 1.5 1.5V19zm1-2v-3h2v3H5zm6 2H8V3.207l1.5-1.5 1.5 1.5V19zm1-2v-3h2v3h-2zm6 2h-3V3.207l1.5-1.5 1.5 1.5V19z"
+    d: "M10 6.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M3 15.5a.5.5 0 11-1 0 .5.5 0 011 0zM10 15.5a.5.5 0 11-1 0 .5.5 0 011 0zM17 15.5a.5.5 0 11-1 0 .5.5 0 011 0z"
+    d: "M17 6.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.854 2.646l-2-2c-0.195-0.195-0.512-0.195-0.707 0l-2 2c-0.094 0.094-0.146 0.221-0.146 0.354v1h-2v-1c0-0.133-0.053-0.26-0.146-0.354l-2-2c-0.195-0.195-0.512-0.195-0.707 0l-2 2c-0.094 0.094-0.146 0.221-0.146 0.354v1h-2v-1c0-0.133-0.053-0.26-0.146-0.354l-2-2c-0.195-0.195-0.512-0.195-0.707 0l-2 2c-0.094 0.094-0.146 0.221-0.146 0.354v16.5c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-1.5h2v1.5c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-1.5h2v1.5c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-16.5c0-0.133-0.053-0.26-0.146-0.354zM12 9h2v4h-2v-4zM14 5v3h-2v-3h2zM5 9h2v4h-2v-4zM7 5v3h-2v-3h2zM4 19h-3v-15.793l1.5-1.5 1.5 1.5v15.793zM5 17v-3h2v3h-2zM11 19h-3v-15.793l1.5-1.5 1.5 1.5v15.793zM12 17v-3h2v3h-2zM18 19h-3v-15.793l1.5-1.5 1.5 1.5v15.793z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 15.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 15.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 15.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniFence.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniFence;

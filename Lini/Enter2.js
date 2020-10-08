@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniEnter2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniEnter2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniEnter2';
+  var className = 'Component Lini LiniEnter2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniEnter2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 20c-2.538 0-4.923-.988-6.718-2.782S0 13.038 0 10.501a.5.5 0 011 0c0 4.687 3.813 8.5 8.5 8.5s8.5-3.813 8.5-8.5-3.813-8.5-8.5-8.5a.5.5 0 010-1c2.538 0 4.923.988 6.717 2.783S19 7.964 19 10.502s-.988 4.923-2.782 6.717A9.438 9.438 0 019.5 20.001z"
+    d: "M9.5 20c-2.538 0-4.923-0.988-6.718-2.782s-2.782-4.18-2.782-6.717c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5c0 4.687 3.813 8.5 8.5 8.5s8.5-3.813 8.5-8.5-3.813-8.5-8.5-8.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5c2.538 0 4.923 0.988 6.717 2.783s2.783 4.18 2.783 6.718-0.988 4.923-2.782 6.717c-1.794 1.794-4.18 2.782-6.718 2.782z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 4a.5.5 0 00-.5.5v4.793L.854 1.147a.5.5 0 00-.707.707L8.293 10H3.5a.5.5 0 000 1h6a.5.5 0 00.5-.5v-6a.5.5 0 00-.5-.5z"
+    d: "M9.5 4c-0.276 0-0.5 0.224-0.5 0.5v4.793l-8.146-8.146c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l8.146 8.146h-4.793c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h6c0.276 0 0.5-0.224 0.5-0.5v-6c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniEnter2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniEnter2;

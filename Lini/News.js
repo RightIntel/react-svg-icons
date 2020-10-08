@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniNews({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniNews({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniNews';
+  var className = 'Component Lini LiniNews';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,28 @@ export default function LiniNews({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M14.5 14h-6a.5.5 0 01-.5-.5v-4a.5.5 0 01.5-.5h6a.5.5 0 01.5.5v4a.5.5 0 01-.5.5zM9 13h5v-3H9v3zM6.5 10h-3a.5.5 0 010-1h3a.5.5 0 010 1zM6.5 12h-3a.5.5 0 010-1h3a.5.5 0 010 1zM6.5 14h-3a.5.5 0 010-1h3a.5.5 0 010 1z"
+    d: "M14.5 14h-6c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5h6c0.276 0 0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5zM9 13h5v-3h-5v3z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M19.5 6a.5.5 0 00-.5.5v9a.5.5 0 01-.5.5h-17a.5.5 0 01-.5-.5v-10a.5.5 0 01.5-.5h15a.5.5 0 01.5.5v9a.5.5 0 001 0v-9c0-.827-.673-1.5-1.5-1.5h-15C.673 4 0 4.673 0 5.5v10c0 .827.673 1.5 1.5 1.5h17c.827 0 1.5-.673 1.5-1.5v-9a.5.5 0 00-.5-.5z"
+    d: "M6.5 10h-3c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M14.5 8h-11a.5.5 0 010-1h11a.5.5 0 010 1z"
+    d: "M6.5 12h-3c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6.5 14h-3c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19.5 6c-0.276 0-0.5 0.224-0.5 0.5v9c0 0.276-0.224 0.5-0.5 0.5h-17c-0.276 0-0.5-0.224-0.5-0.5v-10c0-0.276 0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5v9c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-9c0-0.827-0.673-1.5-1.5-1.5h-15c-0.827 0-1.5 0.673-1.5 1.5v10c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-9c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M14.5 8h-11c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h11c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniNews.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniNews;

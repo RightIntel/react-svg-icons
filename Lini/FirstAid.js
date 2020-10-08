@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniFirstAid({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniFirstAid({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniFirstAid';
+  var className = 'Component Lini LiniFirstAid';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniFirstAid({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M11.5 16h-3a.5.5 0 01-.5-.5V14H6.5a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5H8V8.5a.5.5 0 01.5-.5h3a.5.5 0 01.5.5V10h1.5a.5.5 0 01.5.5v3a.5.5 0 01-.5.5H12v1.5a.5.5 0 01-.5.5zM9 15h2v-1.5a.5.5 0 01.5-.5H13v-2h-1.5a.5.5 0 01-.5-.5V9H9v1.5a.5.5 0 01-.5.5H7v2h1.5a.5.5 0 01.5.5V15z"
+    d: "M11.5 16h-3c-0.276 0-0.5-0.224-0.5-0.5v-1.5h-1.5c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h1.5v-1.5c0-0.276 0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5v1.5h1.5c0.276 0 0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5h-1.5v1.5c0 0.276-0.224 0.5-0.5 0.5zM9 15h2v-1.5c0-0.276 0.224-0.5 0.5-0.5h1.5v-2h-1.5c-0.276 0-0.5-0.224-0.5-0.5v-1.5h-2v1.5c0 0.276-0.224 0.5-0.5 0.5h-1.5v2h1.5c0.276 0 0.5 0.224 0.5 0.5v1.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 5H14V3.5c0-.827-.673-1.5-1.5-1.5h-5C6.673 2 6 2.673 6 3.5V5H1.5C.673 5 0 5.673 0 6.5v11c0 .827.673 1.5 1.5 1.5h17c.827 0 1.5-.673 1.5-1.5v-11c0-.827-.673-1.5-1.5-1.5zM7 3.5a.5.5 0 01.5-.5h5a.5.5 0 01.5.5V5H7V3.5zm12 14a.5.5 0 01-.5.5h-17a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5h17a.5.5 0 01.5.5v11z"
+    d: "M18.5 5h-4.5v-1.5c0-0.827-0.673-1.5-1.5-1.5h-5c-0.827 0-1.5 0.673-1.5 1.5v1.5h-4.5c-0.827 0-1.5 0.673-1.5 1.5v11c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-11c0-0.827-0.673-1.5-1.5-1.5zM7 3.5c0-0.276 0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5v1.5h-6v-1.5zM19 17.5c0 0.276-0.224 0.5-0.5 0.5h-17c-0.276 0-0.5-0.224-0.5-0.5v-11c0-0.276 0.224-0.5 0.5-0.5h17c0.276 0 0.5 0.224 0.5 0.5v11z",
+    fill: color
   })));
 }
+
 LiniFirstAid.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniFirstAid;

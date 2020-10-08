@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniSelfTimer({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniSelfTimer({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniSelfTimer';
+  var className = 'Component Lini LiniSelfTimer';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniSelfTimer({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 20c-2.538 0-4.923-.988-6.718-2.782S0 13.038 0 10.501a9.4 9.4 0 01.988-4.223.5.5 0 01.895.445A8.412 8.412 0 001 10.5C1 15.187 4.813 19 9.5 19s8.5-3.813 8.5-8.5S14.187 2 9.5 2a.5.5 0 01-.121-.985l4-1a.5.5 0 11.242.97l-1.508.377a9.45 9.45 0 014.104 2.42c1.794 1.794 2.782 4.18 2.782 6.718s-.988 4.923-2.782 6.717A9.438 9.438 0 019.5 19.999z"
+    d: "M9.5 20c-2.538 0-4.923-0.988-6.718-2.782s-2.782-4.18-2.782-6.717c0-1.483 0.332-2.904 0.988-4.223 0.123-0.247 0.423-0.348 0.67-0.225s0.348 0.423 0.225 0.67c-0.586 1.179-0.883 2.45-0.883 3.777 0 4.687 3.813 8.5 8.5 8.5s8.5-3.813 8.5-8.5-3.813-8.5-8.5-8.5c-0.253 0-0.465-0.188-0.496-0.439s0.13-0.485 0.375-0.546l4-1c0.268-0.067 0.539 0.096 0.606 0.364s-0.096 0.539-0.364 0.606l-1.508 0.377c1.536 0.437 2.944 1.26 4.104 2.42 1.794 1.794 2.782 4.18 2.782 6.718s-0.988 4.923-2.782 6.717c-1.794 1.794-4.18 2.782-6.717 2.782z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 11.027a.494.494 0 01-.258-.072l-5-3.027a.5.5 0 01.518-.856l5 3.027a.5.5 0 01-.259.928z"
+    d: "M9.5 11.027c-0.088 0-0.178-0.023-0.258-0.072l-5-3.027c-0.236-0.143-0.312-0.45-0.169-0.687s0.45-0.312 0.687-0.169l5 3.027c0.236 0.143 0.312 0.45 0.169 0.687-0.094 0.155-0.259 0.241-0.428 0.241z",
+    fill: color
   })));
 }
+
 LiniSelfTimer.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniSelfTimer;

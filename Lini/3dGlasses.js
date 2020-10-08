@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function Lini3dGlasses({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function Lini3dGlasses({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini Lini3dGlasses';
+  var className = 'Component Lini Lini3dGlasses';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function Lini3dGlasses({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 15H13c-.743 0-1.561-.532-1.863-1.211L10 11.231l-1.137 2.558C8.561 14.468 7.743 15 7 15H1.5C.673 15 0 14.327 0 13.5v-6C0 6.673.673 6 1.5 6h17c.827 0 1.5.673 1.5 1.5v6c0 .827-.673 1.5-1.5 1.5zM10 10.037c.169 0 .593.066.863.674l1.188 2.672c.143.323.596.617.949.617h5.5a.5.5 0 00.5-.5v-6a.5.5 0 00-.5-.5h-17a.5.5 0 00-.5.5v6a.5.5 0 00.5.5H7c.353 0 .806-.294.949-.617l1.188-2.672c.27-.608.694-.674.863-.674z"
+    d: "M18.5 15h-5.5c-0.743 0-1.561-0.532-1.863-1.211l-1.137-2.558-1.137 2.558c-0.302 0.679-1.12 1.211-1.863 1.211h-5.5c-0.827 0-1.5-0.673-1.5-1.5v-6c0-0.827 0.673-1.5 1.5-1.5h17c0.827 0 1.5 0.673 1.5 1.5v6c0 0.827-0.673 1.5-1.5 1.5zM10 10.037c0.169 0 0.593 0.066 0.863 0.674l1.188 2.672c0.143 0.323 0.596 0.617 0.949 0.617h5.5c0.276 0 0.5-0.224 0.5-0.5v-6c0-0.276-0.224-0.5-0.5-0.5h-17c-0.276 0-0.5 0.224-0.5 0.5v6c0 0.276 0.224 0.5 0.5 0.5h5.5c0.353 0 0.806-0.294 0.949-0.617l1.188-2.672c0.27-0.608 0.694-0.674 0.863-0.674z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 13h-4a.5.5 0 01-.447-.276l-2-4a.5.5 0 01.447-.723h6a.5.5 0 01.5.5v4a.5.5 0 01-.5.5zm-3.691-1H17V9h-4.691l1.5 3zM6.5 13h-4a.5.5 0 01-.5-.5v-4a.5.5 0 01.5-.5h6a.5.5 0 01.447.723l-2 4a.5.5 0 01-.447.276zM3 12h3.191l1.5-3H3v3z"
+    d: "M17.5 13h-4c-0.189 0-0.363-0.107-0.447-0.276l-2-4c-0.077-0.155-0.069-0.339 0.022-0.486s0.252-0.237 0.425-0.237h6c0.276 0 0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5zM13.809 12h3.191v-3h-4.691l1.5 3z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6.5 13h-4c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5h6c0.173 0 0.334 0.090 0.425 0.237s0.099 0.331 0.022 0.486l-2 4c-0.085 0.169-0.258 0.276-0.447 0.276zM3 12h3.191l1.5-3h-4.691v3z",
+    fill: color
   })));
 }
+
 Lini3dGlasses.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = Lini3dGlasses;

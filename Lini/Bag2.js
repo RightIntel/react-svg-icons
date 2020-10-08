@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniBag2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniBag2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniBag2';
+  var className = 'Component Lini LiniBag2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniBag2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.997 19.438l-.998-13.974A.5.5 0 0018.5 5h-2.293l-3.854-3.854a.5.5 0 00-.707 0l-.5.5a.5.5 0 00.707.707l.146-.146L14.792 5h-1.586L8.852.646a.5.5 0 00-.707 0L3.791 5H1.498a.5.5 0 00-.499.464l-1 14a.497.497 0 00.499.535h19.001a.5.5 0 00.496-.562zM8.5 1.707L11.793 5H5.207L8.5 1.707zM1.037 19l.929-13h16.068l.929 13H1.037z"
+    d: "M19.997 19.438l-0.998-13.974c-0.019-0.262-0.236-0.464-0.499-0.464h-2.293l-3.854-3.854c-0.195-0.195-0.512-0.195-0.707 0l-0.5 0.5c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l0.146-0.146 2.793 2.793h-1.586l-4.354-4.354c-0.195-0.195-0.512-0.195-0.707 0l-4.354 4.354h-2.293c-0.262 0-0.48 0.203-0.499 0.464l-1 14c-0.010 0.138 0.038 0.275 0.133 0.376s0.227 0.159 0.366 0.159h19c0 0 0 0 0.001 0 0.276 0 0.5-0.224 0.5-0.5 0-0.021-0.001-0.041-0.004-0.062zM8.5 1.707l3.293 3.293h-6.586l3.293-3.293zM1.037 19l0.929-13h2.034c0 0 0 0 0 0h14.034l0.929 13h-17.926z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M10 14c-1.103 0-2.127-.596-2.884-1.678C6.397 11.294 6 9.937 6 8.5a.5.5 0 011 0c0 1.234.332 2.388.935 3.249C8.5 12.556 9.233 13 10 13s1.5-.444 2.065-1.251c.603-.861.935-2.015.935-3.249a.5.5 0 011 0c0 1.437-.396 2.795-1.116 3.822C12.127 13.404 11.102 14 10 14z"
+    d: "M10 14c-1.103 0-2.127-0.596-2.884-1.678-0.719-1.028-1.116-2.385-1.116-3.822 0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5c0 1.234 0.332 2.388 0.935 3.249 0.565 0.807 1.298 1.251 2.065 1.251s1.5-0.444 2.065-1.251c0.603-0.861 0.935-2.015 0.935-3.249 0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5c0 1.437-0.396 2.795-1.116 3.822-0.757 1.082-1.782 1.678-2.884 1.678z",
+    fill: color
   })));
 }
+
 LiniBag2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniBag2;

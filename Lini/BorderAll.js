@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniBorderAll({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniBorderAll({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniBorderAll';
+  var className = 'Component Lini LiniBorderAll';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniBorderAll({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 2h-14C1.673 2 1 2.673 1 3.5v14c0 .827.673 1.5 1.5 1.5h14c.827 0 1.5-.673 1.5-1.5v-14c0-.827-.673-1.5-1.5-1.5zm0 1a.5.5 0 01.5.5V10h-7V3h6.5zM2 3.5a.5.5 0 01.5-.5H9v7H2V3.5zM2.5 18a.5.5 0 01-.5-.5V11h7v7H2.5zm14.5-.5a.5.5 0 01-.5.5H10v-7h7v6.5z"
+    d: "M16.5 2h-14c-0.827 0-1.5 0.673-1.5 1.5v14c0 0.827 0.673 1.5 1.5 1.5h14c0.827 0 1.5-0.673 1.5-1.5v-14c0-0.827-0.673-1.5-1.5-1.5zM16.5 3c0.276 0 0.5 0.224 0.5 0.5v6.5h-7v-7h6.5zM2 3.5c0-0.276 0.224-0.5 0.5-0.5h6.5v7h-7v-6.5zM2.5 18c-0.276 0-0.5-0.224-0.5-0.5v-6.5h7v7h-6.5zM17 17.5c0 0.276-0.224 0.5-0.5 0.5h-6.5v-7h7v6.5z",
+    fill: color
   })));
 }
+
 LiniBorderAll.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniBorderAll;

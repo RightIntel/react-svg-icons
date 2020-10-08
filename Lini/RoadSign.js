@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniRoadSign({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniRoadSign({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniRoadSign';
+  var className = 'Component Lini LiniRoadSign';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniRoadSign({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.777 5.084l-3-2A.498.498 0 0015.5 3H11V1.5C11 .673 10.327 0 9.5 0h-2C6.673 0 6 .673 6 1.5V3H.5a.5.5 0 00-.5.5v4a.5.5 0 00.5.5H6v1H4.5a.496.496 0 00-.277.084l-3 2a.501.501 0 000 .832l3 2A.498.498 0 004.5 14H6v5.5a.5.5 0 00.5.5h4a.5.5 0 00.5-.5V14h3.5a.5.5 0 00.5-.5v-4a.5.5 0 00-.5-.5H11V8h4.5a.496.496 0 00.277-.084l3-2a.501.501 0 000-.832zM7 1.5a.5.5 0 01.5-.5h2a.5.5 0 01.5.5V3H7V1.5zM10 19H7v-5h3v5zm4-6H4.651l-2.25-1.5 2.25-1.5H14v3zm-4-4H7V8h3v1zm5.349-2H1V4h14.349l2.25 1.5-2.25 1.5z"
+    d: "M18.777 5.084l-3-2c-0.082-0.055-0.179-0.084-0.277-0.084h-4.5v-1.5c0-0.827-0.673-1.5-1.5-1.5h-2c-0.827 0-1.5 0.673-1.5 1.5v1.5h-5.5c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h5.5v1h-1.5c-0.099 0-0.195 0.029-0.277 0.084l-3 2c-0.139 0.093-0.223 0.249-0.223 0.416s0.084 0.323 0.223 0.416l3 2c0.082 0.055 0.179 0.084 0.277 0.084h1.5v5.5c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-5.5h3.5c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5h-3.5v-1h4.5c0.099 0 0.195-0.029 0.277-0.084l3-2c0.139-0.093 0.223-0.249 0.223-0.416s-0.084-0.323-0.223-0.416zM7 1.5c0-0.276 0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5v1.5h-3v-1.5zM10 19h-3v-5h3v5zM14 13h-9.349l-2.25-1.5 2.25-1.5h9.349v3zM10 9h-3v-1h3v1zM15.349 7h-14.349v-3h14.349l2.25 1.5-2.25 1.5z",
+    fill: color
   })));
 }
+
 LiniRoadSign.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniRoadSign;

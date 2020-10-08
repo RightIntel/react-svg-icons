@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniExpand4({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniExpand4({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniExpand4';
+  var className = 'Component Lini LiniExpand4';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function LiniExpand4({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 18h-16C.673 18 0 17.327 0 16.5v-12C0 3.673.673 3 1.5 3h16c.827 0 1.5.673 1.5 1.5v12c0 .827-.673 1.5-1.5 1.5zM1.5 4a.5.5 0 00-.5.5v12a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-12a.5.5 0 00-.5-.5h-16z"
+    d: "M17.5 18h-16c-0.827 0-1.5-0.673-1.5-1.5v-12c0-0.827 0.673-1.5 1.5-1.5h16c0.827 0 1.5 0.673 1.5 1.5v12c0 0.827-0.673 1.5-1.5 1.5zM1.5 4c-0.276 0-0.5 0.224-0.5 0.5v12c0 0.276 0.224 0.5 0.5 0.5h16c0.276 0 0.5-0.224 0.5-0.5v-12c0-0.276-0.224-0.5-0.5-0.5h-16z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 5h-3a.5.5 0 000 1h1.793l-2.146 2.146a.5.5 0 00.708.707l2.146-2.146V8.5a.5.5 0 001 0v-3a.5.5 0 00-.5-.5zM5.5 15H3.707l2.146-2.146a.5.5 0 00-.707-.707L3 14.293V12.5a.5.5 0 00-1 0v3a.5.5 0 00.5.5h3a.5.5 0 000-1z"
+    d: "M16.5 5h-3c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h1.793l-2.146 2.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l2.146-2.146v1.793c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-3c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 15h-1.793l2.146-2.146c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-2.146 2.146v-1.793c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v3c0 0.276 0.224 0.5 0.5 0.5h3c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniExpand4.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniExpand4;

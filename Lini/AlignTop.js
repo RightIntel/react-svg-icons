@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniAlignTop({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniAlignTop({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniAlignTop';
+  var className = 'Component Lini LiniAlignTop';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,19 @@ export default function LiniAlignTop({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M0 .5A.5.5 0 01.5 0h19a.5.5 0 010 1H.5A.5.5 0 010 .5zM11 11.5v-8c0-.827.673-1.5 1.5-1.5h4c.827 0 1.5.673 1.5 1.5v8c0 .827-.673 1.5-1.5 1.5h-4c-.827 0-1.5-.673-1.5-1.5zm6-8a.5.5 0 00-.5-.5h-4a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-8zM2 17.5v-14C2 2.673 2.673 2 3.5 2h4C8.327 2 9 2.673 9 3.5v14c0 .827-.673 1.5-1.5 1.5h-4c-.827 0-1.5-.673-1.5-1.5zm6-14a.5.5 0 00-.5-.5h-4a.5.5 0 00-.5.5v14a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-14z"
+    d: "M0 0.5c0-0.276 0.224-0.5 0.5-0.5h19c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-19c-0.276 0-0.5-0.224-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 11.5v-8c0-0.827 0.673-1.5 1.5-1.5h4c0.827 0 1.5 0.673 1.5 1.5v8c0 0.827-0.673 1.5-1.5 1.5h-4c-0.827 0-1.5-0.673-1.5-1.5zM17 3.5c0-0.276-0.224-0.5-0.5-0.5h-4c-0.276 0-0.5 0.224-0.5 0.5v8c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-8z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2 17.5v-14c0-0.827 0.673-1.5 1.5-1.5h4c0.827 0 1.5 0.673 1.5 1.5v14c0 0.827-0.673 1.5-1.5 1.5h-4c-0.827 0-1.5-0.673-1.5-1.5zM8 3.5c0-0.276-0.224-0.5-0.5-0.5h-4c-0.276 0-0.5 0.224-0.5 0.5v14c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5v-14z",
+    fill: color
   })));
 }
+
 LiniAlignTop.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniAlignTop;

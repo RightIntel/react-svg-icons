@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniUserLock({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniUserLock({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniUserLock';
+  var className = 'Component Lini LiniUserLock';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,19 @@ export default function LiniUserLock({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 11C6.467 11 4 8.533 4 5.5S6.467 0 9.5 0 15 2.467 15 5.5 12.533 11 9.5 11zm0-10C7.019 1 5 3.019 5 5.5S7.019 10 9.5 10 14 7.981 14 5.5 11.981 1 9.5 1zM11.5 20h-10C.673 20 0 19.327 0 18.5c0-.068.014-1.685 1.225-3.3.705-.94 1.67-1.687 2.869-2.219C5.558 12.33 7.377 12 9.5 12c1.104 0 2.135.09 3.064.267a.501.501 0 01-.187.983 15.495 15.495 0 00-2.877-.249c-3.516 0-6.101.968-7.475 2.8C1.012 17.152 1 18.488 1 18.501a.5.5 0 00.5.5h10a.5.5 0 010 1zM19 14.086V13.5c0-1.378-1.122-2.5-2.5-2.5S14 12.122 14 13.5v.586c-.582.206-1 .762-1 1.414v3c0 .827.673 1.5 1.5 1.5h4c.827 0 1.5-.673 1.5-1.5v-3c0-.652-.418-1.208-1-1.414zM16.5 12c.827 0 1.5.673 1.5 1.5v.5h-3v-.5c0-.827.673-1.5 1.5-1.5zm2.5 6.5a.5.5 0 01-.5.5h-4a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v3z"
+    d: "M9.5 11c-3.033 0-5.5-2.467-5.5-5.5s2.467-5.5 5.5-5.5 5.5 2.467 5.5 5.5-2.467 5.5-5.5 5.5zM9.5 1c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11.5 20h-10c-0.827 0-1.5-0.673-1.5-1.5 0-0.068 0.014-1.685 1.225-3.3 0.705-0.94 1.67-1.687 2.869-2.219 1.464-0.651 3.283-0.981 5.406-0.981 1.104 0 2.135 0.090 3.064 0.267 0.271 0.052 0.449 0.313 0.398 0.585s-0.313 0.449-0.585 0.398c-0.867-0.165-1.835-0.249-2.877-0.249-3.516 0-6.101 0.968-7.475 2.8-1.013 1.351-1.025 2.687-1.025 2.7 0 0.276 0.224 0.5 0.5 0.5h10c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19 14.086v-0.586c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v0.586c-0.582 0.206-1 0.762-1 1.414v3c0 0.827 0.673 1.5 1.5 1.5h4c0.827 0 1.5-0.673 1.5-1.5v-3c0-0.652-0.418-1.208-1-1.414zM16.5 12c0.827 0 1.5 0.673 1.5 1.5v0.5h-3v-0.5c0-0.827 0.673-1.5 1.5-1.5zM19 18.5c0 0.276-0.224 0.5-0.5 0.5h-4c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h4c0.276 0 0.5 0.224 0.5 0.5v3z",
+    fill: color
   })));
 }
+
 LiniUserLock.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniUserLock;

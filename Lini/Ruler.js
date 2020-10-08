@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniRuler({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniRuler({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniRuler';
+  var className = 'Component Lini LiniRuler';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniRuler({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 7h-16C.673 7 0 7.673 0 8.5v3c0 .827.673 1.5 1.5 1.5h16c.827 0 1.5-.673 1.5-1.5v-3c0-.827-.673-1.5-1.5-1.5zm.5 4.5a.5.5 0 01-.5.5H16v-1.5a.5.5 0 00-1 0V12h-2V9.5a.5.5 0 00-1 0V12h-2v-1.5a.5.5 0 00-1 0V12H7V9.5a.5.5 0 00-1 0V12H4v-1.5a.5.5 0 00-1 0V12H1.5a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h16a.5.5 0 01.5.5v3z"
+    d: "M17.5 7h-16c-0.827 0-1.5 0.673-1.5 1.5v3c0 0.827 0.673 1.5 1.5 1.5h16c0.827 0 1.5-0.673 1.5-1.5v-3c0-0.827-0.673-1.5-1.5-1.5zM18 11.5c0 0.276-0.224 0.5-0.5 0.5h-1.5v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-2v-2.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v2.5h-2v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-2v-2.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v2.5h-2v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-1.5c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h16c0.276 0 0.5 0.224 0.5 0.5v3z",
+    fill: color
   })));
 }
+
 LiniRuler.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniRuler;

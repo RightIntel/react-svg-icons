@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniLan2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniLan2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniLan2';
+  var className = 'Component Lini LiniLan2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniLan2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.5 10H15V4.5c0-.827-.673-1.5-1.5-1.5H11V.5a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v7a.5.5 0 00.5.5h3.398c-.185.496-.575.968-.752 1.146A.499.499 0 003.5 10h4a.5.5 0 00.354-.854C7.688 8.98 7.291 8.501 7.103 8H10.5a.5.5 0 00.5-.5V4h2.5a.5.5 0 01.5.5V10H9.5a.5.5 0 00-.5.5v7a.5.5 0 00.5.5h3.398c-.185.496-.575.968-.752 1.146A.499.499 0 0012.5 20h4a.5.5 0 00.354-.854c-.166-.166-.563-.645-.751-1.146H19.5a.5.5 0 00.5-.5v-7a.5.5 0 00-.5-.5zM10 1v4H1V1h9zM6.484 9H4.516c.176-.289.341-.632.425-1h1.118c.084.368.248.711.425 1zM1 7V6h9v1H1zm18 4v4h-9v-4h9zm-3.516 8h-1.968c.176-.289.341-.632.425-1h1.118c.084.368.248.711.425 1zM10 17v-1h9v1h-9z"
+    d: "M19.5 10h-4.5v-5.5c0-0.827-0.673-1.5-1.5-1.5h-2.5v-2.5c0-0.276-0.224-0.5-0.5-0.5h-10c-0.276 0-0.5 0.224-0.5 0.5v7c0 0.276 0.224 0.5 0.5 0.5h3.398c-0.185 0.496-0.575 0.968-0.752 1.146-0.143 0.143-0.186 0.358-0.108 0.545s0.26 0.309 0.462 0.309h4c0.202 0 0.385-0.122 0.462-0.309s0.035-0.402-0.108-0.545c-0.166-0.166-0.563-0.645-0.751-1.146h3.397c0.276 0 0.5-0.224 0.5-0.5v-3.5h2.5c0.276 0 0.5 0.224 0.5 0.5v5.5h-4.5c-0.276 0-0.5 0.224-0.5 0.5v7c0 0.276 0.224 0.5 0.5 0.5h3.398c-0.185 0.496-0.575 0.968-0.752 1.146-0.143 0.143-0.186 0.358-0.108 0.545s0.26 0.309 0.462 0.309h4c0.202 0 0.385-0.122 0.462-0.309s0.035-0.402-0.108-0.545c-0.166-0.166-0.563-0.645-0.751-1.146h3.397c0.276 0 0.5-0.224 0.5-0.5v-7c0-0.276-0.224-0.5-0.5-0.5zM10 1v4h-9v-4h9zM6.484 9h-1.968c0.176-0.289 0.341-0.632 0.425-1h1.118c0.084 0.368 0.248 0.711 0.425 1zM1 7v-1h9v1h-9zM19 11v4h-9v-4h9zM15.484 19h-1.968c0.176-0.289 0.341-0.632 0.425-1h1.118c0.084 0.368 0.248 0.711 0.425 1zM10 17v-1h9v1h-9z",
+    fill: color
   })));
 }
+
 LiniLan2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniLan2;

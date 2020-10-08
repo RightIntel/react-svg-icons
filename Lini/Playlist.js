@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPlaylist({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPlaylist({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPlaylist';
+  var className = 'Component Lini LiniPlaylist';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,25 @@ export default function LiniPlaylist({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 6A2.503 2.503 0 0114 3.5a.5.5 0 00-1 0v12.399a3.965 3.965 0 00-.448-.26C11.728 15.227 10.645 15 9.5 15s-2.228.227-3.052.639C5.514 16.106 5 16.767 5 17.5s.514 1.395 1.448 1.861c.824.412 1.907.639 3.052.639s2.228-.227 3.052-.639C13.486 18.894 14 18.233 14 17.5V5.947A3.492 3.492 0 0016.5 7C17.878 7 19 8.122 19 9.5a.5.5 0 001 0C20 7.57 18.43 6 16.5 6zm-7 13C7.497 19 6 18.208 6 17.5S7.497 16 9.5 16s3.5.792 3.5 1.5S11.503 19 9.5 19z"
+    d: "M16.5 6c-1.378 0-2.5-1.122-2.5-2.5 0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v12.399c-0.136-0.092-0.286-0.179-0.448-0.26-0.824-0.412-1.907-0.639-3.052-0.639s-2.228 0.227-3.052 0.639c-0.934 0.467-1.448 1.128-1.448 1.861s0.514 1.395 1.448 1.861c0.824 0.412 1.907 0.639 3.052 0.639s2.228-0.227 3.052-0.639c0.934-0.467 1.448-1.128 1.448-1.861v-11.553c0.636 0.649 1.522 1.053 2.5 1.053 1.378 0 2.5 1.122 2.5 2.5 0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5c0-1.93-1.57-3.5-3.5-3.5zM9.5 19c-2.003 0-3.5-0.792-3.5-1.5s1.497-1.5 3.5-1.5c2.003 0 3.5 0.792 3.5 1.5s-1.497 1.5-3.5 1.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M10.5 13H.5a.5.5 0 010-1h10a.5.5 0 010 1zM10.5 10H.5a.5.5 0 010-1h10a.5.5 0 010 1zM10.5 7H.5a.5.5 0 010-1h10a.5.5 0 010 1zM10.5 4H.5a.5.5 0 010-1h10a.5.5 0 010 1z"
+    d: "M10.5 13h-10c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h10c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10.5 10h-10c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h10c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10.5 7h-10c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h10c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10.5 4h-10c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h10c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniPlaylist.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPlaylist;

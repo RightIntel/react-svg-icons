@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniArrowsSplit({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniArrowsSplit({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniArrowsSplit';
+  var className = 'Component Lini LiniArrowsSplit';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniArrowsSplit({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 1h-5a.5.5 0 000 1h3.793l-8.146 8.146a.5.5 0 00-.146.354v9a.5.5 0 001 0v-8.793l8-8V6.5a.5.5 0 001 0v-5a.5.5 0 00-.5-.5zM7.854 8.146L1.708 2h3.793a.5.5 0 000-1h-5a.5.5 0 00-.5.5v5a.5.5 0 001 0V2.707l6.146 6.146a.498.498 0 00.708 0 .5.5 0 000-.707z"
+    d: "M18.5 1h-5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h3.793l-8.146 8.146c-0.094 0.094-0.146 0.221-0.146 0.354v9c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-8.793l8-8v3.793c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-5c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.854 8.146l-6.146-6.146h3.793c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-5c-0.276 0-0.5 0.224-0.5 0.5v5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-3.793l6.146 6.146c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
   })));
 }
+
 LiniArrowsSplit.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniArrowsSplit;

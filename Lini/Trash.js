@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniTrash({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniTrash({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniTrash';
+  var className = 'Component Lini LiniTrash';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniTrash({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 2h-5.75L11.4.2A.5.5 0 0011 0H9a.5.5 0 00-.4.2L7.25 2H1.5a.5.5 0 000 1h17a.5.5 0 000-1zM9.25 1h1.5l.75 1h-3l.75-1zM17.582 4.007a.5.5 0 00-.575.411l-2.336 14.014a.725.725 0 01-.671.569H6a.724.724 0 01-.671-.569L2.993 4.418a.5.5 0 00-.986.164l2.336 14.014A1.718 1.718 0 006.001 20h8a1.72 1.72 0 001.658-1.404l2.336-14.014a.5.5 0 00-.411-.575z"
+    d: "M18.5 2h-5.75l-1.35-1.8c-0.094-0.126-0.243-0.2-0.4-0.2h-2c-0.157 0-0.306 0.074-0.4 0.2l-1.35 1.8h-5.75c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5l17 0c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5zM9.25 1h1.5l0.75 1h-3l0.75-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.582 4.007c-0.272-0.045-0.53 0.139-0.575 0.411l-2.336 14.014c-0.051 0.303-0.364 0.569-0.671 0.569h-8c-0.307 0-0.621-0.266-0.671-0.569l-2.336-14.014c-0.045-0.272-0.303-0.456-0.575-0.411s-0.456 0.303-0.411 0.575l2.336 14.014c0.131 0.787 0.859 1.404 1.658 1.404h8c0.798 0 1.526-0.617 1.658-1.404l2.336-14.014c0.045-0.272-0.139-0.53-0.411-0.575z",
+    fill: color
   })));
 }
+
 LiniTrash.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniTrash;

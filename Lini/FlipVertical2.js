@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniFlipVertical2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniFlipVertical2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniFlipVertical2';
+  var className = 'Component Lini LiniFlipVertical2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,31 @@ export default function LiniFlipVertical2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M1 .5a.502.502 0 01.5-.5h10a.498.498 0 01.407.79l-5 7a.5.5 0 01-.814 0l-5-7A.496.496 0 011 .499zm9.528.5H2.471l4.028 5.64L10.527 1zM1 18.5a.5.5 0 01.093-.291l5-7a.5.5 0 01.814 0l5 7a.5.5 0 01-.407.79h-10a.502.502 0 01-.5-.5zm5.5-6.14L2.472 18h8.057l-4.028-5.64zM10 9.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zM7 9.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zM4 9.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zM1 9.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zM19 17.5a.5.5 0 00-.5-.5h-2.652A10.49 10.49 0 0019 9.5a10.39 10.39 0 00-1.144-4.77 10.597 10.597 0 00-3.055-3.63.5.5 0 00-.6.799A9.426 9.426 0 0118 9.499a9.49 9.49 0 01-3 6.928v-2.928a.5.5 0 00-1 0v4a.5.5 0 00.5.5h4a.5.5 0 00.5-.5z"
+    d: "M1 0.5c0-0.078 0.018-0.157 0.055-0.229 0.086-0.167 0.257-0.271 0.445-0.271h10c0.187 0 0.359 0.105 0.445 0.271s0.071 0.367-0.038 0.519l-5 7c-0.094 0.131-0.245 0.209-0.407 0.209s-0.313-0.078-0.407-0.209l-5-7c-0.062-0.086-0.093-0.188-0.093-0.291zM10.528 1h-8.057l4.028 5.64 4.028-5.64z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 18.5c0-0.102 0.031-0.204 0.093-0.291l5-7c0.094-0.131 0.245-0.209 0.407-0.209s0.313 0.078 0.407 0.209l5 7c0.109 0.152 0.123 0.353 0.038 0.519s-0.257 0.271-0.445 0.271h-10c-0.187 0-0.359-0.105-0.445-0.271-0.037-0.072-0.055-0.151-0.055-0.229zM6.5 12.36l-4.028 5.64h8.057l-4.028-5.64z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 9.5c0-0.276 0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1c-0.276 0-0.5-0.224-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7 9.5c0-0.276 0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1c-0.276 0-0.5-0.224-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M4 9.5c0-0.276 0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1c-0.276 0-0.5-0.224-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 9.5c0-0.276 0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1c-0.276 0-0.5-0.224-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19 17.5c0-0.276-0.224-0.5-0.5-0.5h-2.652c2.011-1.97 3.152-4.666 3.152-7.5 0-1.679-0.385-3.284-1.144-4.77-0.724-1.417-1.78-2.672-3.055-3.63-0.221-0.166-0.534-0.121-0.7 0.099-0.068 0.090-0.1 0.195-0.1 0.3 0 0.152 0.069 0.302 0.2 0.4 2.415 1.814 3.799 4.584 3.799 7.6 0 2.633-1.088 5.134-3 6.928v-2.928c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h4c0.276 0 0.5-0.224 0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniFlipVertical2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniFlipVertical2;

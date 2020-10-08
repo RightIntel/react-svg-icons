@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniQuoteClose({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniQuoteClose({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniQuoteClose';
+  var className = 'Component Lini LiniQuoteClose';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniQuoteClose({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M4.5 13c.924 0 1.783-.28 2.499-.759A7.505 7.505 0 01.5 16a.5.5 0 000 1c2.27 0 4.405-.884 6.01-2.49S9 10.77 9 8.5C9 6.019 6.981 4 4.5 4S0 6.019 0 8.5 2.019 13 4.5 13zm0-8C6.43 5 8 6.57 8 8.5l-.001.09A3.505 3.505 0 014.5 12C2.57 12 1 10.43 1 8.5S2.57 5 4.5 5zM11.5 16a.5.5 0 000 1c2.27 0 4.405-.884 6.01-2.49S20 10.77 20 8.5C20 6.019 17.981 4 15.5 4S11 6.019 11 8.5s2.019 4.5 4.5 4.5c.924 0 1.783-.28 2.499-.759A7.505 7.505 0 0111.5 16zm4-4c-1.93 0-3.5-1.57-3.5-3.5S13.57 5 15.5 5 19 6.57 19 8.5l-.001.09A3.505 3.505 0 0115.5 12z"
+    d: "M4.5 13c0.924 0 1.783-0.28 2.499-0.759-1.297 2.245-3.725 3.759-6.499 3.759-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5c2.27 0 4.405-0.884 6.010-2.49s2.49-3.74 2.49-6.010c0-2.481-2.019-4.5-4.5-4.5s-4.5 2.019-4.5 4.5 2.019 4.5 4.5 4.5zM4.5 5c1.93 0 3.5 1.57 3.5 3.5 0 0.030-0.001 0.060-0.001 0.090-0.048 1.888-1.599 3.41-3.499 3.41-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11.5 16c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5c2.27 0 4.405-0.884 6.010-2.49s2.49-3.74 2.49-6.010c0-2.481-2.019-4.5-4.5-4.5s-4.5 2.019-4.5 4.5 2.019 4.5 4.5 4.5c0.924 0 1.783-0.28 2.499-0.759-1.297 2.245-3.725 3.759-6.499 3.759zM15.5 12c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5c0 0.030-0.001 0.060-0.001 0.090-0.048 1.888-1.599 3.41-3.499 3.41z",
+    fill: color
   })));
 }
+
 LiniQuoteClose.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniQuoteClose;

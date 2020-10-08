@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniDirectionLtr({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniDirectionLtr({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniDirectionLtr';
+  var className = 'Component Lini LiniDirectionLtr';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,16 @@ export default function LiniDirectionLtr({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M15.354 17.146l-2-2a.5.5 0 00-.707.707l1.146 1.146H4.5a.5.5 0 000 1h9.293l-1.146 1.146a.5.5 0 00.708.707l2-2a.5.5 0 000-.707zM15.5 1H7C4.794 1 3 2.794 3 5s1.794 4 4 4h1v4.5a.5.5 0 001 0V2h3v11.5a.5.5 0 001 0V2h2.5a.5.5 0 000-1zM8 8H7C5.346 8 4 6.654 4 5s1.346-3 3-3h1v6z"
+    d: "M15.354 17.146l-2-2c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l1.146 1.146h-9.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h9.293l-1.146 1.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l2-2c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15.5 1h-8.5c-2.206 0-4 1.794-4 4s1.794 4 4 4h1v4.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-11.5h3v11.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-11.5h2.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5zM8 8h-1c-1.654 0-3-1.346-3-3s1.346-3 3-3h1v6z",
+    fill: color
   })));
 }
+
 LiniDirectionLtr.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniDirectionLtr;

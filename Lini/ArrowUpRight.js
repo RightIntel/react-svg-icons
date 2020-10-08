@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniArrowUpRight({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniArrowUpRight({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniArrowUpRight';
+  var className = 'Component Lini LiniArrowUpRight';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniArrowUpRight({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 2h-8a.5.5 0 000 1h6.793L2.147 17.146a.5.5 0 00.708.707L17.001 3.707V10.5a.5.5 0 001 0v-8a.5.5 0 00-.5-.5z"
+    d: "M17.5 2h-8c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h6.793l-14.146 14.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l14.146-14.146v6.793c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-8c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniArrowUpRight.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniArrowUpRight;

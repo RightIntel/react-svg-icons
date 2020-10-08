@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCity({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCity({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCity';
+  var className = 'Component Lini LiniCity';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,82 @@ export default function LiniCity({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M9 10h1v1H9v-1zM11 10h1v1h-1v-1zM13 10h1v1h-1v-1zM15 10h1v1h-1v-1zM9 13h1v1H9v-1zM11 13h1v1h-1v-1zM13 13h1v1h-1v-1zM15 13h1v1h-1v-1zM9 16h1v1H9v-1zM11 16h1v1h-1v-1zM13 16h1v1h-1v-1zM15 16h1v1h-1v-1z"
+    d: "M9 10h1v1h-1v-1z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 7H17V4.5a.504.504 0 00-.146-.354L15 2.292V.499a.5.5 0 00-1 0v1.793l-1.854 1.854A.5.5 0 0012 4.5V5h-2V2.5a.5.5 0 00-.5-.5h-8a.5.5 0 00-.5.5v17a.5.5 0 00.5.5h16a.5.5 0 00.5-.5v-12a.5.5 0 00-.5-.5zM13 4.707l1.5-1.5 1.5 1.5V7h-1V5.5a.5.5 0 00-.5-.5H13v-.293zM14 6v1h-4V6h4zM7 7.5V19H2V3h7v4H7.5a.5.5 0 00-.5.5zM17 19H8V8h9v11z"
+    d: "M11 10h1v1h-1v-1z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M7 4h1v2H7V4zM5 4h1v2H5V4zM3 4h1v2H3V4zM3 7h1v2H3V7zM5 7h1v2H5V7zM3 10h1v2H3v-2zM5 10h1v2H5v-2zM3 13h1v2H3v-2zM5 13h1v2H5v-2zM3 16h1v2H3v-2zM5 16h1v2H5v-2z"
+    d: "M13 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 10h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 13h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9 16h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 16h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13 16h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 16h1v1h-1v-1z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 7h-0.5v-2.5c0-0.133-0.053-0.26-0.146-0.354l-1.854-1.854v-1.793c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.793l-1.854 1.854c-0.094 0.094-0.146 0.221-0.146 0.354v0.5h-2v-2.5c0-0.276-0.224-0.5-0.5-0.5h-8c-0.276 0-0.5 0.224-0.5 0.5v17c0 0.276 0.224 0.5 0.5 0.5h16c0.276 0 0.5-0.224 0.5-0.5v-12c0-0.276-0.224-0.5-0.5-0.5zM13 4.707l1.5-1.5 1.5 1.5v2.293h-1v-1.5c0-0.276-0.224-0.5-0.5-0.5h-1.5v-0.293zM14 6v1h-4v-1h4zM7 7.5v11.5h-5v-16h7v4h-1.5c-0.276 0-0.5 0.224-0.5 0.5zM17 19h-9v-11h9v11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7 4h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 4h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 4h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 7h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 7h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 10h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 10h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 13h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 13h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3 16h1v2h-1v-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5 16h1v2h-1v-2z",
+    fill: color
   })));
 }
+
 LiniCity.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCity;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniAlignRight({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniAlignRight({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniAlignRight';
+  var className = 'Component Lini LiniAlignRight';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,19 @@ export default function LiniAlignRight({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M19.5 20a.5.5 0 00.5-.5V.5a.5.5 0 00-1 0v19a.5.5 0 00.5.5zM7 7.5v-4C7 2.673 7.673 2 8.5 2h8c.827 0 1.5.673 1.5 1.5v4c0 .827-.673 1.5-1.5 1.5h-8C7.673 9 7 8.327 7 7.5zM8.5 3a.5.5 0 00-.5.5v4a.5.5 0 00.5.5h8a.5.5 0 00.5-.5v-4a.5.5 0 00-.5-.5h-8zM1 16.5v-4c0-.827.673-1.5 1.5-1.5h14c.827 0 1.5.673 1.5 1.5v4c0 .827-.673 1.5-1.5 1.5h-14c-.827 0-1.5-.673-1.5-1.5zM2.5 12a.5.5 0 00-.5.5v4a.5.5 0 00.5.5h14a.5.5 0 00.5-.5v-4a.5.5 0 00-.5-.5h-14z"
+    d: "M19.5 20c0.276 0 0.5-0.224 0.5-0.5v-19c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v19c0 0.276 0.224 0.5 0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7 7.5v-4c0-0.827 0.673-1.5 1.5-1.5h8c0.827 0 1.5 0.673 1.5 1.5v4c0 0.827-0.673 1.5-1.5 1.5h-8c-0.827 0-1.5-0.673-1.5-1.5zM8.5 3c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h8c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5h-8z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1 16.5v-4c0-0.827 0.673-1.5 1.5-1.5h14c0.827 0 1.5 0.673 1.5 1.5v4c0 0.827-0.673 1.5-1.5 1.5h-14c-0.827 0-1.5-0.673-1.5-1.5zM2.5 12c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h14c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5h-14z",
+    fill: color
   })));
 }
+
 LiniAlignRight.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniAlignRight;

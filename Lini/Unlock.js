@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniUnlock({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniUnlock({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniUnlock';
+  var className = 'Component Lini LiniUnlock';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniUnlock({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M13.5 1A4.505 4.505 0 009 5.5V8H1.5C.673 8 0 8.673 0 9.5v8c0 .827.673 1.5 1.5 1.5h10c.827 0 1.5-.673 1.5-1.5v-8c0-.827-.673-1.5-1.5-1.5H10V5.5C10 3.57 11.57 2 13.5 2S17 3.57 17 5.5v1a.5.5 0 001 0v-1C18 3.019 15.981 1 13.5 1zm-2 8a.5.5 0 01.5.5v8a.5.5 0 01-.5.5h-10a.5.5 0 01-.5-.5v-8a.5.5 0 01.5-.5h10z"
+    d: "M13.5 1c-2.481 0-4.5 2.019-4.5 4.5v2.5h-7.5c-0.827 0-1.5 0.673-1.5 1.5v8c0 0.827 0.673 1.5 1.5 1.5h10c0.827 0 1.5-0.673 1.5-1.5v-8c0-0.827-0.673-1.5-1.5-1.5h-1.5v-2.5c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5v1c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-1c0-2.481-2.019-4.5-4.5-4.5zM11.5 9c0.276 0 0.5 0.224 0.5 0.5v8c0 0.276-0.224 0.5-0.5 0.5h-10c-0.276 0-0.5-0.224-0.5-0.5v-8c0-0.276 0.224-0.5 0.5-0.5h10z",
+    fill: color
   })));
 }
+
 LiniUnlock.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniUnlock;

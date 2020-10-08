@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniRank3({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniRank3({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniRank3';
+  var className = 'Component Lini LiniRank3';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,19 @@ export default function LiniRank3({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 16a.494.494 0 01-.242-.063l-8.757-4.865-8.757 4.865a.5.5 0 01-.486-.874l9-5a.5.5 0 01.486 0l9 5A.5.5 0 0118.5 16z"
+    d: "M18.5 16c-0.082 0-0.165-0.020-0.242-0.063l-8.757-4.865-8.757 4.865c-0.241 0.134-0.546 0.047-0.68-0.194s-0.047-0.546 0.194-0.68l9-5c0.151-0.084 0.335-0.084 0.486 0l9 5c0.241 0.134 0.328 0.438 0.194 0.68-0.091 0.164-0.262 0.257-0.438 0.257z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 13a.494.494 0 01-.242-.063L9.501 8.072.744 12.937a.5.5 0 01-.486-.874l9-5a.5.5 0 01.486 0l9 5A.5.5 0 0118.5 13z"
+    d: "M18.5 13c-0.082 0-0.165-0.020-0.242-0.063l-8.757-4.865-8.757 4.865c-0.241 0.134-0.546 0.047-0.68-0.194s-0.047-0.546 0.194-0.68l9-5c0.151-0.084 0.335-0.084 0.486 0l9 5c0.241 0.134 0.328 0.438 0.194 0.68-0.091 0.164-0.262 0.257-0.438 0.257z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 10a.494.494 0 01-.242-.063L9.501 5.072.744 9.937a.5.5 0 01-.486-.874l9-5a.5.5 0 01.486 0l9 5A.5.5 0 0118.5 10z"
+    d: "M18.5 10c-0.082 0-0.165-0.020-0.242-0.063l-8.757-4.865-8.757 4.865c-0.241 0.134-0.546 0.047-0.68-0.194s-0.047-0.546 0.194-0.68l9-5c0.151-0.084 0.335-0.084 0.486 0l9 5c0.241 0.134 0.328 0.438 0.194 0.68-0.091 0.164-0.262 0.257-0.438 0.257z",
+    fill: color
   })));
 }
+
 LiniRank3.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniRank3;

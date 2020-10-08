@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniBarcode3({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniBarcode3({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniBarcode3';
+  var className = 'Component Lini LiniBarcode3';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,67 @@ export default function LiniBarcode3({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M0 3h1v12H0V3zM16 3h.5v11H16V3zM3.5 3H4v11h-.5V3zM12 3h1v11h-1V3zM2 3h1v11H2V3zM7.5 3H8v11h-.5V3zM6 3h1v11H6V3zM19.5 3h.5v12h-.5V3zM17 3h1v11h-1V3zM8.5 3H9v11h-.5V3zM10 3h1v11h-1V3zM3.5 14.5v.5h1v.5h-1V17H5v-.5H4V16h1v-1.5zM2 14.5h.5V17H2v-2.5zM6 14.5v.5h1v.5H6V17h1.5v-.5h-1V16h1v-1.5zM9.5 14.5v1H9v-1h-.5V16h1v1h.5v-2.5zM11 14.5v.5h1v.5h-1v.5h1v.5h-1v.5h1.5v-2.5zM15 15v-.5h-1.5V16h1v.5h-1v.5H15v-1.5h-1V15zM16 14.5h.5V17H16v-2.5zM19 15v-.5h-1.5V17H19v-1.5h-1V15h1zm-.5 1v.5H18V16h.5z"
+    d: "M0 3h1v12h-1v-12z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16 3h0.5v11h-0.5v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3.5 3h0.5v11h-0.5v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 3h1v11h-1v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2 3h1v11h-1v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.5 3h0.5v11h-0.5v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6 3h1v11h-1v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19.5 3h0.5v12h-0.5v-12z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17 3h1v11h-1v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M8.5 3h0.5v11h-0.5v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M10 3h1v11h-1v-11z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M3.5 14.5v0.5h1v0.5h-1v1.5h1.5v-0.5h-1v-0.5h1v-1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M2 14.5h0.5v2.5h-0.5v-2.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M6 14.5v0.5h1v0.5h-1v1.5h1.5v-0.5h-1v-0.5h1v-1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 14.5v1h-0.5v-1h-0.5v1.5h1v1h0.5v-2.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11 14.5v0.5h1v0.5h-1v0.5h1v0.5h-1v0.5h1.5v-2.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M15 15v-0.5h-1.5v1.5h1v0.5h-1v0.5h1.5v-1.5h-1v-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16 14.5h0.5v2.5h-0.5v-2.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19 15v-0.5h-1.5v2.5h1.5v-1.5h-1v-0.5h1zM18.5 16v0.5h-0.5v-0.5h0.5z",
+    fill: color
   })));
 }
+
 LiniBarcode3.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniBarcode3;

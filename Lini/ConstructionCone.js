@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniConstructionCone({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniConstructionCone({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniConstructionCone';
+  var className = 'Component Lini LiniConstructionCone';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniConstructionCone({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 17h-.653L12.32 2.261C12.055 1.554 11.256 1 10.501 1h-1c-.755 0-1.554.554-1.819 1.261L2.155 17h-.653c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5h17c.827 0 1.5-.673 1.5-1.5s-.673-1.5-1.5-1.5zm-4.722-8H6.221l1.125-3h5.307l1.125 3zm.375 1l1.125 3H4.721l1.125-3h8.307zM8.617 2.612c.12-.32.541-.612.883-.612h1c.342 0 .763.292.883.612L12.279 5H7.722l.896-2.388zM4.347 14h11.307l1.125 3H3.222l1.125-3zM18.5 19h-17a.5.5 0 010-1h17a.5.5 0 010 1z"
+    d: "M18.5 17h-0.653l-5.527-14.739c-0.265-0.707-1.064-1.261-1.819-1.261h-1c-0.755 0-1.554 0.554-1.819 1.261l-5.527 14.739h-0.653c-0.827 0-1.5 0.673-1.5 1.5s0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5s-0.673-1.5-1.5-1.5zM13.778 9h-7.557l1.125-3h5.307l1.125 3zM14.153 10l1.125 3h-10.557l1.125-3h8.307zM8.617 2.612c0.12-0.32 0.541-0.612 0.883-0.612h1c0.342 0 0.763 0.292 0.883 0.612l0.896 2.388h-4.557l0.896-2.388zM4.347 14h11.307l1.125 3h-13.557l1.125-3zM18.5 19h-17c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h17c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniConstructionCone.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniConstructionCone;

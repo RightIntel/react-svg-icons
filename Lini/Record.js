@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniRecord({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniRecord({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniRecord';
+  var className = 'Component Lini LiniRecord';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,22 @@ export default function LiniRecord({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M11.5 17a.5.5 0 000-1H8v-1.5a.5.5 0 01.5-.5h3a.5.5 0 000-1h-3c-.827 0-1.5.673-1.5 1.5v4c0 .827.673 1.5 1.5 1.5h3a.5.5 0 000-1h-3a.5.5 0 01-.5-.5V17h3.5zM18.5 20h-3c-.827 0-1.5-.673-1.5-1.5v-4c0-.827.673-1.5 1.5-1.5h3a.5.5 0 010 1h-3a.5.5 0 00-.5.5v4a.5.5 0 00.5.5h3a.5.5 0 010 1zM4.884 19.18L3.067 17h.432c.827 0 1.5-.673 1.5-1.5v-1c0-.827-.673-1.5-1.5-1.5h-2c-.827 0-1.5.673-1.5 1.5v5a.5.5 0 001 0V17h.766l2.35 2.82a.498.498 0 00.704.064.5.5 0 00.064-.704zM1 14.5a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v1a.5.5 0 01-.5.5H1.998 1v-1.5zM9.5 10C7.019 10 5 7.981 5 5.5S7.019 1 9.5 1 14 3.019 14 5.5 11.981 10 9.5 10zm0-8C7.57 2 6 3.57 6 5.5S7.57 9 9.5 9 13 7.43 13 5.5 11.43 2 9.5 2z"
+    d: "M11.5 17c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-3.5v-1.5c0-0.276 0.224-0.5 0.5-0.5h3c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-3c-0.827 0-1.5 0.673-1.5 1.5v4c0 0.827 0.673 1.5 1.5 1.5h3c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-3c-0.276 0-0.5-0.224-0.5-0.5v-1.5h3.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 20h-3c-0.827 0-1.5-0.673-1.5-1.5v-4c0-0.827 0.673-1.5 1.5-1.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-3c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M4.884 19.18l-1.817-2.18h0.432c0.827 0 1.5-0.673 1.5-1.5v-1c0-0.827-0.673-1.5-1.5-1.5h-2c-0.827 0-1.5 0.673-1.5 1.5v5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2.5h0.766l2.35 2.82c0.099 0.119 0.241 0.18 0.384 0.18 0.113 0 0.226-0.038 0.32-0.116 0.212-0.177 0.241-0.492 0.064-0.704zM1 14.5c0-0.276 0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5h-1.502c-0 0-0.001 0-0.001 0h-0.997v-1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 10c-2.481 0-4.5-2.019-4.5-4.5s2.019-4.5 4.5-4.5c2.481 0 4.5 2.019 4.5 4.5s-2.019 4.5-4.5 4.5zM9.5 2c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5z",
+    fill: color
   })));
 }
+
 LiniRecord.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniRecord;

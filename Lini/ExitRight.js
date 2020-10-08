@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniExitRight({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniExitRight({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniExitRight';
+  var className = 'Component Lini LiniExitRight';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniExitRight({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M0 16.5v-12C0 3.673.673 3 1.5 3h10c.827 0 1.5.673 1.5 1.5v4a.5.5 0 01-1 0v-4a.5.5 0 00-.5-.5h-10a.5.5 0 00-.5.5v12a.5.5 0 00.5.5h10a.5.5 0 00.5-.5v-4a.5.5 0 011 0v4c0 .827-.673 1.5-1.5 1.5h-10C.673 18 0 17.327 0 16.5z"
+    d: "M0 16.5v-12c0-0.827 0.673-1.5 1.5-1.5h10c0.827 0 1.5 0.673 1.5 1.5v4c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5h-10c-0.276 0-0.5 0.224-0.5 0.5v12c0 0.276 0.224 0.5 0.5 0.5h10c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v4c0 0.827-0.673 1.5-1.5 1.5h-10c-0.827 0-1.5-0.673-1.5-1.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M16.354 13.853l3-3a.5.5 0 000-.707l-3-3a.5.5 0 00-.707.707L17.793 10H6.5a.5.5 0 000 1h11.293l-2.146 2.147a.497.497 0 000 .706.5.5 0 00.707 0z"
+    d: "M16.354 13.853l3-3c0.195-0.195 0.195-0.512 0-0.707l-3-3c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l2.146 2.147h-11.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h11.293l-2.146 2.147c-0.098 0.098-0.146 0.226-0.146 0.353s0.049 0.256 0.146 0.353c0.195 0.195 0.512 0.195 0.707 0z",
+    fill: color
   })));
 }
+
 LiniExitRight.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniExitRight;

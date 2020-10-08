@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniArrowLeftCircle({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniArrowLeftCircle({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniArrowLeftCircle';
+  var className = 'Component Lini LiniArrowLeftCircle';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniArrowLeftCircle({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M2.782 3.782C4.576 1.988 6.962 1 9.5 1s4.923.988 6.718 2.782S19 7.962 19 10.499s-.988 4.923-2.782 6.718-4.18 2.782-6.718 2.782-4.923-.988-6.718-2.782S0 13.037 0 10.499s.988-4.923 2.782-6.717zM9.5 19c4.687 0 8.5-3.813 8.5-8.5S14.187 2 9.5 2C4.813 2 1 5.813 1 10.5S4.813 19 9.5 19z"
+    d: "M2.782 3.782c1.794-1.794 4.18-2.782 6.718-2.782s4.923 0.988 6.718 2.782 2.782 4.18 2.782 6.717-0.988 4.923-2.782 6.718-4.18 2.782-6.718 2.782-4.923-0.988-6.718-2.782-2.782-4.18-2.782-6.718 0.988-4.923 2.782-6.717zM9.5 19c4.687 0 8.5-3.813 8.5-8.5s-3.813-8.5-8.5-8.5c-4.687 0-8.5 3.813-8.5 8.5s3.813 8.5 8.5 8.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M3.647 10.147l4-4a.5.5 0 01.707.707L5.207 10H15.5a.5.5 0 010 1H5.207l3.146 3.147a.5.5 0 01-.706.706l-4-4a.5.5 0 010-.707z"
+    d: "M3.647 10.147l4-4c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-3.147 3.146h10.293c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-10.293l3.146 3.147c0.195 0.195 0.195 0.512 0 0.707-0.098 0.098-0.226 0.146-0.353 0.146s-0.256-0.049-0.353-0.147l-4-4c-0.195-0.195-0.195-0.512 0-0.707z",
+    fill: color
   })));
 }
+
 LiniArrowLeftCircle.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniArrowLeftCircle;

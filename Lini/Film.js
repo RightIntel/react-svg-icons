@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniFilm({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniFilm({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniFilm';
+  var className = 'Component Lini LiniFilm';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniFilm({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 1h-17a.5.5 0 00-.5.5v18a.5.5 0 00.5.5h17a.5.5 0 00.5-.5v-18a.5.5 0 00-.5-.5zM4 7H2V5h2v2zm0 1v2H2V8h2zm0 3v2H2v-2h2zm-2 3h2v2H2v-2zM5 2h10v17H5V2zm11 9h2v2h-2v-2zm0-1V8h2v2h-2zm0-3V5h2v2h-2zm0 7h2v2h-2v-2zm2-10h-2V2h2v2zM4 2v2H2V2h2zM2 17h2v2H2v-2zm14 2v-2h2v2h-2z"
+    d: "M18.5 1h-17c-0.276 0-0.5 0.224-0.5 0.5v18c0 0.276 0.224 0.5 0.5 0.5h17c0.276 0 0.5-0.224 0.5-0.5v-18c0-0.276-0.224-0.5-0.5-0.5zM4 7h-2v-2h2v2zM4 8v2h-2v-2h2zM4 11v2h-2v-2h2zM2 14h2v2h-2v-2zM5 2h10v17h-10v-17zM16 11h2v2h-2v-2zM16 10v-2h2v2h-2zM16 7v-2h2v2h-2zM16 14h2v2h-2v-2zM18 4h-2v-2h2v2zM4 2v2h-2v-2h2zM2 17h2v2h-2v-2zM16 19v-2h2v2h-2z",
+    fill: color
   })));
 }
+
 LiniFilm.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniFilm;

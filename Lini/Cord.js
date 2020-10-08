@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCord({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCord({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCord';
+  var className = 'Component Lini LiniCord';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniCord({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.756 17.15a.5.5 0 00-.707-.007A6.462 6.462 0 0113.5 19a6.508 6.508 0 01-6.483-6.03A4.506 4.506 0 0011 8.5V5h.5a.5.5 0 000-1H9V.5a.5.5 0 00-1 0V4H5V.5a.5.5 0 00-1 0V4H1.5a.5.5 0 000 1H2v3.5a4.506 4.506 0 004.015 4.474 7.44 7.44 0 002.182 4.829A7.45 7.45 0 0013.5 20a7.456 7.456 0 005.249-2.143.5.5 0 00.007-.707zM3 8.5V5h7v3.5c0 1.93-1.57 3.5-3.5 3.5S3 10.43 3 8.5z"
+    d: "M18.756 17.15c-0.193-0.197-0.51-0.2-0.707-0.007-1.222 1.198-2.838 1.857-4.549 1.857-3.426 0-6.241-2.664-6.483-6.030 2.239-0.257 3.983-2.164 3.983-4.47v-3.5h0.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-2.5v-3.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v3.5h-3v-3.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v3.5h-2.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h0.5v3.5c0 2.318 1.761 4.231 4.015 4.474 0.113 1.825 0.877 3.525 2.182 4.829 1.417 1.417 3.3 2.197 5.303 2.197 1.975 0 3.839-0.761 5.249-2.143 0.197-0.193 0.2-0.51 0.007-0.707zM3 8.5v-3.5h7v3.5c0 1.93-1.57 3.5-3.5 3.5s-3.5-1.57-3.5-3.5z",
+    fill: color
   })));
 }
+
 LiniCord.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCord;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniFolder({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniFolder({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniFolder';
+  var className = 'Component Lini LiniFolder';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniFolder({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 5H11a.404.404 0 01-.276-.171l-.553-1.106c-.206-.413-.71-.724-1.171-.724H2c-.461 0-.965.311-1.171.724L.276 4.829A3 3 0 000 6v10.5c0 .827.673 1.5 1.5 1.5h17c.827 0 1.5-.673 1.5-1.5v-10c0-.827-.673-1.5-1.5-1.5zm.5 11.5a.5.5 0 01-.5.5h-17a.5.5 0 01-.5-.5V6c0-.196.083-.548.171-.724l.553-1.106A.406.406 0 012 3.999h7c.086 0 .238.094.276.171l.553 1.106c.206.413.71.724 1.171.724h7.5a.5.5 0 01.5.5v10z"
+    d: "M18.5 5h-7.5c-0.086 0-0.238-0.094-0.276-0.171l-0.553-1.106c-0.206-0.413-0.71-0.724-1.171-0.724h-7c-0.461 0-0.965 0.311-1.171 0.724l-0.553 1.106c-0.158 0.315-0.276 0.818-0.276 1.171v10.5c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-10c0-0.827-0.673-1.5-1.5-1.5zM19 16.5c0 0.276-0.224 0.5-0.5 0.5h-17c-0.276 0-0.5-0.224-0.5-0.5v-10.5c0-0.196 0.083-0.548 0.171-0.724l0.553-1.106c0.038-0.077 0.191-0.171 0.276-0.171h7c0.086 0 0.238 0.094 0.276 0.171l0.553 1.106c0.206 0.413 0.71 0.724 1.171 0.724h7.5c0.276 0 0.5 0.224 0.5 0.5v10z",
+    fill: color
   })));
 }
+
 LiniFolder.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniFolder;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniStrikethrough({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniStrikethrough({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniStrikethrough';
+  var className = 'Component Lini LiniStrikethrough';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,19 @@ export default function LiniStrikethrough({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M16.5 2h-14a.5.5 0 000 1H9v4.5a.5.5 0 001 0V3h6.5a.5.5 0 000-1zM9.5 18a.5.5 0 01-.5-.5v-4a.5.5 0 011 0v4a.5.5 0 01-.5.5zM18.5 12H.5a.5.5 0 01-.5-.5v-2A.5.5 0 01.5 9h18a.5.5 0 01.5.5v2a.5.5 0 01-.5.5zM1 11h17v-1H1v1z"
+    d: "M16.5 2h-14c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h6.5v4.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-4.5h6.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M9.5 18c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 12h-18c-0.276 0-0.5-0.224-0.5-0.5v-2c0-0.276 0.224-0.5 0.5-0.5h18c0.276 0 0.5 0.224 0.5 0.5v2c0 0.276-0.224 0.5-0.5 0.5zM1 11h17v-1h-17v1z",
+    fill: color
   })));
 }
+
 LiniStrikethrough.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniStrikethrough;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCli({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCli({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCli';
+  var className = 'Component Lini LiniCli';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function LiniCli({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 18h-17C.673 18 0 17.327 0 16.5v-13C0 2.673.673 2 1.5 2h17c.827 0 1.5.673 1.5 1.5v13c0 .827-.673 1.5-1.5 1.5zM1.5 3a.5.5 0 00-.5.5v13a.5.5 0 00.5.5h17a.5.5 0 00.5-.5v-13a.5.5 0 00-.5-.5h-17z"
+    d: "M18.5 18h-17c-0.827 0-1.5-0.673-1.5-1.5v-13c0-0.827 0.673-1.5 1.5-1.5h17c0.827 0 1.5 0.673 1.5 1.5v13c0 0.827-0.673 1.5-1.5 1.5zM1.5 3c-0.276 0-0.5 0.224-0.5 0.5v13c0 0.276 0.224 0.5 0.5 0.5h17c0.276 0 0.5-0.224 0.5-0.5v-13c0-0.276-0.224-0.5-0.5-0.5h-17z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M3.5 10a.5.5 0 01-.278-.916L5.598 7.5 3.222 5.916a.5.5 0 11.554-.832l3 2a.501.501 0 010 .832l-3 2a.497.497 0 01-.277.084zM11.5 10h-3a.5.5 0 010-1h3a.5.5 0 010 1z"
+    d: "M3.5 10c-0.162 0-0.32-0.078-0.417-0.223-0.153-0.23-0.091-0.54 0.139-0.693l2.376-1.584-2.376-1.584c-0.23-0.153-0.292-0.464-0.139-0.693s0.464-0.292 0.693-0.139l3 2c0.139 0.093 0.223 0.249 0.223 0.416s-0.084 0.323-0.223 0.416l-3 2c-0.085 0.057-0.182 0.084-0.277 0.084z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M11.5 10h-3c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniCli.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCli;

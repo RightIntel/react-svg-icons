@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniEnterRight({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniEnterRight({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniEnterRight';
+  var className = 'Component Lini LiniEnterRight';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniEnterRight({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M10.646 7.146a.5.5 0 000 .707l2.146 2.146H.499a.5.5 0 000 1h12.293l-2.146 2.146a.5.5 0 00.707.707l3-3a.498.498 0 000-.708l-3-3a.5.5 0 00-.707 0z"
+    d: "M10.646 7.146c-0.195 0.195-0.195 0.512 0 0.707l2.146 2.146h-12.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h12.293l-2.146 2.146c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l3-3c0.098-0.098 0.146-0.226 0.146-0.354s-0.049-0.256-0.146-0.354l-3-3c-0.195-0.195-0.512-0.195-0.707 0z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M19 4.5v12c0 .827-.673 1.5-1.5 1.5h-10c-.827 0-1.5-.673-1.5-1.5v-4a.5.5 0 011 0v4a.5.5 0 00.5.5h10a.5.5 0 00.5-.5v-12a.5.5 0 00-.5-.5h-10a.5.5 0 00-.5.5v4a.5.5 0 01-1 0v-4C6 3.673 6.673 3 7.5 3h10c.827 0 1.5.673 1.5 1.5z"
+    d: "M19 4.5v12c0 0.827-0.673 1.5-1.5 1.5h-10c-0.827 0-1.5-0.673-1.5-1.5v-4c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h10c0.276 0 0.5-0.224 0.5-0.5v-12c0-0.276-0.224-0.5-0.5-0.5h-10c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5v-4c0-0.827 0.673-1.5 1.5-1.5h10c0.827 0 1.5 0.673 1.5 1.5z",
+    fill: color
   })));
 }
+
 LiniEnterRight.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniEnterRight;

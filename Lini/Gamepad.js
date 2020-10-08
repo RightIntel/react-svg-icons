@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniGamepad({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniGamepad({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniGamepad';
+  var className = 'Component Lini LiniGamepad';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,22 @@ export default function LiniGamepad({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M15 15a5.013 5.013 0 01-3-1H8c-.861.646-1.919 1-3 1-2.757 0-5-2.243-5-5s2.243-5 5-5h10c2.757 0 5 2.243 5 5s-2.243 5-5 5zm-2.828-2c.114 0 .226.039.314.111a3.956 3.956 0 002.514.888c2.206 0 4-1.794 4-4s-1.794-4-4-4H5c-2.206 0-4 1.794-4 4s1.794 4 4 4c.926 0 1.795-.307 2.514-.888A.5.5 0 017.828 13h4.343z"
+    d: "M15 15c-1.081 0-2.139-0.354-3-1l-4 0c-0.861 0.646-1.919 1-3 1-2.757 0-5-2.243-5-5s2.243-5 5-5h10c2.757 0 5 2.243 5 5s-2.243 5-5 5zM12.172 13c0.114 0 0.226 0.039 0.314 0.111 0.718 0.581 1.588 0.888 2.514 0.888 2.206 0 4-1.794 4-4s-1.794-4-4-4h-10c-2.206 0-4 1.794-4 4s1.794 4 4 4c0.926 0 1.795-0.307 2.514-0.888 0.089-0.072 0.2-0.111 0.314-0.111h4.343z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M7.5 9H6V7.5a.5.5 0 00-1 0V9H3.5a.5.5 0 000 1H5v1.5a.5.5 0 001 0V10h1.5a.5.5 0 000-1zM13.5 10c-.827 0-1.5-.673-1.5-1.5S12.673 7 13.5 7s1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm0-2a.5.5 0 100 1 .5.5 0 000-1zM16.5 12c-.827 0-1.5-.673-1.5-1.5S15.673 9 16.5 9s1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm0-2a.5.5 0 100 1 .5.5 0 000-1z"
+    d: "M7.5 9h-1.5v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-1.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h1.5v1.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-1.5h1.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.5 10c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM13.5 8c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 12c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM16.5 10c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniGamepad.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniGamepad;

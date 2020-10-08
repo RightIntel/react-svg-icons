@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniCable({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniCable({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniCable';
+  var className = 'Component Lini LiniCable';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,13 @@ export default function LiniCable({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M15.5 5H15V1.5a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5V5h-.5C3.673 5 3 5.673 3 6.5v3c0 .654.307 1.577.7 2.1L5.5 14c.266.355.5 1.056.5 1.5 0 .652.418 1.208 1 1.414V19.5a.5.5 0 001 0V17h4v2.5a.5.5 0 001 0v-2.586c.582-.206 1-.762 1-1.414 0-.444.234-1.145.5-1.5l1.8-2.4c.392-.523.7-1.446.7-2.1v-3c0-.827-.673-1.5-1.5-1.5zM6 2h8v3h-1V3.5a.5.5 0 00-1 0V5H8V3.5a.5.5 0 00-1 0V5H6V2zm10 7.5c0 .444-.234 1.145-.5 1.5l-1.8 2.4c-.393.523-.7 1.446-.7 2.1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5c0-.654-.307-1.577-.7-2.1L4.5 11c-.266-.355-.5-1.056-.5-1.5v-3a.5.5 0 01.5-.5h11a.5.5 0 01.5.5v3z"
+    d: "M15.5 5h-0.5v-3.5c0-0.276-0.224-0.5-0.5-0.5h-9c-0.276 0-0.5 0.224-0.5 0.5v3.5h-0.5c-0.827 0-1.5 0.673-1.5 1.5v3c0 0.654 0.307 1.577 0.7 2.1l1.8 2.4c0.266 0.355 0.5 1.056 0.5 1.5 0 0.652 0.418 1.208 1 1.414v2.586c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2.5h4v2.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2.586c0.582-0.206 1-0.762 1-1.414 0-0.444 0.234-1.145 0.5-1.5l1.8-2.4c0.392-0.523 0.7-1.446 0.7-2.1v-3c0-0.827-0.673-1.5-1.5-1.5zM6 2h8v3h-1v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-4v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-1v-3zM16 9.5c0 0.444-0.234 1.145-0.5 1.5l-1.8 2.4c-0.393 0.523-0.7 1.446-0.7 2.1 0 0.276-0.224 0.5-0.5 0.5h-5c-0.276 0-0.5-0.224-0.5-0.5 0-0.654-0.307-1.577-0.7-2.1l-1.8-2.4c-0.266-0.355-0.5-1.056-0.5-1.5v-3c0-0.276 0.224-0.5 0.5-0.5h11c0.276 0 0.5 0.224 0.5 0.5v3z",
+    fill: color
   })));
 }
+
 LiniCable.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniCable;

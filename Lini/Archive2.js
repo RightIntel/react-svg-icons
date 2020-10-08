@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniArchive2({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniArchive2({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniArchive2';
+  var className = 'Component Lini LiniArchive2';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,28 @@ export default function LiniArchive2({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M11.5 16h-3a.5.5 0 010-1h3a.5.5 0 010 1zM16.5 11h-13a.5.5 0 010-1h13a.5.5 0 010 1z"
+    d: "M11.5 16h-3c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M19.557 11.383l-2.698-6.168c-.159-.364-.475-.699-.859-.925V.499a.498.498 0 00-.5-.5h-11a.498.498 0 00-.5.5V4.29c-.384.226-.699.56-.859.925L.443 11.383C.195 11.951 0 12.88 0 13.5v4c0 .827.673 1.5 1.5 1.5h17c.827 0 1.5-.673 1.5-1.5v-4c0-.619-.194-1.549-.443-2.117zM15 1v7H5V1h10zM4 5.747V8.5a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V5.748l2.641 6.037c.03.069.06.148.089.233A1.457 1.457 0 0018.5 12h-17c-.078 0-.155.006-.23.018.029-.085.058-.164.089-.233L4 5.748zM19 17.5a.5.5 0 01-.5.5h-17a.5.5 0 01-.5-.5v-4a.5.5 0 01.5-.5h17a.5.5 0 01.5.5v4z"
+    d: "M16.5 11h-13c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h13c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M13.5 7h-7a.5.5 0 010-1h7a.5.5 0 010 1zM13.5 5h-7a.5.5 0 010-1h7a.5.5 0 010 1zM13.5 3h-7a.5.5 0 010-1h7a.5.5 0 010 1z"
+    d: "M19.557 11.383l-2.698-6.168c-0.159-0.364-0.475-0.699-0.859-0.925l0-3.791c0-0.133-0.053-0.26-0.146-0.354s-0.221-0.146-0.354-0.146h-11c-0.133 0-0.26 0.053-0.354 0.146s-0.146 0.221-0.146 0.354l0 3.791c-0.384 0.226-0.699 0.56-0.859 0.925l-2.698 6.168c-0.248 0.568-0.443 1.497-0.443 2.117v4c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-4c0-0.619-0.194-1.549-0.443-2.117zM15 1l-0 7h-10l-0-7h10zM4 5.747v2.753c0 0.276 0.224 0.5 0.5 0.5h11c0.276 0 0.5-0.224 0.5-0.5l0-2.752 2.641 6.037c0.030 0.069 0.060 0.148 0.089 0.233-0.075-0.012-0.152-0.018-0.23-0.018h-17c-0.078 0-0.155 0.006-0.23 0.018 0.029-0.085 0.058-0.164 0.089-0.233l2.641-6.037zM19 17.5c0 0.276-0.224 0.5-0.5 0.5h-17c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5h17c0.276 0 0.5 0.224 0.5 0.5v4z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.5 7h-7c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.5 5h-7c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.5 3h-7c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h7c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniArchive2.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniArchive2;

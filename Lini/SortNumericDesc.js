@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniSortNumericDesc({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniSortNumericDesc({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniSortNumericDesc';
+  var className = 'Component Lini LiniSortNumericDesc';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,9 +21,19 @@ export default function LiniSortNumericDesc({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M8.854 14.646a.5.5 0 00-.707 0l-3.146 3.146V.499a.5.5 0 00-1 0v17.293L.855 14.646a.5.5 0 00-.707.707l4 4a.498.498 0 00.708 0l4-4a.5.5 0 000-.707zM17.5 8h-2c-1.483 0-2.363-1.151-2.4-1.2a.5.5 0 11.8-.6c.004.006.626.8 1.6.8h2c.827 0 1.5-.673 1.5-1.5V5h-3.5C14.122 5 13 3.878 13 2.5S14.122 0 15.5 0h2C18.878 0 20 1.122 20 2.5v3C20 6.878 18.878 8 17.5 8zm-2-7c-.827 0-1.5.673-1.5 1.5S14.673 4 15.5 4H19V2.5c0-.827-.673-1.5-1.5-1.5h-2zM17.5 12h-2a2.503 2.503 0 00-2.5 2.5v3c0 1.378 1.122 2.5 2.5 2.5h2c1.378 0 2.5-1.122 2.5-2.5v-3c0-1.378-1.122-2.5-2.5-2.5zM14 14.5c0-.827.673-1.5 1.5-1.5h2c.27 0 .524.072.743.198l-4.145 4.836A1.502 1.502 0 0114 17.5v-3zm5 3c0 .827-.673 1.5-1.5 1.5h-2c-.27 0-.524-.072-.743-.198l4.145-4.836a1.5 1.5 0 01.098.533v3z"
+    d: "M8.854 14.646c-0.195-0.195-0.512-0.195-0.707 0l-3.146 3.146v-17.293c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v17.293l-3.146-3.146c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l4 4c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l4-4c0.195-0.195 0.195-0.512 0-0.707z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 8h-2c-1.483 0-2.363-1.151-2.4-1.2-0.166-0.221-0.121-0.534 0.1-0.7s0.534-0.121 0.7 0.1c0.004 0.006 0.626 0.8 1.6 0.8h2c0.827 0 1.5-0.673 1.5-1.5v-0.5h-3.5c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5h2c1.378 0 2.5 1.122 2.5 2.5v3c0 1.378-1.122 2.5-2.5 2.5zM15.5 1c-0.827 0-1.5 0.673-1.5 1.5s0.673 1.5 1.5 1.5h3.5v-1.5c0-0.827-0.673-1.5-1.5-1.5h-2z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M17.5 12h-2c-1.378 0-2.5 1.122-2.5 2.5v3c0 1.378 1.122 2.5 2.5 2.5h2c1.378 0 2.5-1.122 2.5-2.5v-3c0-1.378-1.122-2.5-2.5-2.5zM14 14.5c0-0.827 0.673-1.5 1.5-1.5h2c0.27 0 0.524 0.072 0.743 0.198l-4.145 4.836c-0.063-0.166-0.098-0.346-0.098-0.534v-3zM19 17.5c0 0.827-0.673 1.5-1.5 1.5h-2c-0.27 0-0.524-0.072-0.743-0.198l4.145-4.836c0.063 0.166 0.098 0.346 0.098 0.533v3z",
+    fill: color
   })));
 }
+
 LiniSortNumericDesc.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniSortNumericDesc;

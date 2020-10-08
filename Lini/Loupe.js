@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniLoupe({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniLoupe({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniLoupe';
+  var className = 'Component Lini LiniLoupe';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,16 @@ export default function LiniLoupe({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M17.5 20h-8c-2.538 0-4.923-.988-6.718-2.782S0 13.038 0 10.501c0-2.538.988-4.923 2.782-6.718S6.962 1 9.5 1c2.538 0 4.923.988 6.718 2.783S19 7.963 19 10.501v8c0 .827-.673 1.5-1.5 1.5zm-8-18C4.813 2 1 5.813 1 10.5S4.813 19 9.5 19h8a.5.5 0 00.5-.5v-8C18 5.813 14.187 2 9.5 2z"
+    d: "M17.5 20h-8c-2.538 0-4.923-0.988-6.718-2.782s-2.782-4.18-2.782-6.717c0-2.538 0.988-4.923 2.782-6.718s4.18-2.783 6.718-2.783c2.538 0 4.923 0.988 6.718 2.783s2.782 4.18 2.782 6.718v8c0 0.827-0.673 1.5-1.5 1.5zM9.5 2c-4.687 0-8.5 3.813-8.5 8.5s3.813 8.5 8.5 8.5h8c0.276 0 0.5-0.224 0.5-0.5v-8c0-4.687-3.813-8.5-8.5-8.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 17C5.916 17 3 14.084 3 10.5S5.916 4 9.5 4 16 6.916 16 10.5 13.084 17 9.5 17zm0-12C6.467 5 4 7.467 4 10.5S6.467 16 9.5 16s5.5-2.467 5.5-5.5S12.533 5 9.5 5z"
+    d: "M9.5 17c-3.584 0-6.5-2.916-6.5-6.5s2.916-6.5 6.5-6.5 6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5zM9.5 5c-3.033 0-5.5 2.467-5.5 5.5s2.467 5.5 5.5 5.5 5.5-2.467 5.5-5.5-2.467-5.5-5.5-5.5z",
+    fill: color
   })));
 }
+
 LiniLoupe.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniLoupe;

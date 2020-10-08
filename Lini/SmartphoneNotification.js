@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniSmartphoneNotification({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniSmartphoneNotification({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniSmartphoneNotification';
+  var className = 'Component Lini LiniSmartphoneNotification';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,15 +21,28 @@ export default function LiniSmartphoneNotification({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M14.5 20h-9c-.827 0-1.5-.673-1.5-1.5v-6a.5.5 0 011 0v6a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-17a.5.5 0 00-.5-.5h-4a.5.5 0 010-1h4c.827 0 1.5.673 1.5 1.5v17c0 .827-.673 1.5-1.5 1.5z"
+    d: "M14.5 20h-9c-0.827 0-1.5-0.673-1.5-1.5v-6c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v6c0 0.276 0.224 0.5 0.5 0.5h9c0.276 0 0.5-0.224 0.5-0.5v-17c0-0.276-0.224-0.5-0.5-0.5h-4c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h4c0.827 0 1.5 0.673 1.5 1.5v17c0 0.827-0.673 1.5-1.5 1.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M13.5 16h-7a.5.5 0 01-.5-.5v-3a.5.5 0 011 0V15h6V3h-.5a.5.5 0 010-1h1a.5.5 0 01.5.5v13a.5.5 0 01-.5.5zM10.5 18h-1a.5.5 0 010-1h1a.5.5 0 010 1z"
+    d: "M13.5 16h-7c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v2.5h6v-12h-0.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5v13c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M5.5 11C2.467 11 0 8.533 0 5.5S2.467 0 5.5 0 11 2.467 11 5.5 8.533 11 5.5 11zm0-10C3.019 1 1 3.019 1 5.5S3.019 10 5.5 10 10 7.981 10 5.5 7.981 1 5.5 1z"
+    d: "M10.5 18h-1c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M5.5 4a.5.5 0 01-.5-.5v-1a.5.5 0 011 0v1a.5.5 0 01-.5.5zM5.5 9a.5.5 0 01-.5-.5v-3a.5.5 0 011 0v3a.5.5 0 01-.5.5z"
+    d: "M5.5 11c-3.033 0-5.5-2.467-5.5-5.5s2.467-5.5 5.5-5.5 5.5 2.467 5.5 5.5-2.467 5.5-5.5 5.5zM5.5 1c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5 4.5-2.019 4.5-4.5-2.019-4.5-4.5-4.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 4c-0.276 0-0.5-0.224-0.5-0.5v-1c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v1c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 9c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
   })));
 }
+
 LiniSmartphoneNotification.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniSmartphoneNotification;

@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniJump({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniJump({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniJump';
+  var className = 'Component Lini LiniJump';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,19 @@ export default function LiniJump({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M13 4c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm0-3c-.551 0-1 .449-1 1s.449 1 1 1 1-.449 1-1-.449-1-1-1zM9.5 20a.501.501 0 01-.465-.686l1.878-4.694-2.767-2.767a.5.5 0 01-.094-.577L10.69 6H7.65L4.776 7.916a.5.5 0 11-.554-.832l3-2A.498.498 0 017.499 5h4a.5.5 0 01.447.723l-2.839 5.678 2.745 2.745a.501.501 0 01.111.539l-2 5a.5.5 0 01-.464.314z"
+    d: "M13 4c-1.103 0-2-0.897-2-2s0.897-2 2-2 2 0.897 2 2-0.897 2-2 2zM13 1c-0.551 0-1 0.449-1 1s0.449 1 1 1 1-0.449 1-1-0.449-1-1-1z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M5.5 10a.5.5 0 01-.31-.892l2-1.578a.477.477 0 01.115-.068l1-.422a.5.5 0 01.389.921l-.938.396-1.947 1.536A.5.5 0 015.5 10z"
+    d: "M9.5 20c-0.062 0-0.125-0.012-0.186-0.036-0.256-0.103-0.381-0.394-0.279-0.65l1.878-4.694-2.767-2.767c-0.152-0.152-0.19-0.385-0.094-0.577l2.638-5.276h-3.040l-2.874 1.916c-0.23 0.153-0.54 0.091-0.693-0.139s-0.091-0.54 0.139-0.693l3-2c0.082-0.055 0.179-0.084 0.277-0.084h4c0.173 0 0.334 0.090 0.425 0.237s0.099 0.331 0.022 0.486l-2.839 5.678 2.745 2.745c0.141 0.141 0.185 0.354 0.111 0.539l-2 5c-0.078 0.195-0.266 0.314-0.464 0.314z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M5.5 10c-0.148 0-0.294-0.065-0.393-0.19-0.171-0.217-0.134-0.531 0.083-0.702l2-1.578c0.035-0.028 0.074-0.051 0.115-0.068l1-0.422c0.254-0.107 0.548 0.012 0.655 0.266s-0.012 0.548-0.266 0.655l-0.938 0.396-1.947 1.536c-0.092 0.072-0.201 0.107-0.309 0.107z",
+    fill: color
   })));
 }
+
 LiniJump.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniJump;

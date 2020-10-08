@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniNewTab({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniNewTab({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniNewTab';
+  var className = 'Component Lini LiniNewTab';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,13 +21,25 @@ export default function LiniNewTab({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M3 3.5a.5.5 0 11-1 0 .5.5 0 011 0zM5 3.5a.5.5 0 11-1 0 .5.5 0 011 0zM7 3.5a.5.5 0 11-1 0 .5.5 0 011 0z"
+    d: "M3 3.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 1h-17C.673 1 0 1.673 0 2.5v12a.5.5 0 001 0V6h7.5c.827 0 1.5-.673 1.5-1.5a.5.5 0 01.5-.5h5a.5.5 0 01.5.5c0 .827.673 1.5 1.5 1.5H19v11.5a.5.5 0 01-.5.5h-14a.5.5 0 000 1h14c.827 0 1.5-.673 1.5-1.5v-15c0-.827-.673-1.5-1.5-1.5zm-1 4a.5.5 0 01-.5-.5c0-.827-.673-1.5-1.5-1.5h-5C9.673 3 9 3.673 9 4.5a.5.5 0 01-.5.5H1V2.5a.5.5 0 01.5-.5h17a.5.5 0 01.5.5V5h-1.5z"
+    d: "M5 3.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M7.5 11h-3a.5.5 0 000 1h1.793l-5.146 5.146a.5.5 0 00.708.707l5.146-5.146V14.5a.5.5 0 001 0v-3a.5.5 0 00-.5-.5z"
+    d: "M7 3.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M18.5 1h-17c-0.827 0-1.5 0.673-1.5 1.5v12c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-8.5h7.5c0.827 0 1.5-0.673 1.5-1.5 0-0.276 0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5 0 0.827 0.673 1.5 1.5 1.5h1.5v11.5c0 0.276-0.224 0.5-0.5 0.5h-14c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h14c0.827 0 1.5-0.673 1.5-1.5v-15c0-0.827-0.673-1.5-1.5-1.5zM17.5 5c-0.276 0-0.5-0.224-0.5-0.5 0-0.827-0.673-1.5-1.5-1.5h-5c-0.827 0-1.5 0.673-1.5 1.5 0 0.276-0.224 0.5-0.5 0.5h-7.5v-2.5c0-0.276 0.224-0.5 0.5-0.5h17c0.276 0 0.5 0.224 0.5 0.5v2.5h-1.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7.5 11h-3c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h1.793l-5.146 5.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l5.146-5.146v1.793c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-3c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniNewTab.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniNewTab;

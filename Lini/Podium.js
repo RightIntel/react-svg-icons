@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-export default function LiniPodium({
+var React = require('react');
+
+var PropTypes = require('prop-types');
+
+function LiniPodium({
   size,
+  color = '#000000',
   ...props
 }) {
-  let className = 'Component Lini LiniPodium';
+  var className = 'Component Lini LiniPodium';
 
   if (props.className) {
     className += ' ' + props.className;
   }
 
-  return /*#__PURE__*/React.createElement("span", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("span", Object.extends({}, props, {
     className: className
   }), /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18,11 +21,22 @@ export default function LiniPodium({
     height: size,
     viewBox: "0 0 20 20"
   }, /*#__PURE__*/React.createElement("path", {
-    d: "M18.5 8H13V3.5a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5V6H.5a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h18a.5.5 0 00.5-.5v-8a.5.5 0 00-.5-.5zM7 4h5v12H7V4zM1 7h5v9H1V7zm17 9h-5V9h5v7z"
+    d: "M18.5 8h-5.5v-4.5c0-0.276-0.224-0.5-0.5-0.5h-6c-0.276 0-0.5 0.224-0.5 0.5v2.5h-5.5c-0.276 0-0.5 0.224-0.5 0.5v10c0 0.276 0.224 0.5 0.5 0.5h18c0.276 0 0.5-0.224 0.5-0.5v-8c0-0.276-0.224-0.5-0.5-0.5zM7 4h5v12h-5v-12zM1 7h5v9h-5v-9zM18 16h-5v-7h5v7z",
+    fill: color
   }), /*#__PURE__*/React.createElement("path", {
-    d: "M9.5 10a.5.5 0 01-.5-.5v-4a.5.5 0 011 0v4a.5.5 0 01-.5.5zM4.5 13h-2a.5.5 0 01-.5-.5v-2a.5.5 0 01.5-.5H4V9H2.5a.5.5 0 010-1h2a.5.5 0 01.5.5v2a.5.5 0 01-.5.5H3v1h1.5a.5.5 0 010 1zM16.5 10h-2a.5.5 0 000 1H16v1h-1.5a.5.5 0 000 1H16v1h-1.5a.5.5 0 000 1h2a.5.5 0 00.5-.5v-4a.5.5 0 00-.5-.5z"
+    d: "M9.5 10c-0.276 0-0.5-0.224-0.5-0.5v-4c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v4c0 0.276-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M4.5 13h-2c-0.276 0-0.5-0.224-0.5-0.5v-2c0-0.276 0.224-0.5 0.5-0.5h1.5v-1h-1.5c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5v2c0 0.276-0.224 0.5-0.5 0.5h-1.5v1h1.5c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z",
+    fill: color
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M16.5 10h-2c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h1.5v1h-1.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h1.5v1h-1.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h2c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5z",
+    fill: color
   })));
 }
+
 LiniPodium.propTypes = {
-  size: PropTypes.number.isRequired
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string
 };
+module.exports = LiniPodium;
