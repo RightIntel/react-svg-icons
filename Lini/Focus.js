@@ -26,15 +26,15 @@ function LiniFocus({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", _extends({
+  }, /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M18.5 7c-0.276 0-0.5-0.224-0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.827 0 1.5 0.673 1.5 1.5v2c0 0.276-0.224 0.5-0.5 0.5z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M0.5 7c-0.276 0-0.5-0.224-0.5-0.5v-2c0-0.827 0.673-1.5 1.5-1.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-2c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276-0.224 0.5-0.5 0.5z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M3.5 18h-2c-0.827 0-1.5-0.673-1.5-1.5v-2c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5h2c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17.5 18h-2c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h2c0.276 0 0.5-0.224 0.5-0.5v-2c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v2c0 0.827-0.673 1.5-1.5 1.5z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M11.5 10h-1.5v-1.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v1.5h-1.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h1.5v1.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-1.5h1.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z"
   }, pathProps))));
 }

@@ -26,25 +26,25 @@ function LiniDial({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", _extends({
+  }, /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M5 5c-1.103 0-2-0.897-2-2s0.897-2 2-2 2 0.897 2 2-0.897 2-2 2zM5 2c-0.551 0-1 0.449-1 1s0.449 1 1 1 1-0.449 1-1-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M10 5c-1.103 0-2-0.897-2-2s0.897-2 2-2c1.103 0 2 0.897 2 2s-0.897 2-2 2zM10 2c-0.551 0-1 0.449-1 1s0.449 1 1 1c0.551 0 1-0.449 1-1s-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M15 5c-1.103 0-2-0.897-2-2s0.897-2 2-2 2 0.897 2 2-0.897 2-2 2zM15 2c-0.551 0-1 0.449-1 1s0.449 1 1 1 1-0.449 1-1-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M5 10c-1.103 0-2-0.897-2-2s0.897-2 2-2 2 0.897 2 2-0.897 2-2 2zM5 7c-0.551 0-1 0.449-1 1s0.449 1 1 1 1-0.449 1-1-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M10 10c-1.103 0-2-0.897-2-2s0.897-2 2-2c1.103 0 2 0.897 2 2s-0.897 2-2 2zM10 7c-0.551 0-1 0.449-1 1s0.449 1 1 1c0.551 0 1-0.449 1-1s-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M15 10c-1.103 0-2-0.897-2-2s0.897-2 2-2 2 0.897 2 2-0.897 2-2 2zM15 7c-0.551 0-1 0.449-1 1s0.449 1 1 1 1-0.449 1-1-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M5 15c-1.103 0-2-0.897-2-2s0.897-2 2-2 2 0.897 2 2-0.897 2-2 2zM5 12c-0.551 0-1 0.449-1 1s0.449 1 1 1 1-0.449 1-1-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M10 15c-1.103 0-2-0.897-2-2s0.897-2 2-2c1.103 0 2 0.897 2 2s-0.897 2-2 2zM10 12c-0.551 0-1 0.449-1 1s0.449 1 1 1c0.551 0 1-0.449 1-1s-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M15 15c-1.103 0-2-0.897-2-2s0.897-2 2-2 2 0.897 2 2-0.897 2-2 2zM15 12c-0.551 0-1 0.449-1 1s0.449 1 1 1 1-0.449 1-1-0.449-1-1-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M10 20c-1.103 0-2-0.897-2-2s0.897-2 2-2c1.103 0 2 0.897 2 2s-0.897 2-2 2zM10 17c-0.551 0-1 0.449-1 1s0.449 1 1 1c0.551 0 1-0.449 1-1s-0.449-1-1-1z"
   }, pathProps))));
 }

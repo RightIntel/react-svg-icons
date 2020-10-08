@@ -26,27 +26,27 @@ function LiniBarcode({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", _extends({
+  }, /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M0 3h1v14h-1v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M16 3h0.5v14h-0.5v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M3.5 3h0.5v14h-0.5v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M12 3h1v14h-1v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M2 3h1v14h-1v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M7.5 3h0.5v14h-0.5v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M6 3h1v14h-1v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M19.5 3h0.5v14h-0.5v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 3h1v14h-1v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M8.5 3h0.5v14h-0.5v-14z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M10 3h1v14h-1v-14z"
   }, pathProps))));
 }

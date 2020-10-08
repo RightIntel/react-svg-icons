@@ -26,79 +26,79 @@ function LiniBorderTop({
     width: size,
     height: size,
     viewBox: "0 0 20 20"
-  }, /*#__PURE__*/React.createElement("path", _extends({
+  }, /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M3 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M5 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M7 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M11 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M13 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M15 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 10h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 16h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 14h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 12h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 8h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 6h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 4h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 16h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 14h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 12h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 8h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 6h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M1 4h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 16h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 14h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 12h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 8h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 6h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17 4h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M9 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M3 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M5 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M7 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M11 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M13 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M15 18h1v1h-1v-1z"
-  }, pathProps)), /*#__PURE__*/React.createElement("path", _extends({
+  }, pathProps)), /*#__PURE__*/React.createElement("path", Object.assign({
     d: "M17.5 3h-16c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h16c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z"
   }, pathProps))));
 }
