@@ -1,13 +1,42 @@
-import React from 'react';
-export default function SvgComponent({
-  paths
+import React from "react";
+import PropTypes from "prop-types";
+
+export default function LiniSun2({
+  size = 20,
+  color = "#333",
+  className = "",
+  ...moreProps
 }) {
-  return /*#__PURE__*/React.createElement("svg", {
-    version: "1.1",
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "20",
-    height: "20",
-    viewBox: "0 0 20 20"
-  }, paths.map(path => /*#__PURE__*/React.createElement("path", path)));
+  return (
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      width={size}
+      height={size}
+      className={`Component Lini LiniSun2 ${className}`}
+      {...moreProps}
+    >
+      <g fill={color}>
+        <path d="M9.5 15c-2.481 0-4.5-2.019-4.5-4.5s2.019-4.5 4.5-4.5c2.481 0 4.5 2.019 4.5 4.5s-2.019 4.5-4.5 4.5zM9.5 7c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5z" />
+        <path d="M5.507 6.507c-0.128 0-0.256-0.049-0.354-0.146l-2.121-2.121c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l2.121 2.121c0.195 0.195 0.195 0.512 0 0.707-0.098 0.098-0.226 0.146-0.354 0.146z" />
+        <path d="M3.386 17.614c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l2.121-2.121c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-2.121 2.121c-0.098 0.098-0.226 0.146-0.354 0.146z" />
+        <path d="M13.493 6.507c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l2.121-2.121c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-2.121 2.121c-0.098 0.098-0.226 0.146-0.354 0.146z" />
+        <path d="M9.5 5c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5z" />
+        <path d="M3.5 11h-3c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z" />
+        <path d="M9.5 20c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5s0.5 0.224 0.5 0.5v3c0 0.276-0.224 0.5-0.5 0.5z" />
+        <path d="M18.5 11h-3c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z" />
+        <path d="M16.5 14c-1.378 0-2.5 1.122-2.5 2.5v3c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-1.5h3v1.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-3c0-1.378-1.122-2.5-2.5-2.5zM15 17v-0.5c0-0.827 0.673-1.5 1.5-1.5s1.5 0.673 1.5 1.5v0.5h-3z" />
+      </g>
+    </svg>
+  );
 }
-;
+
+LiniSun2.propTypes = {
+  /** The height/width in pixels */
+  size: PropTypes.number,
+  /** The fill color */
+  color: PropTypes.string,
+  /** Additional CSS class names */
+  className: PropTypes.string,
+};

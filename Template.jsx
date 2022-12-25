@@ -1,17 +1,32 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-export default function SvgComponent({ paths }) {
-    return (
-        <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-        >
-            {paths.map(path => (
-                <path {...path} />
-            ))}
-        </svg>
-    );
+export default function Lini__Name__({
+  size = 20,
+  color = "#333",
+  className = "",
+  ...moreProps
+}) {
+  return (
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      width={size}
+      height={size}
+      className={`Component Lini Lini__Name__ ${className}`}
+      {...moreProps}
+    >
+      <g fill={color}>__paths__</g>
+    </svg>
+  );
+}
+
+Lini__Name__.propTypes = {
+  /** The height/width in pixels */
+  size: PropTypes.number,
+  /** The fill color */
+  color: PropTypes.string,
+  /** Additional CSS class names */
+  className: PropTypes.string,
 };

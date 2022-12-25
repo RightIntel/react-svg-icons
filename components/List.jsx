@@ -1,13 +1,39 @@
-import React from 'react';
-export default function SvgComponent({
-  paths
+import React from "react";
+import PropTypes from "prop-types";
+
+export default function LiniList({
+  size = 20,
+  color = "#333",
+  className = "",
+  ...moreProps
 }) {
-  return /*#__PURE__*/React.createElement("svg", {
-    version: "1.1",
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "20",
-    height: "20",
-    viewBox: "0 0 20 20"
-  }, paths.map(path => /*#__PURE__*/React.createElement("path", path)));
+  return (
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      width={size}
+      height={size}
+      className={`Component Lini LiniList ${className}`}
+      {...moreProps}
+    >
+      <g fill={color}>
+        <path d="M19.5 16h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z" />
+        <path d="M19.5 11h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z" />
+        <path d="M19.5 6h-15c-0.276 0-0.5-0.224-0.5-0.5s0.224-0.5 0.5-0.5h15c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5z" />
+        <path d="M1.5 7c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM1.5 5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z" />
+        <path d="M1.5 12c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5c0 0.827-0.673 1.5-1.5 1.5zM1.5 10c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z" />
+        <path d="M1.5 17c-0.827 0-1.5-0.673-1.5-1.5s0.673-1.5 1.5-1.5 1.5 0.673 1.5 1.5-0.673 1.5-1.5 1.5zM1.5 15c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5 0.5-0.224 0.5-0.5-0.224-0.5-0.5-0.5z" />
+      </g>
+    </svg>
+  );
 }
-;
+
+LiniList.propTypes = {
+  /** The height/width in pixels */
+  size: PropTypes.number,
+  /** The fill color */
+  color: PropTypes.string,
+  /** Additional CSS class names */
+  className: PropTypes.string,
+};
