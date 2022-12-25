@@ -8,7 +8,7 @@ A license is required to use Lini icons
 
 ```jsx harmony
 import React from 'react';
-import LiniAlarm from 'react-svg-icons/Lini/Alarm.js';
+import { LiniAlarm } from 'react-svg-icons';
 
 export function MyComponent() {
     return (
@@ -29,5 +29,5 @@ export function MyComponent() {
 
 ## Choosing an icon
 
-TODO: how to fire up icomoon chooser in browser
+Go to [http://lini.sharpr.com](http://lini.sharpr.com).
 

@@ -1,12 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const { transformSync } = require('@babel/core');
 
 const options = { presets: ['@babel/preset-react']};
+const toExport = [];
 
 const start = +new Date();
 const dir = path.resolve(__dirname, '../svgs');
-const tpl = fs.readFileSync(path.resolve(__dirname, '../Template.js'), 'utf8');
+const tpl = fs.readFileSync(path.resolve(__dirname, '../Template.jsx'), 'utf8');
 const files = fs.readdirSync(dir);
 let size = 0;
 for (const name of files) {
@@ -24,10 +25,14 @@ for (const name of files) {
 	output = output.replace(/^.+(var React)/s, '$1');
 	output = output.replace(/_extends\(/g, 'Object.assign(');
 	output = output.trim();
-	const dest = path.resolve(__dirname, `../Lini/${PascalName}.js`)
+	const dest = path.resolve(__dirname, `../components/${PascalName}.jsx`);
 	fs.writeFileSync(dest, output, 'utf8');
-	console.log(`Built svgs/${name} to Lini/${PascalName}.js with ${output.length} bytes`);
+	toExport.push(`export { default as ${PascalName} } from './components/${PascalName}.jsx';`);
+	// console.log(`Built svgs/${name} to components/${PascalName}.jsx with ${output.length} bytes`);
 	size += output.length;
 }
+const dest = path.resolve(__dirname, '../index.jsx');
+const indexContents = toExport.join('\n') + '\n';
+fs.writeFileSync(dest, indexContents, 'utf8');
 const elapsed = ((+new Date() - start) / 1000).toFixed(1);
-console.log(`Wrote ${(size/1024/1024).toFixed(2)} MB for ${files.length} components to the Lini directory in ${elapsed}s.`);
+console.log(`Wrote ${(size/1024/1024).toFixed(2)} MB for ${files.length} components to the components directory in ${elapsed}s.`);
