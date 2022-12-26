@@ -1,9 +1,8 @@
 {
   "name": "react-svg-icons",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "React components for Linearicons svg icons",
   "main": "index.jsx",
-  "type": "module",
   "sideEffects": false,
   "bin": {
     "pick-lini": "open ./picker/index.html"

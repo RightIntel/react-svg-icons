@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function LiniSignal40({
   size = 20,
-  color = "#333",
+  color = "",
   className = "",
   ...moreProps
 }) {

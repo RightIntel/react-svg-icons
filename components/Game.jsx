@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function LiniGame({
   size = 20,
-  color = "#333",
+  color = "",
   className = "",
   ...moreProps
 }) {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function LiniBlog({
   size = 20,
-  color = "#333",
+  color = "",
   className = "",
   ...moreProps
 }) {

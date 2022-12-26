@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function LiniFlashMemory({
   size = 20,
-  color = "#333",
+  color = "",
   className = "",
   ...moreProps
 }) {

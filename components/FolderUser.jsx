@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function LiniFolderUser({
   size = 20,
-  color = "#333",
+  color = "",
   className = "",
   ...moreProps
 }) {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function LiniBandages({
   size = 20,
-  color = "#333",
+  color = "",
   className = "",
   ...moreProps
 }) {
