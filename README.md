@@ -1,25 +1,32 @@
 # react-svg-icons
 
-React components for svg icons
+React components for svg icons.
 
-A license is required to use Lini icons
+A paid license from [linearicons.com](https://linearicons.com/)
+is required to use these components in your application.
 
 ## Usage
 
+Import from 'react-svg-icons' and optionally provide size and color.
+
+Default size is `20` and default color is `#333`.
+
 ```jsx harmony
 import React from 'react';
-import { LiniAlarm } from 'react-svg-icons';
+import { LiniAlarm, LiniCog, LiniInbox2 } from 'react-svg-icons';
 
 export function MyComponent() {
     return (
         <div className="MyComponent">
-            <LiniAlarm size={24} />
+            <LiniAlarm size={24} color="var(--color-muted)" />
+            <LiniCog size={32} color="var(--theme-color-bubble)" />
+            <LiniInbox2 size={20} color="#f00" />
         </div>
     );
 }
 ```
 
-## Changing Color
+## Changing Color with CSS
 
 ```css
 .MyComponent .Lini {
@@ -29,5 +36,5 @@ export function MyComponent() {
 
 ## Choosing an icon
 
-Go to [http://lini.sharpr.com](http://lini.sharpr.com).
-
+You can open a page to choose an icon by running `npx pick-lini` 
+or visiting [http://lini.sharpr.com](http://lini.sharpr.com).

@@ -1,8 +1,11 @@
 {
   "name": "react-svg-icons",
-  "version": "2.1.0",
+  "version": "2.0.0",
   "description": "React components for svg icons",
   "main": "index.jsx",
+  "bin": {
+    "pick-lini": "open ./picker/index.html"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node scripts/build.js"
@@ -17,7 +20,7 @@
     "url": "https://github.com/RightIntel/react-svg-icons/issues"
   },
   "homepage": "https://github.com/RightIntel/react-svg-icons#readme",
-  "devDpendencies": {
-    "prettier": "^2.8.1"
+  "devDependencies": {
+    "prettier": "2.8.1"
   }
 }
