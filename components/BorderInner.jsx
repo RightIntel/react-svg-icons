@@ -1,54 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Lini from "../Lini.jsx";
 
-export default function LiniBorderInner({
-  size = 20,
-  color = "",
-  className = "",
-  ...moreProps
-}) {
+export default function LiniBorderInner(props = {}) {
+  props.name = "BorderInner";
+  
   return (
-    <svg
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      width={size}
-      height={size}
-      className={`Component Lini LiniBorderInner ${className}`}
-      {...moreProps}
-    >
-      <g fill={color}>
-        <path d="M1 16h1v1h-1v-1z" />
-        <path d="M1 18h1v1h-1v-1z" />
-        <path d="M1 14h1v1h-1v-1z" />
-        <path d="M1 12h1v1h-1v-1z" />
-        <path d="M1 2h1v1h-1v-1z" />
-        <path d="M1 8h1v1h-1v-1z" />
-        <path d="M1 6h1v1h-1v-1z" />
-        <path d="M1 4h1v1h-1v-1z" />
-        <path d="M17 16h1v1h-1v-1z" />
-        <path d="M17 18h1v1h-1v-1z" />
-        <path d="M17 14h1v1h-1v-1z" />
-        <path d="M17 12h1v1h-1v-1z" />
-        <path d="M17 2h1v1h-1v-1z" />
-        <path d="M17 8h1v1h-1v-1z" />
-        <path d="M17 6h1v1h-1v-1z" />
-        <path d="M17 4h1v1h-1v-1z" />
-        <path d="M3 2h1v1h-1v-1z" />
-        <path d="M5 2h1v1h-1v-1z" />
-        <path d="M7 2h1v1h-1v-1z" />
-        <path d="M11 2h1v1h-1v-1z" />
-        <path d="M13 2h1v1h-1v-1z" />
-        <path d="M15 2h1v1h-1v-1z" />
-        <path d="M3 18h1v1h-1v-1z" />
-        <path d="M5 18h1v1h-1v-1z" />
-        <path d="M7 18h1v1h-1v-1z" />
-        <path d="M11 18h1v1h-1v-1z" />
-        <path d="M13 18h1v1h-1v-1z" />
-        <path d="M15 18h1v1h-1v-1z" />
-        <path d="M17.5 10h-7.5v-7.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v7.5h-7.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h7.5v7.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-7.5h7.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z" />
-      </g>
-    </svg>
+    <Lini {...props}>
+      <path d="M1 16h1v1h-1v-1z" />
+      <path d="M1 18h1v1h-1v-1z" />
+      <path d="M1 14h1v1h-1v-1z" />
+      <path d="M1 12h1v1h-1v-1z" />
+      <path d="M1 2h1v1h-1v-1z" />
+      <path d="M1 8h1v1h-1v-1z" />
+      <path d="M1 6h1v1h-1v-1z" />
+      <path d="M1 4h1v1h-1v-1z" />
+      <path d="M17 16h1v1h-1v-1z" />
+      <path d="M17 18h1v1h-1v-1z" />
+      <path d="M17 14h1v1h-1v-1z" />
+      <path d="M17 12h1v1h-1v-1z" />
+      <path d="M17 2h1v1h-1v-1z" />
+      <path d="M17 8h1v1h-1v-1z" />
+      <path d="M17 6h1v1h-1v-1z" />
+      <path d="M17 4h1v1h-1v-1z" />
+      <path d="M3 2h1v1h-1v-1z" />
+      <path d="M5 2h1v1h-1v-1z" />
+      <path d="M7 2h1v1h-1v-1z" />
+      <path d="M11 2h1v1h-1v-1z" />
+      <path d="M13 2h1v1h-1v-1z" />
+      <path d="M15 2h1v1h-1v-1z" />
+      <path d="M3 18h1v1h-1v-1z" />
+      <path d="M5 18h1v1h-1v-1z" />
+      <path d="M7 18h1v1h-1v-1z" />
+      <path d="M11 18h1v1h-1v-1z" />
+      <path d="M13 18h1v1h-1v-1z" />
+      <path d="M15 18h1v1h-1v-1z" />
+      <path d="M17.5 10h-7.5v-7.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v7.5h-7.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h7.5v7.5c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-7.5h7.5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5z" />
+    </Lini>
   );
 }
 

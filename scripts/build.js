@@ -19,11 +19,12 @@ for (const name of files) {
     .split(/\n+/g);
   let js = tpl;
   js = js.replace(/__Name__/g, PascalName);
-  const indent = "        ";
+  const indent = "      ";
   const indented = paths.map((path) => indent + path);
-  js = js.replace("__paths__", `\n${indented.join("\n")}\n      `);
+  js = js.replace("__paths__", `\n${indented.join("\n")}\n    `);
   js = js.replace(/ fill="#000000"/g, "");
   js = js.replace(/><\/path>/g, " />");
+  js = js.replace(/\/\/ prettier-ignore/g, "");
   const dest = path.resolve(__dirname, `../components/${PascalName}.jsx`);
   fs.writeFileSync(dest, js, "utf8");
   toExport.push(

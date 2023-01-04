@@ -5,6 +5,19 @@ React components for svg icons.
 A paid license from [linearicons.com](https://linearicons.com/)
 is required to use these components in your application.
 
+## Installation
+
+```
+npm i github:RightIntel/react-svg-icons#v2.0.3
+OR
+yarn add github:RightIntel/react-svg-icons#v2.0.3
+OR
+pnpm add github:RightIntel/react-svg-icons#v2.0.3
+```
+
+_Note:_ This package is not affiliated with npm's
+[react-svg-icons package](https://npmjs.com/package/react-svg-icons).
+
 ## Usage
 
 Import from 'react-svg-icons' and optionally provide size and color.

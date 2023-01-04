@@ -1,24 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Lini from "../Lini.jsx";
 
-export default function Lini__Name__({
-  size = 20,
-  color = "",
-  className = "",
-  ...moreProps
-}) {
+export default function Lini__Name__(props = {}) {
+  props.name = "__Name__";
+  // prettier-ignore
   return (
-    <svg
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      width={size}
-      height={size}
-      className={`Component Lini Lini__Name__ ${className}`}
-      {...moreProps}
-    >
-      <g fill={color}>__paths__</g>
-    </svg>
+    <Lini {...props}>__paths__</Lini>
   );
 }
 
